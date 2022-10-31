@@ -5,4 +5,3 @@ node_modules
 dist
 .eslintcache
 .tsbuild
-src/tailwind.css

@@ -1,5 +1,5 @@
 {
-  "name": "Techwondoe-Component-Library",
+  "name": "techwondoe-component-library",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -16,7 +16,9 @@
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,css,md,json}\" --config ./.prettierrc --ignore-path ./.prettierignore",
     "ts": "tsc --noEmit --skipLibCheck",
     "checks": "yarn format && yarn lint && yarn ts",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "clean": "rm -rf dist",
+    "buildDist": "npm run clean && tsc && cp package.json README.md ./dist"
   },
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
@@ -96,5 +98,21 @@
     "prop-types": "^15.8.1",
     "tailwindcss": "^3.1.8",
     "webpack": "^5.74.0"
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": ".eslintrc.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Techwondoe/react-tailwind-components.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Techwondoe/react-tailwind-components/issues"
+  },
+  "homepage": "https://github.com/Techwondoe/react-tailwind-components#readme"
 }

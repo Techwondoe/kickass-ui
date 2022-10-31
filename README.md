@@ -1,1 +1,1 @@
-# react-tailwind-components
+# React Tailwind components

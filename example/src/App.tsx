@@ -6,8 +6,8 @@ import {
   Toggles,
   Accordion,
   ListWithRadioOnRight,
-} from 'alice-component-library';
-import 'alice-component-library/dist/index.css';
+} from 'react-tailwind-components';
+import 'react-tailwind-components/dist/index.css';
 import React from 'react';
 
 const App = () => {

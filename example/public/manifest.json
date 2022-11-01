@@ -1,6 +1,6 @@
 {
-  "short_name": "alice-component-library",
-  "name": "alice-component-library",
+  "short_name": "react-tailwind-components",
+  "name": "react-tailwind-components",
   "icons": [
     {
       "src": "favicon.ico",

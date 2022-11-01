@@ -1,10 +1,10 @@
 {
-  "name": "alice-component-library",
-  "version": "1.0.0",
-  "description": "A React Component Library",
-  "author": "Alex Suarez",
+  "name": "react-tailwind-components",
+  "version": "0.0.1",
+  "description": "A React Tailwind Component Library",
+  "author": "Raj Upadhyay",
   "license": "MIT",
-  "repository": "Alex Suarez/alice-component-library",
+  "repository": "https://github.com/Techwondoe/react-tailwind-components",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.tsx",
@@ -21,7 +21,8 @@
     "test:unit": "cross-env CI=1 react-scripts test --env=jsdom",
     "test:watch": "react-scripts test --env=jsdom",
     "predeploy": "cd example && yarn install && yarn run build",
-    "deploy": "gh-pages -d example/build"
+    "deploy": "gh-pages -d example/build",
+    "clean": "rm -rf dist && rm -rf node_modules && cd example && rm -rf node_modules"
   },
   "peerDependencies": {
     "react": "^18.2.0"

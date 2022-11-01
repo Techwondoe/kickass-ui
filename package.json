@@ -12,8 +12,8 @@
     "node": ">=10"
   },
   "scripts": {
-    "build": "NODE_ENV=publish microbundle-crl --no-compress --format modern,cjs",
-    "start": "NODE_ENV=development microbundle-crl watch --no-compress --format modern,cjs ",
+    "build": "microbundle-crl --no-compress --format modern,cjs --jsxFragment React.Fragment",
+    "start": "microbundle-crl watch --no-compress --format modern,cjs --jsxFragment React.Fragment",
     "prepare": "run-s build",
     "test": "run-s test:unit test:lint test:build",
     "test:build": "run-s build",
@@ -62,6 +62,7 @@
     "react-icons": "^4.3.1",
     "react-scripts": "^3.4.1",
     "tailwindcss": "^3.1.8",
+    "tailwind-merge": "^1.6.2",
     "typescript": "^3.7.5"
   },
   "files": [

@@ -1,6 +1,6 @@
 import React from 'react';
-// import { XMarkIcon } from '@heroicons/react/24/outline';
-import { Typography, ColorCodes } from '~/components/atoms';
+import { XMarkIcon } from '@heroicons/react/24/outline';
+import { Typography, ColorCodes, Button } from '~/components/atoms';
 
 export interface AlertProps extends React.HTMLAttributes<HTMLDivElement> {
   Icon?: React.ComponentType<React.SVGProps<SVGSVGElement>>;
@@ -45,29 +45,29 @@ export function Alert({
                 )}
               </div>
             )}
-            {/* {actions && (
+            {actions && (
               <div className="mt-4">
                 <div className="-mx-2 -my-1.5 flex space-x-2">
                   {actions.map((action, index) => (
-                    <Button color={`${color as ColorCodes}`} key={index} onClick={action.onClick}>
+                    <Button color={color} key={index} onClick={action.onClick}>
                       {action.label}
                     </Button>
                   ))}
                 </div>
               </div>
-            )} */}
+            )}
           </div>
         </div>
-        {/* {closeIcon && (
+        {closeIcon && (
           <div className="pl-3 ml-auto">
             <div className="-mx-1.5 -my-1.5">
-              <Button color={`${color}`}>
+              <Button color={color}>
                 <span className="sr-only">Dismiss</span>
                 <XMarkIcon className="w-5 h-5" aria-hidden="true" />
               </Button>
             </div>
           </div>
-        )} */}
+        )}
       </div>
     </div>
   );

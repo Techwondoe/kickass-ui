@@ -1,4 +1,4 @@
-import { Radio, Typography, Button, Avatar } from 'alice-component-library';
+import { Radio, Typography, Button, Avatar, Toggles } from 'alice-component-library';
 import 'alice-component-library/dist/index.css';
 import React from 'react';
 
@@ -51,6 +51,7 @@ const App = () => {
         test the button
       </Button>
       <Avatar alt={''} src={'https://avatars.githubusercontent.com/u/75943412?v=4'} />
+      <Toggles id={'test'} name={'test toggle'} />
       <div className="radios">
         <Radio id="name" name="my-radios" title='Name' onChange={() => {}} />
         <Radio id="last-name" name="my-radios" title='Last Name' onChange={() => {}} />

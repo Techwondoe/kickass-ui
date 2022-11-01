@@ -4,4 +4,4 @@ export * from './Checkbox';
 export * from './Radio';
 export * from './SelectMenus';
 export * from './Textarea';
-
+export * from './Toggles';

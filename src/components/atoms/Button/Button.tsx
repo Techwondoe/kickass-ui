@@ -51,23 +51,6 @@ export function Button({
     } ${className}`
   );
 
-  // const buttonContent = (
-  //   <>
-  //     {StartIcon && <StartIcon className={`mr-2 ${iconSizes[size]}`} />}
-  //     {children}
-  //     {EndIcon && <EndIcon className={`ml-2 ${iconSizes[size]}`} />}
-  //   </>
-  // );
-
-  // return React.createElement(
-  //   href ? 'a' : 'button',
-  //   {
-  //     ...restProps,
-  //     className: classes,
-  //     href,
-  //   },
-  //   buttonContent
-  // );
   return href ? (
     <a className={classes} href={href} {...restProps}>
       {' '}

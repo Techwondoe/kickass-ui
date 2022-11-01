@@ -1,5 +1,9 @@
 {
   "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "~/*": ["src/*"]
+    },
     "outDir": "dist",
     "module": "esnext",
     "lib": ["dom", "esnext"],

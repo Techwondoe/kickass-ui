@@ -1,18 +1,18 @@
-import { Radio, Typography, Button, Avatar, Toggles } from 'alice-component-library';
+import {
+  Radio,
+  Typography,
+  Button,
+  Avatar,
+  Toggles,
+  Accordion,
+  ListWithRadioOnRight,
+} from 'alice-component-library';
 import 'alice-component-library/dist/index.css';
 import React from 'react';
 
 const App = () => {
   return (
     <div style={{ padding: 20 }}>
-      {/* <div style={{ marginBottom: 20 }}>
-        <Button onClick={() => {}}>Alice Component Library</Button>
-      </div>
-      <div>
-        <Button variant='primaryGhost' onClick={() => {}}>
-          Tailwind Setup Starter
-        </Button>
-      </div> */}
       <Typography color="primary" variant="h1">
         test
       </Typography>
@@ -52,9 +52,39 @@ const App = () => {
       </Button>
       <Avatar alt={''} src={'https://avatars.githubusercontent.com/u/75943412?v=4'} />
       <Toggles id={'test'} name={'test toggle'} />
+      <Accordion
+        accordoinData={[
+          {
+            title: 'Accordion 1',
+            content:
+              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.',
+          },
+          {
+            title: 'Accordion 2',
+            content:
+              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.',
+          },
+        ]}
+      />
+      <ListWithRadioOnRight
+        accounts={[
+          { id: 'checking', name: 'Checking', description: 'CIBC ••••6610' },
+          {
+            id: 'savings',
+            name: 'Savings',
+            description: 'Bank of America ••••0149',
+          },
+          {
+            id: 'mastercard',
+            name: 'Mastercard',
+            description: 'Capital One ••••7877',
+          },
+        ]}
+        title={'List with radio'}
+      />
       <div className="radios">
-        <Radio id="name" name="my-radios" title='Name' onChange={() => {}} />
-        <Radio id="last-name" name="my-radios" title='Last Name' onChange={() => {}} />
+        <Radio id="name" name="my-radios" title="Name" onChange={() => {}} />
+        <Radio id="last-name" name="my-radios" title="Last Name" onChange={() => {}} />
       </div>
     </div>
   );

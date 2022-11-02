@@ -15,7 +15,7 @@ npm install --save react-tailwind-components
 ```tsx
 import React, { Component } from 'react'
 
-import MyComponent from 'react-tailwind-components'
+import { MyComponent } from 'react-tailwind-components'
 import 'react-tailwind-components/dist/index.css'
 
 class Example extends Component {
@@ -24,7 +24,3 @@ class Example extends Component {
   }
 }
 ```
-
-## License
-
-MIT © [Alex Suarez](https://github.com/Alex Suarez)

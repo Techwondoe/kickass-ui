@@ -47,9 +47,9 @@ export function Button({
   };
 
   const classes = twMerge(
-    `button-base ${sizes[size]} ${variants[variant]} ${fullWidth ? 'w-full' : 'w-fit'} ${
-      shapes[shape]
-    } ${className}`
+    `flex items-center justify-center font-medium hover:brightness-90 active:brightness-100 ${
+      sizes[size]
+    } ${variants[variant]} ${fullWidth ? 'w-full' : 'w-fit'} ${shapes[shape]} ${className}`
   );
 
   return href ? (

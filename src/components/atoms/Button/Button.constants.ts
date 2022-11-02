@@ -20,7 +20,6 @@ export type ButtonShapes = 'rounded' | 'square';
  * @params size - Size of the button. It supports those theme sizes that make sense for this component.
  * @params variant - Variant of the button. It supports those theme variants that make sense for this component.
  */
-
 export interface ButtonProps extends HTMLAttributes<HTMLButtonElement | HTMLAnchorElement> {
   EndIcon?: React.ComponentType<React.SVGProps<SVGSVGElement>>;
   StartIcon?: React.ComponentType<React.SVGProps<SVGSVGElement>>;

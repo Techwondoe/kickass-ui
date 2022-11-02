@@ -1,38 +1,6 @@
-export interface ITheme {
-  contrast?: {
-    danger: string;
-    info: string;
-    onSurface: string;
-    primary: string;
-    secondary: string;
-    success: string;
-    surface: string;
-    warning: string;
-  };
-  danger?: string;
-  info?: string;
-  onSurface?: string;
-  primary?: string;
-  secondary?: string;
-  success?: string;
-  surface?: string;
-  warning?: string;
-}
+import { ITheme, IMappedTheme, ApplyThemeProps, base } from './types';
 
-export interface IThemes {
-  [key: string]: ITheme;
-}
-
-export interface IMappedTheme {
-  [key: string]: string | null;
-}
-
-export interface ApplyThemeProps {
-  customTheme?: ITheme;
-  theme: string;
-}
-
-export const mapTheme: (variables: ITheme) => IMappedTheme = (variables: ITheme) => {
+const mapTheme: (variables: ITheme) => IMappedTheme = (variables: ITheme) => {
   return {
     '--color-contrast-danger': variables.contrast?.danger || '',
     '--color-contrast-info': variables.contrast?.info || '',
@@ -53,18 +21,25 @@ export const mapTheme: (variables: ITheme) => IMappedTheme = (variables: ITheme)
   };
 };
 
-export const extendTheme: (extending: ITheme, newTheme: ITheme) => ITheme = (
-  extending: ITheme,
+/**
+ * Helper function to define a new theme using existing theme
+ *
+ * @param {ITheme} extendingTheme The name of the theme to be set
+ * @param {ITheme} newTheme custom theme from the user
+ * @return {ITheme} returns new custom theme object
+ */
+export const extendTheme: (extendingTheme: ITheme, newTheme: ITheme) => ITheme = (
+  extendingTheme: ITheme,
   newTheme: ITheme
 ): ITheme => {
-  return { ...extending, ...newTheme };
+  return { ...extendingTheme, ...newTheme };
 };
 
 /**
  * Helper function to set a new theme
  *
  * @param {string} theme The name of the theme to be set
- * @param {string} customTheme custom theme from the suer
+ * @param {ITheme} customTheme custom theme from the user
  * @return {void}
  */
 export const applyTheme = ({ theme, customTheme }: ApplyThemeProps): void => {
@@ -83,33 +58,12 @@ export const applyTheme = ({ theme, customTheme }: ApplyThemeProps): void => {
   });
 };
 
-export const base = {
-  contrast: {
-    danger: '#fff',
-    info: '#fff',
-    onSurface: '#fff',
-    primary: '#fff',
-    secondary: '#fff',
-    success: '#000',
-    surface: '#000',
-    warning: '#fff',
-  },
-  danger: '#ff4e4e',
-  info: '#5F9DF7',
-  onSurface: '#000',
-  primary: '#4d89ff',
-  secondary: '#999999',
-  success: '#4dff4d',
-  surface: '#fff',
-  warning: '#ff965f',
-};
 export const dark = extendTheme(base, {
   primary: 'red',
   secondary: 'blue',
 });
-export const DEFAULT_THEME = 'base';
-export const themes: IThemes = {
+
+export const themes = {
   base,
   dark,
 };
-

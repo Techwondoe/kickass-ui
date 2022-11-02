@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { applyTheme, ITheme, DEFAULT_THEME } from '../themes/utils';
+import { applyTheme } from './utils';
+import { ITheme } from './types';
 
 export interface ThemeInputProps {
   children: React.ReactNode;
@@ -12,19 +13,17 @@ export interface ThemeContextProps {
 }
 
 const useTheme = (customTheme?: ITheme): ThemeContextProps => {
-  const [theme, setTheme] = useState(DEFAULT_THEME);
+  const [theme, setTheme] = useState('base');
   /**
    * Run the applyTheme function every time the theme state changes
    */
   useEffect(() => {
     if (!customTheme) {
       applyTheme({ theme });
+    } else {
+      applyTheme({ theme: 'base', customTheme });
     }
   }, [theme, customTheme]);
-
-  useEffect(() => {
-    applyTheme({ theme: 'base', customTheme });
-  }, [customTheme]);
 
   return {
     theme,

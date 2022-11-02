@@ -13,7 +13,11 @@ export interface CenteredWithSingleActionModalProps extends React.HTMLAttributes
   title: string;
 }
 
-export function CenteredWithSingleAction({ title, description, actions }: CenteredWithSingleActionModalProps) {
+export function CenteredWithSingleAction({
+  title,
+  description,
+  actions,
+}: CenteredWithSingleActionModalProps) {
   const [open, setOpen] = useState(true);
 
   return (

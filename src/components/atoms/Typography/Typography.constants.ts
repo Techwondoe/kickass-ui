@@ -1,7 +1,6 @@
 import { ReactNode } from 'react';
 import { ColorCodes } from '~/constants/types';
 
-
 export type TypographyAlignments = 'center' | 'inherit' | 'justify' | 'left' | 'right';
 
 export type TypographyVariants = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span';

@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { applyTheme } from './utils';
-import { ITheme } from './types';
+import { Theme } from './types';
 
 export interface ThemeInputProps {
   children: React.ReactNode;
-  customTheme?: ITheme;
+  customTheme?: Theme;
 }
 
 export interface ThemeContextProps {
@@ -12,7 +12,7 @@ export interface ThemeContextProps {
   theme: string;
 }
 
-const useTheme = (customTheme?: ITheme): ThemeContextProps => {
+const useTheme = (customTheme?: Theme): ThemeContextProps => {
   const [theme, setTheme] = useState('base');
   /**
    * Run the applyTheme function every time the theme state changes
@@ -33,7 +33,7 @@ const useTheme = (customTheme?: ITheme): ThemeContextProps => {
 
 const ThemeContext = React.createContext<ThemeContextProps>({
   theme: 'base',
-  setTheme: () => Promise.resolve(),
+  setTheme: () => {},
 });
 
 export const ThemeProvider = ({ children, customTheme }: ThemeInputProps) => {

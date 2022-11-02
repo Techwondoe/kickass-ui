@@ -1,6 +1,6 @@
-import { ITheme, IMappedTheme, ApplyThemeProps, base } from './types';
+import { Theme, MappedTheme, ApplyThemeProps, base } from './types';
 
-const mapTheme: (variables: ITheme) => IMappedTheme = (variables: ITheme) => {
+const mapTheme: (variables: Theme) => MappedTheme = (variables: Theme) => {
   return {
     '--color-contrast-danger': variables.contrast?.danger || '',
     '--color-contrast-info': variables.contrast?.info || '',
@@ -24,14 +24,14 @@ const mapTheme: (variables: ITheme) => IMappedTheme = (variables: ITheme) => {
 /**
  * Helper function to define a new theme using existing theme
  *
- * @param {ITheme} extendingTheme The name of the theme to be set
- * @param {ITheme} newTheme custom theme from the user
- * @return {ITheme} returns new custom theme object
+ * @param {Theme} extendingTheme The name of the theme to be set
+ * @param {Theme} newTheme custom theme from the user
+ * @return {Theme} returns new custom theme object
  */
-export const extendTheme: (extendingTheme: ITheme, newTheme: ITheme) => ITheme = (
-  extendingTheme: ITheme,
-  newTheme: ITheme
-): ITheme => {
+export const extendTheme: (extendingTheme: Theme, newTheme: Theme) => Theme = (
+  extendingTheme: Theme,
+  newTheme: Theme
+): Theme => {
   return { ...extendingTheme, ...newTheme };
 };
 
@@ -39,11 +39,11 @@ export const extendTheme: (extendingTheme: ITheme, newTheme: ITheme) => ITheme =
  * Helper function to set a new theme
  *
  * @param {string} theme The name of the theme to be set
- * @param {ITheme} customTheme custom theme from the user
+ * @param {Theme} customTheme custom theme from the user
  * @return {void}
  */
 export const applyTheme = ({ theme, customTheme }: ApplyThemeProps): void => {
-  const themeObject: IMappedTheme = mapTheme(customTheme ? customTheme : themes[theme]);
+  const themeObject: MappedTheme = mapTheme(customTheme ? customTheme : themes[theme]);
   if (!themeObject) {
     return;
   }

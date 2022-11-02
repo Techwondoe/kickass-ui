@@ -1,10 +1,10 @@
 export enum ColorCodes {
+  DANGER = 'danger',
+  INFO = 'info',
+  ON_SURFACE = 'onSurface',
   PRIMARY = 'primary',
   SECONDARY = 'secondary',
   SUCCESS = 'success',
-  WARNING = 'warning',
-  DANGER = 'danger',
-  INFO = 'info',
   SURFACE = 'surface',
-  ON_SURFACE = 'onSurface',
+  WARNING = 'warning',
 }

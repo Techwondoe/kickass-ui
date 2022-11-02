@@ -1,4 +1,4 @@
-export interface ITheme {
+export interface Theme {
   contrast?: {
     danger: string;
     info: string;
@@ -19,12 +19,12 @@ export interface ITheme {
   warning?: string;
 }
 
-export interface IMappedTheme {
+export interface MappedTheme {
   [key: string]: string | null;
 }
 
 export interface ApplyThemeProps {
-  customTheme?: ITheme;
+  customTheme?: Theme;
   theme: string;
 }
 

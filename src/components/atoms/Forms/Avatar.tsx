@@ -11,6 +11,8 @@ export interface AvatarProps extends HTMLAttributes<HTMLImageElement> {
   /** Provide an alt text for the image tag */
   alt: string;
 
+  className?: string;
+
   /** Provide user current status */
   currentStatus?: AvatarCurrentStatuses;
 
@@ -27,6 +29,34 @@ export interface AvatarProps extends HTMLAttributes<HTMLImageElement> {
   src: string;
 }
 
+const sizes = {
+  xs: 'w-6 h-6',
+  sm: 'w-8 h-8',
+  md: 'w-10 h-10',
+  lg: 'w-12 h-12',
+  xl: 'w-16 h-16',
+  xxl: 'w-20 h-20',
+  xxxl: 'w-24 h-24',
+};
+const shapes = {
+  circle: 'rounded-full',
+  square: 'rounded',
+};
+const activeClass = {
+  xs: 'w-1.5 h-1.5',
+  sm: 'w-2 h-2',
+  md: 'w-2.5 h-2.5',
+  lg: 'w-3 h-3',
+  xl: 'w-4 h-4',
+  xxl: 'w-5 h-5',
+  xxxl: 'w-6 h-6',
+};
+const status = {
+  online: 'bg-green-500',
+  offline: 'bg-gray-500',
+  busy: 'bg-red-500',
+};
+
 export function Avatar({
   src,
   alt,
@@ -34,42 +64,16 @@ export function Avatar({
   shape = 'circle',
   onClick,
   currentStatus = 'away',
+  className,
   ...restProps
 }: AvatarProps) {
-  const sizes = {
-    xs: 'w-6 h-6',
-    sm: 'w-8 h-8',
-    md: 'w-10 h-10',
-    lg: 'w-12 h-12',
-    xl: 'w-16 h-16',
-    xxl: 'w-20 h-20',
-    xxxl: 'w-24 h-24',
-  };
-  const shapes = {
-    circle: 'rounded-full',
-    square: 'rounded',
-  };
-  const activeClass = {
-    xs: 'w-1.5 h-1.5',
-    sm: 'w-2 h-2',
-    md: 'w-2.5 h-2.5',
-    lg: 'w-3 h-3',
-    xl: 'w-4 h-4',
-    xxl: 'w-5 h-5',
-    xxxl: 'w-6 h-6',
-  };
-  const status = {
-    online: 'bg-green-500',
-    offline: 'bg-gray-500',
-    busy: 'bg-red-500',
-  };
   return (
     <span className="inline-block relative">
       <img
         {...restProps}
         className={`inline-block ${onClick ? 'cursor-pointer' : ''} ${sizes[size]} ${
           shapes[shape]
-        } ${restProps.className}`}
+        } ${className}`}
         src={
           src ||
           'https://avatars.dicebear.com/api/croodles-neutral/manikangkandas.png?background=%23AED7FF'

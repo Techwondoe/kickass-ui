@@ -3,6 +3,23 @@ import { twMerge } from 'tailwind-merge';
 import { ColorCodes } from '~/constants/types';
 import { ButtonProps } from './Button.constants';
 
+const sizes = {
+  small: 'px-2 py-1 text-sm',
+  medium: 'px-3 py-2 text-base',
+  large: 'px-4 py-3 text-lg',
+};
+
+const iconSizes = {
+  small: 'w-4 h-4',
+  medium: 'w-5 h-5',
+  large: 'w-6 h-6',
+};
+
+const shapes = {
+  rounded: 'rounded-full',
+  square: 'rounded',
+};
+
 /**
  * @param {ButtonProps} props
  * @returns Button component
@@ -23,27 +40,10 @@ export function Button({
   className = '',
   ...restProps
 }: ButtonProps) {
-  const sizes = {
-    small: 'px-2 py-1 text-sm',
-    medium: 'px-3 py-2 text-base',
-    large: 'px-4 py-3 text-lg',
-  };
-
-  const iconSizes = {
-    small: 'w-4 h-4',
-    medium: 'w-5 h-5',
-    large: 'w-6 h-6',
-  };
-
   const variants = {
     contained: `bg-${color} text-contrast-${color}`,
     outlined: `border border-${color} text-${color} hover:bg-${color}/20`,
     text: `text-${color} hover:bg-${color}/20`,
-  };
-
-  const shapes = {
-    rounded: 'rounded-full',
-    square: 'rounded',
   };
 
   const classes = twMerge(
@@ -54,7 +54,6 @@ export function Button({
 
   return href ? (
     <a className={classes} href={href} {...restProps}>
-      {' '}
       {StartIcon && <StartIcon className={`mr-2 ${iconSizes[size]}`} />}
       {children}
       {EndIcon && <EndIcon className={`ml-2 ${iconSizes[size]}`} />}

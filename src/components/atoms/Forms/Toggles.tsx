@@ -1,6 +1,6 @@
 import React, { useState, HTMLAttributes } from 'react';
 import { Switch } from '@headlessui/react';
-import { ColorCodes } from '../atoms.types';
+import { ColorCodes } from '~/constants/types';
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ');
@@ -15,7 +15,14 @@ export interface ToggleProps extends HTMLAttributes<HTMLInputElement> {
   name: string;
 }
 
-export function Toggles({ color = 'primary', checked, disabled, id, name, label }: ToggleProps) {
+export function Toggles({
+  color = ColorCodes.PRIMARY,
+  checked,
+  disabled,
+  id,
+  name,
+  label,
+}: ToggleProps) {
   {
     const [enabled, setEnabled] = useState(false);
 

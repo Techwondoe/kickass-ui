@@ -1,5 +1,6 @@
 import React from 'react';
 import { twMerge } from 'tailwind-merge';
+import { ColorCodes } from '~/constants/types';
 import { TextFieldProps } from './TextField.constants';
 
 /**
@@ -10,7 +11,7 @@ import { TextFieldProps } from './TextField.constants';
  */
 
 export function TextField({
-  color = 'primary',
+  color = ColorCodes.PRIMARY,
   disabled,
   error,
   helperText,

@@ -1,5 +1,5 @@
 import React, { HTMLAttributes, ReactNode } from 'react';
-import { ColorCodes } from '../atoms.types';
+import { ColorCodes } from '~/constants/types';
 
 export type ButtonVariants = 'contained' | 'outlined' | 'text';
 

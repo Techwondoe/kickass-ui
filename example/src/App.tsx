@@ -14,7 +14,7 @@ import 'react-tailwind-components/dist/index.css';
 import React from 'react';
 
 const customTheme = extendTheme(base, {
-  primary: 'pink',
+  primary: 'blue',
   secondary: 'green',
   contrast: {
     ...base.contrast,

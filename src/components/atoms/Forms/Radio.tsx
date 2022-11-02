@@ -1,5 +1,5 @@
 import React from 'react';
-import { ColorCodes } from '../atoms.types';
+import { ColorCodes } from '~/constants/types';
 
 export interface RadioProps extends React.HTMLAttributes<HTMLInputElement> {
   checked?: boolean;
@@ -16,7 +16,7 @@ export function Radio({
   id,
   title,
   checked,
-  color = 'primary',
+  color = ColorCodes.PRIMARY,
   name,
   onChange,
   value,

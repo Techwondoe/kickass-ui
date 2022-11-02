@@ -1,5 +1,6 @@
 import React from 'react';
 import { twMerge } from 'tailwind-merge';
+import { ColorCodes } from '~/constants/types';
 import { TypographyProps } from './Typography.constants';
 
 /**
@@ -13,7 +14,7 @@ export function Typography({
   children,
   id,
   align = 'center',
-  color = 'primary',
+  color = ColorCodes.PRIMARY,
   variant = 'h1',
   className = '',
   whitespace = 'normal',

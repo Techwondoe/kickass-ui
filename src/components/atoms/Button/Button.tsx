@@ -1,5 +1,6 @@
 import React from 'react';
 import { twMerge } from 'tailwind-merge';
+import { ColorCodes } from '~/constants/types';
 import { ButtonProps } from './Button.constants';
 
 /**
@@ -12,7 +13,7 @@ import { ButtonProps } from './Button.constants';
 export function Button({
   children,
   variant = 'contained',
-  color = 'primary',
+  color = ColorCodes.PRIMARY,
   size = 'medium',
   fullWidth = false,
   StartIcon,

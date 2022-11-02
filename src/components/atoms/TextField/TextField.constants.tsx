@@ -1,6 +1,6 @@
 /* eslint-disable sort-keys */
 
-import { ColorCodes } from '../atoms.types';
+import { ColorCodes } from '~/constants/types';
 
 export type TextFieldVariants = 'filled' | 'outlined' | 'standard';
 

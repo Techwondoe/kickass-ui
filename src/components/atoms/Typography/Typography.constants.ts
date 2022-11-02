@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
-import { ColorCodes } from '../atoms.types';
+import { ColorCodes } from '~/constants/types';
+
 
 export type TypographyAlignments = 'center' | 'inherit' | 'justify' | 'left' | 'right';
 

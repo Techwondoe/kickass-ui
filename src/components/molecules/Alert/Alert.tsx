@@ -1,6 +1,7 @@
 import React from 'react';
 import { XMarkIcon } from '@heroicons/react/24/outline';
-import { Typography, ColorCodes, Button } from '~/components/atoms';
+import { Typography, Button } from '~/components/atoms';
+import { ColorCodes } from '~/constants/types';
 
 export interface AlertProps extends React.HTMLAttributes<HTMLDivElement> {
   Icon?: React.ComponentType<React.SVGProps<SVGSVGElement>>;
@@ -14,7 +15,7 @@ export interface AlertProps extends React.HTMLAttributes<HTMLDivElement> {
   title?: string;
 }
 export function Alert({
-  color = 'success',
+  color = ColorCodes.SUCCESS,
   title,
   description,
   actions,

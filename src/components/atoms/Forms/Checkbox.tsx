@@ -11,6 +11,12 @@ export interface CheckboxProps {
   size?: 'small' | 'medium' | 'large';
 }
 
+const sizes = {
+  small: 'w-4 h-4',
+  medium: 'w-5 h-5',
+  large: 'w-6 h-6',
+};
+
 export function Checkbox({
   id,
   name,
@@ -21,12 +27,6 @@ export function Checkbox({
   color = 'primary',
   size = 'medium',
 }: CheckboxProps) {
-  const sizes = {
-    small: 'w-4 h-4',
-    medium: 'w-5 h-5',
-    large: 'w-6 h-6',
-  };
-
   const disabledClasses = disabled ? 'opacity-50 cursor-not-allowed' : '';
 
   const checkboxClasses = `rounded border-2 border-${color}-500 cursor-pointer ${

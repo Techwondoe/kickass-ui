@@ -5,6 +5,7 @@ import {
   Avatar,
   Toggles,
   Accordion,
+  Slider,
   ListWithRadioOnRight,
   extendTheme,
   base,
@@ -14,7 +15,7 @@ import 'react-tailwind-components/dist/index.css';
 import React from 'react';
 
 const customTheme = extendTheme(base, {
-  primary: 'pink',
+  primary: 'blue',
   secondary: 'green',
   contrast: {
     ...base.contrast,
@@ -98,6 +99,9 @@ const App = () => {
         <div className="radios">
           <Radio id="name" name="my-radios" title="Name" onChange={() => {}} />
           <Radio id="last-name" name="my-radios" title="Last Name" onChange={() => {}} />
+        </div>
+        <div className="slider">
+          <Slider size="medium" color="primary" step={1} min={0} max={100} />
         </div>
       </div>
     </ThemeProvider>

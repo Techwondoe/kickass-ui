@@ -31,7 +31,7 @@ module.exports = {
       textColor: ['visited', 'checked'],
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/forms')],
   safelist: [
     {
       pattern: /(bg|border|text)-(primary|secondary|success|warning|danger|info|surface|onSurface)/,

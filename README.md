@@ -116,10 +116,10 @@ const App = () => {
 
 |  Component |  Use |
 |---|---|
-| `extendTheme` | Create a theme object extending another theme object `( base | dark | custom )`  |
+| `extendTheme` | Create a theme object extending another theme object `( base || dark || custom )`  |
 | `applyTheme`  | Manually apply theme  |
 | `<ThemeProvider/>`  | Theme context to automatically apply custom theme. Pass props `customTheme`  |
-| `themes (base |dark)`| Themes defined in codebase |
+| `themes (base || dark)` | Themes defined in codebase |
 
 ## Component list
 
@@ -128,7 +128,7 @@ const App = () => {
 | Component  | Props |
 |------------|-------|
 | Button     |  [Button Props](./src/components/atoms/Button/Button.types.ts)     |
-| Avatar     |       |
+| Avatar     |  [Avatar Props](./src/components/atoms/Forms/Avatar/Avatar.types.ts)     |
 | Badge      |       |
 | Checkbox   |       |
 | Radios     |       |

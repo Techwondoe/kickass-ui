@@ -1,6 +1,7 @@
 import React from 'react';
-import { Avatar } from '../../atoms/forms/Avatar';
+import { Avatar } from '../../atoms/Forms/Avatar/Avatar';
 import { Button, ButtonSizes, Typography, TypographyVariants } from '../../atoms';
+import { AvatarSizes } from '~/components/atoms/Forms/Avatar';
 
 export interface PageHeadingWithBannerProps {
   actions: {
@@ -28,7 +29,7 @@ export function PageHeadingWithBannerImage({ actions, profile }: PageHeadingWith
             <Avatar
               src={profile.avatar}
               alt="avatar"
-              size="xxxl"
+              size={AvatarSizes.XXXL}
               className="ring-4 ring-white sm:h-32 sm:w-32"
             />
           </div>

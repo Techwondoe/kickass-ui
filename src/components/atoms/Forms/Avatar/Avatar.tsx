@@ -1,40 +1,12 @@
-/* eslint-disable sort-keys */
-import React, { HTMLAttributes } from 'react';
-
-type AvatarCurrentStatuses = 'online' | 'offline' | 'away' | 'busy';
-
-type AvatarSizes = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl' | 'xxxl';
-
-type AvatarShapes = 'circle' | 'square';
-
-export interface AvatarProps extends HTMLAttributes<HTMLImageElement> {
-  /** Provide an alt text for the image tag */
-  alt: string;
-
-  className?: string;
-
-  /** Provide user current status */
-  currentStatus?: AvatarCurrentStatuses;
-
-  /** Provides onClick function */
-  onClick?: () => void;
-
-  /** Which shape you would like to use */
-  shape?: AvatarShapes;
-
-  /** Which size you would like to use */
-  size?: AvatarSizes;
-
-  /** Provide a source for the image tag */
-  src: string;
-}
+import React from 'react';
+import { AvatarCurrentStatuses, AvatarProps, AvatarShapes, AvatarSizes } from './Avatar.types';
 
 const sizes = {
-  xs: 'w-6 h-6',
-  sm: 'w-8 h-8',
-  md: 'w-10 h-10',
   lg: 'w-12 h-12',
+  md: 'w-10 h-10',
+  sm: 'w-8 h-8',
   xl: 'w-16 h-16',
+  xs: 'w-6 h-6',
   xxl: 'w-20 h-20',
   xxxl: 'w-24 h-24',
 };
@@ -43,11 +15,11 @@ const shapes = {
   square: 'rounded',
 };
 const activeClass = {
-  xs: 'w-1.5 h-1.5',
-  sm: 'w-2 h-2',
-  md: 'w-2.5 h-2.5',
   lg: 'w-3 h-3',
+  md: 'w-2.5 h-2.5',
+  sm: 'w-2 h-2',
   xl: 'w-4 h-4',
+  xs: 'w-1.5 h-1.5',
   xxl: 'w-5 h-5',
   xxxl: 'w-6 h-6',
 };
@@ -57,13 +29,16 @@ const status = {
   busy: 'bg-red-500',
 };
 
+const defaultUrl =
+  'https://avatars.dicebear.com/api/croodles-neutral/manikangkandas.png?background=%23AED7FF';
+
 export function Avatar({
   src,
   alt,
-  size = 'md',
-  shape = 'circle',
+  size = AvatarSizes.MD,
+  shape = AvatarShapes.CIRCLE,
   onClick,
-  currentStatus = 'away',
+  currentStatus = AvatarCurrentStatuses.AWAY,
   className,
   ...restProps
 }: AvatarProps) {
@@ -74,10 +49,7 @@ export function Avatar({
         className={`inline-block ${onClick ? 'cursor-pointer' : ''} ${sizes[size]} ${
           shapes[shape]
         } ${className}`}
-        src={
-          src ||
-          'https://avatars.dicebear.com/api/croodles-neutral/manikangkandas.png?background=%23AED7FF'
-        }
+        src={src || defaultUrl}
         alt={alt}
         onClick={onClick}
       />

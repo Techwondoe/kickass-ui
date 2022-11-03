@@ -1,6 +1,7 @@
 import React from 'react';
-import { Avatar } from '../../atoms/forms/Avatar';
+import { Avatar } from '../../atoms/Forms/Avatar/Avatar';
 import { Button, ButtonVariants, Typography, TypographyVariants } from '../../atoms';
+import { AvatarSizes } from '~/components/atoms/Forms/Avatar';
 
 export interface PageHeadingWithAvatarAndActionProps {
   actions: {
@@ -24,7 +25,7 @@ export function PageHeadingWithAvatarAndActions({
       <div className="flex items-start space-x-5">
         <div className="flex-shrink-0">
           <div className="relative">
-            <Avatar src={profile.avatar} alt="avatar" size="xl" />
+            <Avatar src={profile.avatar} alt="avatar" size={AvatarSizes.XL} />
             <span className="absolute inset-0 rounded-full shadow-inner" aria-hidden="true" />
           </div>
         </div>

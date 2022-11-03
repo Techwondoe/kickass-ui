@@ -1,4 +1,4 @@
-export * from './Avatar';
+export * from './Avatar/Avatar';
 export * from './Badge';
 export * from './Checkbox';
 export * from './Radio';

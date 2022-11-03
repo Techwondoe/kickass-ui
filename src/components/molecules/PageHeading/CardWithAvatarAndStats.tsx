@@ -1,5 +1,6 @@
 import React from 'react';
 import { Avatar, Typography, TypographyVariants } from '~/components/atoms';
+import { AvatarSizes } from '~/components/atoms/Forms/Avatar';
 
 export interface PageHeadingCardProps {
   stats: {
@@ -23,7 +24,7 @@ export function CardWithAvatarAndStats({ user, stats }: PageHeadingCardProps) {
         <div className="sm:flex sm:items-center sm:justify-between">
           <div className="sm:flex sm:space-x-5">
             <div className="flex-shrink-0">
-              <Avatar src={user.imageUrl} alt="profile" size="xxl" />
+              <Avatar src={user.imageUrl} alt="profile" size={AvatarSizes.XXL} />
             </div>
             <div className="mt-4 text-center sm:mt-0 sm:pt-1 sm:text-left">
               <Typography>Welcome back,</Typography>

@@ -19,7 +19,6 @@ export enum ButtonShapes {
 }
 
 /**
- * Defines the props of the component
  * @params EndIcon - The icon to be displayed at the end of the button
  * @params StartIcon - The icon to be displayed at the start of the button
  * @params children - The content of the button

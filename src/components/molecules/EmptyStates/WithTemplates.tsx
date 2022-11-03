@@ -1,6 +1,7 @@
 import { ChevronRightIcon } from '@heroicons/react/20/solid';
 import React from 'react';
 import { Typography } from '~/components/atoms';
+import { classNames } from '~/helpers/class-merger';
 
 export interface WTEmptyStateProps {
   description: string;
@@ -16,10 +17,6 @@ export interface WTEmptyStateProps {
     name: string;
   }[];
   title: string;
-}
-
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ');
 }
 
 export function WTEmptyState({ title, description, items, externalLink }: WTEmptyStateProps) {

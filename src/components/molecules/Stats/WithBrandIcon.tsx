@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowDownIcon, ArrowUpIcon } from '@heroicons/react/20/solid';
 import { Typography } from '../../atoms';
+import { classNames } from '~/helpers/class-merger';
 
 export interface StatsWithBrandIconProps {
   stats: {
@@ -11,10 +12,6 @@ export interface StatsWithBrandIconProps {
     name: string;
     stat: string;
   }[];
-}
-
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ');
 }
 
 export function StatsWithBrandIcon({ stats }: StatsWithBrandIconProps) {

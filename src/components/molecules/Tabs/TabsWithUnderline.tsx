@@ -1,9 +1,6 @@
 import React from 'react';
 import { TabsProps } from './TabsInPills';
-
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ');
-}
+import { classNames } from '~/helpers/class-merger';
 
 export function TabsWithUnderline({ tabs }: TabsProps) {
   return (

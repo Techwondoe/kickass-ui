@@ -1,13 +1,10 @@
 import React, { useState } from 'react';
 import { Switch } from '@headlessui/react';
+import { classNames } from '~/helpers/class-merger';
 
 export interface ToggleModuleProps {
   details?: string;
   label: string;
-}
-
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ');
 }
 
 export function WithLeftLabelAndDescription({ label, details }: ToggleModuleProps) {

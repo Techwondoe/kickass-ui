@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { RadioGroup } from '@headlessui/react';
+import { classNames } from '~/helpers/class-merger';
 
 export interface ColorPickerProps {
   colors: {
@@ -8,10 +9,6 @@ export interface ColorPickerProps {
     selectedColor: string;
   }[];
   label: string;
-}
-
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ');
 }
 
 export function ColorPicker({ label, colors }: ColorPickerProps) {

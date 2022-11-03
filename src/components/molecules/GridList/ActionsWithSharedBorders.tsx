@@ -1,5 +1,6 @@
 import React from 'react';
 import { Typography } from '~/components/atoms';
+import { classNames } from '~/helpers/class-merger';
 
 interface Action {
   href: string;
@@ -11,10 +12,6 @@ interface Action {
 
 export interface ActionWithSharedBorderProps {
   actions: Action[];
-}
-
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ');
 }
 
 export function ActionsWithSharedBorders({ actions }: ActionWithSharedBorderProps) {

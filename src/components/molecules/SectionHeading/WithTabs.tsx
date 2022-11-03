@@ -1,5 +1,6 @@
 import React from 'react';
 import { Typography, Button } from '../../atoms';
+import { classNames } from '~/helpers/class-merger';
 
 export interface SectionHeadingWithTabsProps {
   tabs: {
@@ -7,10 +8,6 @@ export interface SectionHeadingWithTabsProps {
     href: string;
     name: string;
   }[];
-}
-
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ');
 }
 
 export function SectionHeadingWithTabs({ tabs }: SectionHeadingWithTabsProps) {

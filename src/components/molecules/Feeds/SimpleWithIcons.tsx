@@ -1,5 +1,6 @@
 import React from 'react';
 import { Typography } from '~/components/atoms';
+import { classNames } from '~/helpers/class-merger';
 
 interface Timeline {
   content: string;
@@ -14,10 +15,6 @@ interface Timeline {
 
 export interface FeedsWithIconsProps {
   timeline: Timeline[];
-}
-
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ');
 }
 
 export function FeedsWithIcons({ timeline }: FeedsWithIconsProps) {

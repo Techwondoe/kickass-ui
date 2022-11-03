@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
 import { Switch } from '@headlessui/react';
-
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ');
-}
+import { classNames } from '~/helpers/class-merger';
 
 export function ToggleWithIcon() {
   const [enabled, setEnabled] = useState(false);

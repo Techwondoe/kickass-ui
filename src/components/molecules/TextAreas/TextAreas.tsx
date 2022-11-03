@@ -2,6 +2,7 @@ import React, { Fragment, useState } from 'react';
 import * as solid from '@heroicons/react/20/solid';
 import { Listbox, Transition } from '@headlessui/react';
 import { Button } from '~/components/atoms';
+import { classNames } from '~/helpers/class-merger';
 
 export interface TextAreasProps {
   avatarSrc: string;
@@ -15,10 +16,6 @@ export interface TextAreasProps {
     value: string;
   }[];
   placeholder: string;
-}
-
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ');
 }
 
 export function TextAreas({

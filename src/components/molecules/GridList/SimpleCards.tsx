@@ -1,5 +1,6 @@
 import React from 'react';
 import { Typography } from '~/components/atoms';
+import { classNames } from '~/helpers/class-merger';
 
 interface Projects {
   bgColor: string;
@@ -11,10 +12,6 @@ interface Projects {
 
 export interface SimpleGridListProps {
   projects: Projects[];
-}
-
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ');
 }
 
 export function SimpleCards({ projects }: SimpleGridListProps) {

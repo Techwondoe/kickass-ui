@@ -1,6 +1,5 @@
-/* This example requires Tailwind CSS v2.0+ */
-// import { ArrowSmDownIcon, ArrowSmUpIcon } from '@heroicons/react/solid';
 import React from 'react';
+import { classNames } from '~/helpers/class-merger';
 
 export interface StatsWithSharedBordersProps {
   stats: {
@@ -10,10 +9,6 @@ export interface StatsWithSharedBordersProps {
     previousStat: string;
     stat: string;
   }[];
-}
-
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ');
 }
 
 export function StatsWithSharedBorders({ stats }: StatsWithSharedBordersProps) {

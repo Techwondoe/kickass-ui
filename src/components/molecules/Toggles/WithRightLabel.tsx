@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
 import { Switch } from '@headlessui/react';
 import { ToggleModuleProps } from './WithLeftLabelAndDescription';
-
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ');
-}
+import { classNames } from '~/helpers/class-merger';
 
 export function WithRightLabel({ label, details }: ToggleModuleProps) {
   const [enabled, setEnabled] = useState(false);

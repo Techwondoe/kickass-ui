@@ -1,11 +1,8 @@
 import React from 'react';
+import { classNames } from '~/helpers/class-merger';
 
 export interface TabsProps extends React.HTMLAttributes<HTMLDivElement> {
   tabs: { current: boolean; href: string; name: string }[];
-}
-
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ');
 }
 
 export function TabsInPills({ tabs }: TabsProps) {

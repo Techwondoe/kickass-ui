@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { RadioGroup } from '@headlessui/react';
+import { classNames } from '~/helpers/class-merger';
 
 export interface CardProps {
   mailingLists: {
@@ -9,10 +10,6 @@ export interface CardProps {
     users: string;
   }[];
   title: string;
-}
-
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ');
 }
 
 export function Cards({ title, mailingLists }: CardProps) {

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { RadioGroup } from '@headlessui/react';
+import { classNames } from '~/helpers/class-merger';
 
 export interface ListWithDescriptionsInPanelProps {
   label: string;
@@ -7,10 +8,6 @@ export interface ListWithDescriptionsInPanelProps {
     description: string;
     name: string;
   }[];
-}
-
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ');
 }
 
 export function ListWithDescriptionsInPanel({ label, settings }: ListWithDescriptionsInPanelProps) {

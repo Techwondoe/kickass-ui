@@ -1,4 +1,5 @@
 import React from 'react';
+import { classNames } from '~/helpers/class-merger';
 
 export interface VerticalNavigationProps {
   navigation: {
@@ -8,10 +9,6 @@ export interface VerticalNavigationProps {
     icon?: any;
     name: string;
   }[];
-}
-
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ');
 }
 
 export function VerticalNavigation({ navigation }: VerticalNavigationProps) {

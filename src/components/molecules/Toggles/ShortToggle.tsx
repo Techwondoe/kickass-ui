@@ -1,12 +1,9 @@
 import React, { useState } from 'react';
 import { Switch } from '@headlessui/react';
-
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ');
-}
+import { classNames } from '~/helpers/class-merger';
 
 export function ShortToggle() {
-  const [enabled, setEnabled] = useState(false);
+  const [enabled, setEnabled] = useState<boolean>(false);
 
   return (
     <Switch

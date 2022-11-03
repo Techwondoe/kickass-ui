@@ -1,5 +1,6 @@
 import React from 'react';
 import { Typography } from '~/components/atoms';
+import { classNames } from '~/helpers/class-merger';
 
 export interface Props {
   description: string;
@@ -14,10 +15,6 @@ export interface Props {
     title: string;
   }[];
   title: string;
-}
-
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ');
 }
 
 export function WithStartingPoints({ title, description, items, externalLink }: Props) {

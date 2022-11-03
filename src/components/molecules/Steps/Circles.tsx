@@ -1,9 +1,6 @@
 import React from 'react';
 import { StepsProps } from './Simple';
-
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ');
-}
+import { classNames } from '~/helpers/class-merger';
 
 export function CircleSteps({ steps }: StepsProps) {
   return (
@@ -21,10 +18,6 @@ export function CircleSteps({ steps }: StepsProps) {
                 <a
                   href="#"
                   className="relative flex h-8 w-8 items-center justify-center rounded-full bg-indigo-600 hover:bg-indigo-900">
-                  {/* <CheckIcon
-                    className="h-5 w-5 text-white"
-                    aria-hidden="true"
-                  /> */}
                   <span className="sr-only">{step.name}</span>
                 </a>
               </div>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { RadioGroup } from '@headlessui/react';
+import { classNames } from '~/helpers/class-merger';
 
 export interface SimpleTableProps {
   label: string;
@@ -9,10 +10,6 @@ export interface SimpleTableProps {
     priceMonthly: number;
     priceYearly: number;
   }[];
-}
-
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ');
 }
 
 export function SimpleTable({ label, plans }: SimpleTableProps) {

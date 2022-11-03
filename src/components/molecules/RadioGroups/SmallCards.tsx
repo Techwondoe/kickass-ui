@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { RadioGroup } from '@headlessui/react';
 import { Typography } from '../../atoms';
+import { classNames } from '~/helpers/class-merger';
 
 export interface SmallCardsProps {
   details: string;
@@ -9,10 +10,6 @@ export interface SmallCardsProps {
     inStock: boolean;
     name: string;
   }[];
-}
-
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ');
 }
 
 export function SmallCards({ label, details, memoryOptions }: SmallCardsProps) {

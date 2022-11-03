@@ -1,11 +1,13 @@
 import React from 'react';
 
+/**
+ * @params id - unique id
+ * @params label - label to display above component
+ * @params options - list of options available
+ */
 export interface SelectMenuProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
-  /** Provide an id for the select menus */
   id: string;
-  /** Provide label text for the select menus */
   label: string;
-  /** Provide options for the select menus */
   options: string[];
 }
 

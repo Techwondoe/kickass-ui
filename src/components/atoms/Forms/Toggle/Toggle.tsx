@@ -3,6 +3,14 @@ import { Switch } from '@headlessui/react';
 import { ColorCodes } from '~/constants/types';
 import { classNames } from '~/helpers/class-merger';
 
+/**
+ * @params checked - flag to display the toggle
+ * @params color - background color of the track
+ * @params disabled - Toggle clickable or not
+ * @params id - unique id
+ * @params label - text to display below toggle
+ * @params name - name for html attribute
+ */
 export interface ToggleProps extends HTMLAttributes<HTMLInputElement> {
   checked?: boolean;
   color?: ColorCodes;

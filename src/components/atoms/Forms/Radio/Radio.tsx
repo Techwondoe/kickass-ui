@@ -1,6 +1,16 @@
 import React from 'react';
 import { ColorCodes } from '~/constants/types';
 
+/**
+ * @params checked - Radio is checked or not
+ * @params color - Border color when checked
+ * @params disabled - Radio can be toggled or not
+ * @params id - unique id
+ * @params name - name attribute for html
+ * @params onChange - callback when radio value is changed
+ * @params title - Text to be display below radio
+ * @params value - Value to determine wether radio is toggled or not
+ */
 export interface RadioProps extends React.HTMLAttributes<HTMLInputElement> {
   checked?: boolean;
   color?: ColorCodes;

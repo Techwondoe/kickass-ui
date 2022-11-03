@@ -116,10 +116,11 @@ const App = () => {
 
 |  Component |  Use |
 |---|---|
-| `extendTheme` | Create a theme object extending another theme object `( base || dark || custom )`  |
+| `extendTheme` | Create a theme object extending another theme object `( base or dark or custom )`  |
 | `applyTheme`  | Manually apply theme  |
 | `<ThemeProvider/>`  | Theme context to automatically apply custom theme. Pass props `customTheme`  |
-| `themes (base || dark)` | Themes defined in codebase |
+| `themes (base or dark)` | Themes defined in codebase |
+| `ColorCodes` | Enum with the colorcodes, refer [ColorCodes](./src/constants/types.ts)) |
 
 ## Component list
 
@@ -127,13 +128,14 @@ const App = () => {
 
 | Component  | Props |
 |------------|-------|
-| Button     |  [Button Props](./src/components/atoms/Button/Button.types.ts)     |
+| Button     |  [Button Props](./src/components/atoms/Button/Button.types.ts)         |
 | Avatar     |  [Avatar Props](./src/components/atoms/Forms/Avatar/Avatar.types.ts)     |
 | Badge      |  [Badge Props](./src/components/atoms/Forms/Badge/Badge.tsx)     |
 | Checkbox   |  [Checkbox Props](./src/components/atoms/Forms/Checkbox/Checkbox.types.ts)      |
-| Radios     |       |
-| SelectMenu |       |
-| Toggle     |       |
+| Radio      |  [Radio Props](./src/components/atoms/Forms/Radio/Radio.tsx)     |
+| SelectMenu |  [SelectMenu Props](./src/components/atoms/Forms/SelectMenu/SelectMenu.tsx)     |
+| TextArea   |  [TextArea Props](./src/components/atoms/Forms/TextArea/TextArea.types.ts)      |
+| Toggle     | [Toggle Props](./src/components/atoms/Forms/Toggle/Toggle.tsx)      |
 | Slider     | [Slider Props](./src/components/atoms/Slider/Slider.types.ts)
 | TextField   | [TextField Props](./src/components/atoms/TextField/TextField.types.tsx)      |
 | Typography   | [Typography Props](./src/components/atoms/Typography/Typography.types.ts)      |

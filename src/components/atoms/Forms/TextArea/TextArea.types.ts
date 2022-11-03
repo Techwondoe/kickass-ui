@@ -1,5 +1,34 @@
-import React, { HTMLAttributes } from 'react';
+import { HTMLAttributes } from 'react';
 
+export enum TextAreaResize {
+  BOTH = 'both',
+  HORIZONTAL = 'horizontal',
+  NONE = 'none',
+  VERTICAL = 'vertical',
+}
+
+export enum TextAreaWrap {
+  HARD = 'hard',
+  SOFT = 'soft',
+}
+
+/**
+ * @params autoFocus - Autofocus the TextArea on load
+ * @params cols - The cols attribute specifies the visible width of a text area.
+ * @params disabled - TextArea editable or not
+ * @params id - unique id
+ * @params label - text to display above textarea
+ * @params maxLength - Max number of characters
+ * @params minLength - Min number of characters
+ * @params onChange - On value change for text area
+ * @params placeholder - Place holder text for
+ * @params readOnly - TextArea editable or not
+ * @params required - Submittable without value
+ * @params resize - Resize on screen dimensions change
+ * @params rows - The rows attribute specifies the visible height of text area
+ * @params value - value/text to display
+ * @params wrap - Wrap the text to next line or not
+ */
 export interface TextAreaProps extends HTMLAttributes<HTMLTextAreaElement> {
   /** Provide a autofocus attribute for the textarea */
   autoFocus?: boolean;
@@ -24,30 +53,11 @@ export interface TextAreaProps extends HTMLAttributes<HTMLTextAreaElement> {
   /** Provide a required state for the textarea */
   required?: boolean;
   /** Provide a resize attribute for the textarea */
-  resize?: 'none' | 'both' | 'horizontal' | 'vertical';
+  resize?: TextAreaResize;
   /** Provide a rows attribute for the textarea */
   rows?: number;
   /** Provide a value for the textarea */
   value: string;
   /** Provide a wrap attribute for the textarea */
-  wrap?: 'hard' | 'soft';
-}
-
-export function Textarea({ label, id, placeholder, value, onChange, ...props }: TextAreaProps) {
-  return (
-    <div>
-      <label htmlFor={id} className="block text-sm font-medium text-gray-700">
-        {label}
-      </label>
-      <div className="mt-1">
-        <textarea
-          {...props}
-          rows={4}
-          id={id}
-          className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
-          defaultValue=""
-        />
-      </div>
-    </div>
-  );
+  wrap?: TextAreaWrap;
 }

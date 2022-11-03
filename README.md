@@ -120,7 +120,7 @@ const App = () => {
 | `applyTheme`  | Manually apply theme  |
 | `<ThemeProvider/>`  | Theme context to automatically apply custom theme. Pass props `customTheme`  |
 | `themes (base or dark)` | Themes defined in codebase |
-| `ColorCodes` | Enum with the colorcodes, refer [ColorCodes](./src/constants/types.ts)) |
+| `ColorCodes` | Enum with the colorcodes, refer [ColorCodes](./src/constants/types.ts) |
 
 ## Component list
 

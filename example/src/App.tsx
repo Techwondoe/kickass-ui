@@ -3,7 +3,7 @@ import {
   Typography,
   Button,
   Avatar,
-  Toggles,
+  Toggle,
   Accordion,
   Slider,
   ListWithRadioOnRight,
@@ -65,7 +65,7 @@ const App = () => {
           test the button
         </Button>
         <Avatar alt={''} src={'https://avatars.githubusercontent.com/u/75943412?v=4'} />
-        <Toggles id={'test'} name={'test toggle'} />
+        <Toggle id={'test'} name={'test toggle'} />
         <Accordion
           accordoinData={[
             {

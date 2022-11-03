@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 import { PaperClipIcon } from '@heroicons/react/20/solid';
-import { Typography } from '~/components/atoms';
+import { Typography, TypographyVariants } from '~/components/atoms';
 
 export interface DescriptionListProps {
   attachments?: {
@@ -30,7 +30,7 @@ export function DescriptionList({
   return (
     <div className="overflow-hidden bg-white shadow sm:rounded-lg">
       <div className="px-4 py-5 sm:px-6">
-        <Typography variant="h3">{title}</Typography>
+        <Typography variant={TypographyVariants.H3}>{title}</Typography>
         <Typography>{description}</Typography>
       </div>
       <div className="border-t border-gray-200 px-4 py-5 sm:p-0">

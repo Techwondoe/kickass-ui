@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 import { PlusIcon } from '@heroicons/react/20/solid';
-import { Typography, Button, ButtonVariants } from '~/components/atoms';
+import { Typography, Button, ButtonVariants, TypographyVariants } from '~/components/atoms';
 
 export interface WREmptyStateProps {
   description: string;
@@ -32,7 +32,7 @@ export function WREmptyState({
         <div className="text-center">
           <div className="mx-auto h-12 w-12 text-gray-400">{icon}</div>
 
-          <Typography variant="h2" className="mt-2">
+          <Typography variant={TypographyVariants.H2} className="mt-2">
             {title}
           </Typography>
           <Typography className="mt-1">{description}</Typography>
@@ -52,7 +52,7 @@ export function WREmptyState({
         </form>
       </div>
       <div className="mt-10">
-        <Typography variant="h3">{peopleListLabel}</Typography>
+        <Typography variant={TypographyVariants.H3}>{peopleListLabel}</Typography>
         <ul role="list" className="mt-4 divide-y divide-gray-200 border-t border-b border-gray-200">
           {people.map((person, personIdx) => (
             <li key={personIdx} className="flex items-center justify-between space-x-3 py-4">

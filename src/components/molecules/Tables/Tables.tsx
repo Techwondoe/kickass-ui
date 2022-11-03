@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography, Button } from '~/components/atoms';
+import { Typography, Button, TypographyVariants } from '~/components/atoms';
 
 export interface TableProps {
   buttonText: string;
@@ -25,7 +25,7 @@ export function Simple({
     <div className="px-4 sm:px-6 lg:px-8">
       <div className="sm:flex sm:items-center">
         <div className="sm:flex-auto space-y-2">
-          <Typography variant="h1">{title}</Typography>
+          <Typography variant={TypographyVariants.H1}>{title}</Typography>
           <Typography>{description}</Typography>
         </div>
         <div className="mt-4 sm:mt-0 sm:ml-16 sm:flex-none">

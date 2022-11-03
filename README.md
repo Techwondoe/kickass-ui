@@ -127,11 +127,13 @@ const App = () => {
 
 | Component  | Props |
 |------------|-------|
-| Button     |  [Button Props]('./src/components/atoms/Button/Button.types.ts)     |
+| Button     |  [Button Props](./src/components/atoms/Button/Button.types.ts)     |
 | Avatar     |       |
 | Badge      |       |
 | Checkbox   |       |
 | Radios     |       |
 | SelectMenu |       |
-| TextArea   |       |
 | Toggle     |       |
+| Slider     | [Slider Props](./src/components/atoms/Slider/Slider.types.ts)
+| TextField   | [TextField Props](./src/components/atoms/TextField/TextField.types.tsx)      |
+| Typography   | [Typography Props](./src/components/atoms/Typography/Typography.types.ts)      |

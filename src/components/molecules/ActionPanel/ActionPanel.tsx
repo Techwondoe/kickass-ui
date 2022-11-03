@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, ButtonVariants, Typography } from '~/components/atoms';
+import { Button, ButtonVariants, Typography, TypographyVariants } from '~/components/atoms';
 
 export interface ActionPanelProps {
   button?: {
@@ -22,7 +22,7 @@ export function ActionPanel({ title, description, button, link, buttonRight }: A
   return (
     <div className="bg-white shadow sm:rounded-lg">
       <div className="px-4 py-5 sm:p-6">
-        <Typography variant="h3">{title}</Typography>
+        <Typography variant={TypographyVariants.H3}>{title}</Typography>
         <div className={`${buttonRight && `sm:flex sm:items-start sm:justify-between`}`}>
           <div className="mt-2 max-w-xl text-sm text-gray-500">
             <Typography>{description}</Typography>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography } from '../../atoms';
+import { Typography, TypographyVariants } from '../../atoms';
 
 export interface ListWithRadioOnRightProps extends React.HTMLAttributes<HTMLInputElement> {
   accounts: { description: string; id: string; name: string }[];
@@ -15,7 +15,7 @@ export function ListWithRadioOnRight({
 }: ListWithRadioOnRightProps) {
   return (
     <div>
-      <Typography variant="h2">{title}</Typography>
+      <Typography variant={TypographyVariants.H2}>{title}</Typography>
       <Typography>{description}</Typography>
       <fieldset className="mt-2">
         <legend className="sr-only">Bank account</legend>

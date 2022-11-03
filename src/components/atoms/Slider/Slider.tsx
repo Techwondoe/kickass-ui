@@ -1,35 +1,23 @@
-import React, { HTMLAttributes } from 'react';
+import React from 'react';
 import { ColorCodes } from '~/constants/types';
+import { SliderProps, SliderSizes } from './Slider.types';
 
-export type SliderSizes = 'small' | 'medium' | 'large';
-
-export interface SliderProps extends HTMLAttributes<HTMLInputElement> {
-  className?: string;
-  color?: ColorCodes;
-  disabled?: boolean;
-  max?: number;
-  min?: number;
-  size?: SliderSizes;
-  step?: number;
-}
+const sizes = {
+  small: 'w-24 h-1',
+  medium: 'w-32 h-2',
+  large: 'w-48 h-3',
+};
 
 export function Slider({
   color = ColorCodes.PRIMARY,
-  size = 'small',
+  size = SliderSizes.SMALL,
   step,
   className,
   disabled = false,
   min = 0,
   max,
-  //   ref,
   ...restProps
 }: SliderProps) {
-  const sizes = {
-    small: 'w-24 h-1',
-    medium: 'w-32 h-2',
-    large: 'w-48 h-3',
-  };
-
   return (
     <input
       type="range"

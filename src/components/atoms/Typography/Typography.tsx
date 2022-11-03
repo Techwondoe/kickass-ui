@@ -1,7 +1,12 @@
 import React from 'react';
 import { twMerge } from 'tailwind-merge';
 import { ColorCodes } from '~/constants/types';
-import { TypographyProps } from './Typography.constants';
+import {
+  TypographyAlignments,
+  TypographyProps,
+  TypographyVariants,
+  TypographyWhitespaces,
+} from './Typography.types';
 
 /**
  * @param {TypographyProps} props
@@ -9,15 +14,14 @@ import { TypographyProps } from './Typography.constants';
  * @description This component is used to render text
  * @example <Typography variant="h1">Heading 1</Typography>
  */
-
 export function Typography({
   children,
   id,
-  align = 'center',
+  align = TypographyAlignments.CENTER,
   color = ColorCodes.PRIMARY,
-  variant = 'h1',
+  variant = TypographyVariants.H1,
   className = '',
-  whitespace = 'normal',
+  whitespace = TypographyWhitespaces.NORMAL,
   ...restProps
 }: TypographyProps) {
   const classes = twMerge(`text-${color}`, whitespace ? `whitespace-${whitespace}` : '', className);

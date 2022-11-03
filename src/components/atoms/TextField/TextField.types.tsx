@@ -2,9 +2,16 @@
 
 import { ColorCodes } from '~/constants/types';
 
-export type TextFieldVariants = 'filled' | 'outlined' | 'standard';
+export enum TextFieldVariants {
+  FILLED = 'filled',
+  OUTLINED = 'outlined',
+  STANDARD = 'standard',
+}
 
-export type TextFieldSizes = 'small' | 'normal';
+export enum TextFieldSizes {
+  NORMAL = 'normal',
+  SMALL = 'small',
+}
 
 /**
  * Defines the props for the TextField component
@@ -27,7 +34,6 @@ export type TextFieldSizes = 'small' | 'normal';
  * @param className - Additional class names to be added to the TextField
  * @param restProps - Additional props to be spread to the TextField
  */
-
 export interface TextFieldProps {
   className?: string;
   color?: ColorCodes;

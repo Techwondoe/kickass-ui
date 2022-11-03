@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography } from '~/components/atoms';
+import { Typography, TypographyVariants } from '~/components/atoms';
 
 interface People {
   imageUrl: string;
@@ -29,7 +29,9 @@ export function FeedsWithAvatars({ activityItems }: FeedsWithAvatarsProps) {
               <img className="h-6 w-6 rounded-full" src={activityItem.person.imageUrl} alt="" />
               <div className="flex-1 space-y-1">
                 <div className="flex items-center justify-between">
-                  <Typography variant="h3">{activityItem.person.name}</Typography>
+                  <Typography variant={TypographyVariants.H3}>
+                    {activityItem.person.name}
+                  </Typography>
                   <Typography>{activityItem.time}</Typography>
                 </div>
                 <Typography>

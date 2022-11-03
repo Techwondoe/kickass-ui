@@ -1,6 +1,6 @@
 import React from 'react';
 import { Avatar } from '../../atoms/forms/Avatar';
-import { Button, ButtonVariants, Typography } from '../../atoms';
+import { Button, ButtonVariants, Typography, TypographyVariants } from '../../atoms';
 
 export interface PageHeadingWithAvatarAndActionProps {
   actions: {
@@ -33,7 +33,7 @@ export function PageHeadingWithAvatarAndActions({
           but preserve the same layout if the text wraps without making the image jump around.
         */}
         <div className="pt-1.5">
-          <Typography variant="h1">Ricardo Cooper</Typography>
+          <Typography variant={TypographyVariants.H1}>Ricardo Cooper</Typography>
           <Typography>
             Applied for{' '}
             <a href="#" className="text-gray-900">

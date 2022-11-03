@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 import { PlusIcon } from '@heroicons/react/20/solid';
-import { Typography, Button } from '~/components/atoms';
+import { Typography, Button, TypographyVariants } from '~/components/atoms';
 
 export interface WRGEmptyStateProps {
   accesibilityLabel: string[];
@@ -33,7 +33,7 @@ export function WRGEmptyState({
       <div>
         <div className="text-center">
           <div className="mx-auto h-12 w-12 text-gray-400">{icon}</div>
-          <Typography variant="h2">{title}</Typography>
+          <Typography variant={TypographyVariants.H2}>{title}</Typography>
           <Typography>{description}</Typography>
         </div>
         <form className="mt-6 sm:flex sm:items-center" action="#">
@@ -69,7 +69,7 @@ export function WRGEmptyState({
         </form>
       </div>
       <div className="mt-10">
-        <Typography variant="h3">{peopleListLabel}</Typography>
+        <Typography variant={TypographyVariants.H3}>{peopleListLabel}</Typography>
         <ul role="list" className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
           {people.map((person, personIdx) => (
             <li key={personIdx}>

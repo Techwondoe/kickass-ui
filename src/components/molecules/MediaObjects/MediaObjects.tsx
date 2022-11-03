@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography } from '~/components/atoms';
+import { Typography, TypographyVariants } from '~/components/atoms';
 
 export interface MediaObjectProps extends React.HTMLAttributes<HTMLDivElement> {
   align?: 'center' | 'bottom' | 'stretched';
@@ -22,7 +22,7 @@ export function MediaObjects({ imgSrc, heading, body, align }: MediaObjectProps)
         />
       </div>
       <div className="space-y-2">
-        <Typography variant="h4">{heading}</Typography>
+        <Typography variant={TypographyVariants.H4}>{heading}</Typography>
         <Typography>{body}</Typography>
       </div>
     </div>

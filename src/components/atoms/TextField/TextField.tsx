@@ -1,7 +1,7 @@
 import React from 'react';
 import { twMerge } from 'tailwind-merge';
 import { ColorCodes } from '~/constants/types';
-import { TextFieldProps } from './TextField.constants';
+import { TextFieldProps, TextFieldSizes, TextFieldVariants } from './TextField.types';
 
 /**
  * @param {TextFieldProps} props - The props for the TextField component
@@ -9,7 +9,6 @@ import { TextFieldProps } from './TextField.constants';
  * @description This component is used to render a TextField which could be a text input, password input, email input, textarea, or select (dropdown)
  * @example <TextField color="primary" />
  */
-
 export function TextField({
   color = ColorCodes.PRIMARY,
   disabled,
@@ -21,8 +20,8 @@ export function TextField({
   placeholder,
   type,
   value,
-  variant = 'standard',
-  size = 'normal',
+  variant = TextFieldVariants.STANDARD,
+  size = TextFieldSizes.NORMAL,
   fullWidth,
   multiline,
   select,

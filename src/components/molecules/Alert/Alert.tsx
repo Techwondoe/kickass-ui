@@ -1,6 +1,6 @@
 import React from 'react';
 import { XMarkIcon } from '@heroicons/react/24/outline';
-import { Typography, Button } from '~/components/atoms';
+import { Typography, Button, TypographyVariants } from '~/components/atoms';
 import { ColorCodes } from '~/constants/types';
 
 export interface AlertProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -30,7 +30,7 @@ export function Alert({
         <div className="flex">
           <div className="flex-shrink-0">{iconDisplay}</div>
           <div className="ml-3">
-            <Typography variant="h3">{title}</Typography>
+            <Typography variant={TypographyVariants.H3}>{title}</Typography>
             {description && (
               <div
                 className={`mt-2 text-sm text-${color}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Avatar, Typography } from '~/components/atoms';
+import { Avatar, Typography, TypographyVariants } from '~/components/atoms';
 
 export interface PageHeadingCardProps {
   stats: {
@@ -16,7 +16,7 @@ export interface PageHeadingCardProps {
 export function CardWithAvatarAndStats({ user, stats }: PageHeadingCardProps) {
   return (
     <div className="overflow-hidden rounded-lg bg-white shadow">
-      <Typography variant="h2" className="sr-only" id="profile-overview-title">
+      <Typography variant={TypographyVariants.H2} className="sr-only" id="profile-overview-title">
         Profile Overview
       </Typography>
       <div className="bg-white p-6">

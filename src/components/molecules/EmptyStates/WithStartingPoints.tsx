@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography } from '~/components/atoms';
+import { Typography, TypographyVariants } from '~/components/atoms';
 import { classNames } from '~/helpers/class-merger';
 
 export interface Props {
@@ -20,7 +20,7 @@ export interface Props {
 export function WithStartingPoints({ title, description, items, externalLink }: Props) {
   return (
     <div>
-      <Typography variant="h2">{title}</Typography>
+      <Typography variant={TypographyVariants.H2}>{title}</Typography>
       <Typography>{description}</Typography>
       <ul
         role="list"
@@ -36,7 +36,7 @@ export function WithStartingPoints({ title, description, items, externalLink }: 
                 <item.icon className="h-6 w-6 text-white" aria-hidden="true" />
               </div>
               <div>
-                <Typography variant="h3">
+                <Typography variant={TypographyVariants.H3}>
                   <a href="#" className="focus:outline-none">
                     <span className="absolute inset-0" aria-hidden="true" />
                     <span>{item.title}</span>

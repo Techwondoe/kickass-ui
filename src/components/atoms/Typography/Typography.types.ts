@@ -1,11 +1,32 @@
 import { ReactNode } from 'react';
 import { ColorCodes } from '~/constants/types';
 
-export type TypographyAlignments = 'center' | 'inherit' | 'justify' | 'left' | 'right';
+export enum TypographyAlignments {
+  CENTER = 'center',
+  INHERIT = 'inherit',
+  JUSTIFY = 'justify',
+  LEFT = 'left',
+  RIGHT = 'right',
+}
 
-export type TypographyVariants = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span';
+export enum TypographyVariants {
+  H1 = 'h1',
+  H2 = 'h2',
+  H3 = 'h3',
+  H4 = 'h4',
+  H5 = 'h5',
+  H6 = 'h6',
+  P = 'p',
+  SPAN = 'span',
+}
 
-export type TypographyWhitespaces = 'normal' | 'nowrap' | 'pre' | 'pre-line' | 'pre-wrap';
+export enum TypographyWhitespaces {
+  NORMAL = 'normal',
+  NOWRAP = 'nowrap',
+  PRE = 'pre',
+  PRE_LINE = 'pre-line',
+  PRE_WRAP = 'pre-wrap',
+}
 
 /**
  * Defines the props of the component.
@@ -17,7 +38,6 @@ export type TypographyWhitespaces = 'normal' | 'nowrap' | 'pre' | 'pre-line' | '
  * @params whitespace - White space to apply to the component.
  * @params className - Override or extend the styles applied to the component.
  */
-
 export interface TypographyProps {
   align?: TypographyAlignments;
   children: ReactNode;

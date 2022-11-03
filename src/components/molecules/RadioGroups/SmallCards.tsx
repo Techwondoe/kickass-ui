@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { RadioGroup } from '@headlessui/react';
-import { Typography } from '../../atoms';
+import { Typography, TypographyVariants } from '../../atoms';
 import { classNames } from '~/helpers/class-merger';
 
 export interface SmallCardsProps {
@@ -18,7 +18,7 @@ export function SmallCards({ label, details, memoryOptions }: SmallCardsProps) {
   return (
     <div>
       <div className="flex items-center justify-between">
-        <Typography variant="h2">{label}</Typography>
+        <Typography variant={TypographyVariants.H2}>{label}</Typography>
         <a href="#" className="text-sm font-medium text-indigo-600 hover:text-indigo-500">
           {details}
         </a>

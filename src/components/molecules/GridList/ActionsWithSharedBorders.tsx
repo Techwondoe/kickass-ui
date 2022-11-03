@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography } from '~/components/atoms';
+import { Typography, TypographyVariants } from '~/components/atoms';
 import { classNames } from '~/helpers/class-merger';
 
 interface Action {
@@ -38,7 +38,7 @@ export function ActionsWithSharedBorders({ actions }: ActionWithSharedBorderProp
               )}></span>
           </div>
           <div className="mt-8">
-            <Typography variant="h3">
+            <Typography variant={TypographyVariants.H3}>
               <a href={action.href} className="focus:outline-none">
                 {/* Extend touch target to entire panel */}
                 <span className="absolute inset-0" aria-hidden="true" />

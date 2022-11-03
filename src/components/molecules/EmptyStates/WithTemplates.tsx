@@ -1,6 +1,6 @@
 import { ChevronRightIcon } from '@heroicons/react/20/solid';
 import React from 'react';
-import { Typography } from '~/components/atoms';
+import { Typography, TypographyVariants } from '~/components/atoms';
 import { classNames } from '~/helpers/class-merger';
 
 export interface WTEmptyStateProps {
@@ -22,7 +22,7 @@ export interface WTEmptyStateProps {
 export function WTEmptyState({ title, description, items, externalLink }: WTEmptyStateProps) {
   return (
     <div className="mx-auto max-w-lg">
-      <Typography variant="h2">{title}</Typography>
+      <Typography variant={TypographyVariants.H2}>{title}</Typography>
       <Typography>{description}</Typography>
       <ul role="list" className="mt-6 divide-y divide-gray-200 border-t border-b border-gray-200">
         {items.map((item, itemIdx) => (

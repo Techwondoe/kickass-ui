@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from '~/components/atoms';
+import { Button, ButtonVariants } from '~/components/atoms';
 import { ColorCodes } from '~/constants/types';
 
 export interface ButtonGroupsProps extends React.HTMLAttributes<HTMLButtonElement> {
@@ -11,7 +11,11 @@ export function ButtonGroups({ label, ...props }: ButtonGroupsProps) {
     <span className="isolate inline-flex rounded-md shadow-sm">
       {label.map((item, index) => {
         return (
-          <Button key={index} {...props} color={ColorCodes.PRIMARY} variant="contained">
+          <Button
+            key={index}
+            {...props}
+            color={ColorCodes.PRIMARY}
+            variant={ButtonVariants.CONTAINED}>
             {item}
           </Button>
         );

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography, Button } from '../../atoms';
+import { Typography, Button, ButtonVariants } from '../../atoms';
 import { classNames } from '~/helpers/class-merger';
 
 export interface SectionHeadingWithTabsProps {
@@ -16,8 +16,8 @@ export function SectionHeadingWithTabs({ tabs }: SectionHeadingWithTabsProps) {
       <div className="md:flex md:items-center md:justify-between">
         <Typography variant="h3">Candidates</Typography>
         <div className="mt-3 flex md:absolute md:top-3 md:right-0 md:mt-0 space-x-4">
-          <Button variant="outlined">Share</Button>
-          <Button variant="contained">Create</Button>
+          <Button variant={ButtonVariants.OUTLINED}>Share</Button>
+          <Button variant={ButtonVariants.CONTAINED}>Create</Button>
         </div>
       </div>
       <div className="mt-4">

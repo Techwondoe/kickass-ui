@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Typography } from '~/components/atoms';
+import { Button, ButtonVariants, Typography } from '~/components/atoms';
 
 export interface ActionPanelProps {
   button?: {
@@ -29,7 +29,7 @@ export function ActionPanel({ title, description, button, link, buttonRight }: A
           </div>
           {button && (
             <div className="mt-5">
-              <Button variant="contained" className="sm:text-sm">
+              <Button variant={ButtonVariants.CONTAINED} className="sm:text-sm">
                 {button.label}
               </Button>
             </div>

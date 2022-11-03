@@ -1,6 +1,6 @@
 import React from 'react';
 import { Avatar } from '../../atoms/forms/Avatar';
-import { Button, Typography } from '../../atoms';
+import { Button, ButtonSizes, Typography } from '../../atoms';
 
 export interface PageHeadingWithBannerProps {
   actions: {
@@ -38,7 +38,7 @@ export function PageHeadingWithBannerImage({ actions, profile }: PageHeadingWith
             </div>
             <div className="justify-stretch mt-6 flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-4">
               {actions.map((action, index) => (
-                <Button key={index} size="small">
+                <Button key={index} size={ButtonSizes.SMALL}>
                   <action.icon className="-ml-1 mr-2 h-5 w-5 text-gray-400" aria-hidden="true" />
                   <span>{action.buttonText}</span>
                 </Button>

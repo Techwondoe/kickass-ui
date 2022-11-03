@@ -1,7 +1,7 @@
 import React from 'react';
 import { twMerge } from 'tailwind-merge';
 import { ColorCodes } from '~/constants/types';
-import { ButtonProps } from './Button.constants';
+import { ButtonProps, ButtonShapes, ButtonSizes, ButtonVariants } from './Button.types';
 
 const sizes = {
   small: 'px-2 py-1 text-sm',
@@ -26,17 +26,16 @@ const shapes = {
  * @description This component is used to render a button
  * @example <Button color="primary" size="medium" onClick={handleClick}>Click Me</Button>
  */
-
 export function Button({
   children,
-  variant = 'contained',
+  variant = ButtonVariants.CONTAINED,
   color = ColorCodes.PRIMARY,
-  size = 'medium',
+  size = ButtonSizes.MEDIUM,
   fullWidth = false,
   StartIcon,
   EndIcon,
   href,
-  shape = 'rounded',
+  shape = ButtonShapes.ROUNDED,
   className = '',
   ...restProps
 }: ButtonProps) {

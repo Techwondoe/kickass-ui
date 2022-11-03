@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Typography } from '../../atoms';
+import { Button, ButtonVariants, Typography } from '../../atoms';
 
 export interface SectionHeadingProps {
   actions?: {
@@ -20,7 +20,9 @@ export function SectionHeading({ title, description, actions }: SectionHeadingPr
       <Typography>{description}</Typography>
       <div className="mt-3 flex sm:mt-0 sm:ml-4 space-x-4">
         {actions?.map((action) => (
-          <Button key={action.label} variant={action.active ? 'contained' : 'outlined'}>
+          <Button
+            key={action.label}
+            variant={action.active ? ButtonVariants.CONTAINED : ButtonVariants.OUTLINED}>
             {action.label}
           </Button>
         ))}

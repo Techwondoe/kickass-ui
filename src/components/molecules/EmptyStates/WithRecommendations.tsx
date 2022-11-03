@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 import { PlusIcon } from '@heroicons/react/20/solid';
-import { Typography, Button } from '~/components/atoms';
+import { Typography, Button, ButtonVariants } from '~/components/atoms';
 
 export interface WREmptyStateProps {
   description: string;
@@ -66,7 +66,7 @@ export function WREmptyState({
                 </div>
               </div>
               <div className="flex-shrink-0">
-                <Button variant="contained">
+                <Button variant={ButtonVariants.CONTAINED}>
                   <PlusIcon className="-ml-1 mr-0.5 h-5 w-5 text-gray-400" aria-hidden="true" />
                   <span className="text-sm font-medium text-gray-900">
                     {' '}

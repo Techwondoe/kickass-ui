@@ -127,7 +127,7 @@ const App = () => {
 
 | Component  | Props |
 |------------|-------|
-| Button     |       |
+| Button     |  [Button Props]('./src/components/atoms/Button/Button.types.ts)     |
 | Avatar     |       |
 | Badge      |       |
 | Checkbox   |       |

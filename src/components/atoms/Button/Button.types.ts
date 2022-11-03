@@ -1,11 +1,22 @@
 import React, { HTMLAttributes, ReactNode } from 'react';
 import { ColorCodes } from '~/constants/types';
 
-export type ButtonVariants = 'contained' | 'outlined' | 'text';
+export enum ButtonVariants {
+  CONTAINED = 'contained',
+  OUTLINED = 'outlined',
+  TEXT = 'text',
+}
 
-export type ButtonSizes = 'small' | 'medium' | 'large';
+export enum ButtonSizes {
+  LARGE = 'large',
+  MEDIUM = 'medium',
+  SMALL = 'small',
+}
 
-export type ButtonShapes = 'rounded' | 'square';
+export enum ButtonShapes {
+  ROUNDED = 'rounded',
+  SQUARE = 'square',
+}
 
 /**
  * Defines the props of the component

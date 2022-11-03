@@ -27,7 +27,7 @@ const App = () => {
   return (
     <ThemeProvider customTheme={customTheme}>
       <div style={{ padding: 20 }}>
-        <Typography color="custom" variant="h1">
+        <Typography color="primary" variant="h1">
           test
         </Typography>
         <Typography color="secondary" variant="h2">

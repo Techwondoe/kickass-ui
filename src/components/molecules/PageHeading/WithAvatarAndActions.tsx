@@ -1,6 +1,6 @@
 import React from 'react';
 import { Avatar } from '../../atoms/forms/Avatar';
-import { Button, Typography } from '../../atoms';
+import { Button, ButtonVariants, Typography } from '../../atoms';
 
 export interface PageHeadingWithAvatarAndActionProps {
   actions: {
@@ -45,7 +45,9 @@ export function PageHeadingWithAvatarAndActions({
       </div>
       <div className="justify-stretch mt-6 flex flex-col-reverse space-y-4 space-y-reverse sm:flex-row-reverse sm:justify-end sm:space-y-0 sm:space-x-3 sm:space-x-reverse md:mt-0 md:flex-row md:space-x-3">
         {actions.map((action, index) => (
-          <Button key={index} variant={action.active ? 'contained' : 'outlined'}>
+          <Button
+            key={index}
+            variant={action.active ? ButtonVariants.CONTAINED : ButtonVariants.OUTLINED}>
             {action.buttonText}
           </Button>
         ))}

@@ -2,7 +2,7 @@ import React, { Fragment, useRef, useState } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import { ExclamationTriangleIcon } from '@heroicons/react/24/outline';
 import { XMarkIcon } from '@heroicons/react/20/solid';
-import { Button } from '../../atoms';
+import { Button, ButtonVariants } from '../../atoms';
 
 export interface SimpleAlertProps {
   actions: {
@@ -59,7 +59,7 @@ export function SimpleAlert({
                 <div className={`${grayFooter && `bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4`}`}>
                   {dismissButton && (
                     <div className="absolute top-0 right-0 hidden pt-4 pr-4 sm:block">
-                      <Button variant="contained" size="medium" onClick={() => setOpen(false)}>
+                      <Button variant={ButtonVariants.CONTAINED} onClick={() => setOpen(false)}>
                         <span className="sr-only">Close</span>
                         <XMarkIcon className="h-6 w-6" aria-hidden="true" />
                       </Button>
@@ -91,7 +91,9 @@ export function SimpleAlert({
                       : `mt-5 sm:mt-4 sm:flex sm:flex-row-reverse`
                   }`}>
                   {actions.map((action, index) => (
-                    <Button key={index} variant={index === 0 ? 'contained' : 'outlined'}>
+                    <Button
+                      key={index}
+                      variant={index === 0 ? ButtonVariants.CONTAINED : ButtonVariants.OUTLINED}>
                       {action.label}
                     </Button>
                   ))}

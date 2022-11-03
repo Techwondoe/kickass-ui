@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import { CheckIcon } from '@heroicons/react/24/outline';
-import { Typography, Button } from '../../atoms';
+import { Typography, Button, ButtonVariants } from '../../atoms';
 
 export interface CenteredWithSingleActionModalProps extends React.HTMLAttributes<HTMLDivElement> {
   actions: {
@@ -65,7 +65,11 @@ export function CenteredWithSingleAction({
                   {actions?.map((action, index) => (
                     <Button
                       key={index}
-                      variant={actions.length > 1 && index === 0 ? 'contained' : 'outlined'}
+                      variant={
+                        actions.length > 1 && index === 0
+                          ? ButtonVariants.CONTAINED
+                          : ButtonVariants.OUTLINED
+                      }
                       fullWidth={actions.length > 0}
                       onClick={() => setOpen(false)}>
                       {action.label}

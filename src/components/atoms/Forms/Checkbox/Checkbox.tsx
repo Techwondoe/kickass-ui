@@ -1,15 +1,6 @@
 import React from 'react';
-
-export interface CheckboxProps {
-  checked?: boolean;
-  color?: 'primary' | 'secondary' | 'success' | 'warning' | 'danger';
-  disabled?: boolean;
-  id: string;
-  label?: string;
-  name: string;
-  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  size?: 'small' | 'medium' | 'large';
-}
+import { ColorCodes } from '~/constants/types';
+import { CheckboxProps, CheckboxSize } from './Checkbox.types';
 
 const sizes = {
   small: 'w-4 h-4',
@@ -24,8 +15,8 @@ export function Checkbox({
   checked,
   label,
   disabled,
-  color = 'primary',
-  size = 'medium',
+  color = ColorCodes.PRIMARY,
+  size = CheckboxSize.MEDIUM,
 }: CheckboxProps) {
   const disabledClasses = disabled ? 'opacity-50 cursor-not-allowed' : '';
 

@@ -1,5 +1,5 @@
 export * from './Avatar/Avatar';
-export * from './Badge';
+export * from './Badge/Badge';
 export * from './Checkbox';
 export * from './Radio';
 export * from './SelectMenu';

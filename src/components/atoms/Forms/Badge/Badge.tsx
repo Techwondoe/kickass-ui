@@ -1,11 +1,14 @@
 import React from 'react';
+import { ColorCodes } from '~/constants/types';
 
+/**
+ * @params backgroundColor - Background color for badge
+ * @params color - Text color for badge
+ * @params label - Text within badge
+ */
 export interface BadgeProps extends React.HTMLAttributes<HTMLSpanElement> {
-  /** Provide a background color for the badge */
-  backgroundColor?: string;
-  /** Provide a color for the badge */
-  color?: string;
-  /** Provide a label for the badge */
+  backgroundColor?: ColorCodes;
+  color?: ColorCodes;
   label: string;
 }
 
@@ -18,7 +21,3 @@ export function Badge({ label, color, backgroundColor, ...props }: BadgeProps) {
     </span>
   );
 }
-Badge.defaultProps = {
-  color: '',
-  backgroundColor: '',
-};

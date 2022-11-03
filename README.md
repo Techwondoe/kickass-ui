@@ -129,8 +129,8 @@ const App = () => {
 |------------|-------|
 | Button     |  [Button Props](./src/components/atoms/Button/Button.types.ts)     |
 | Avatar     |  [Avatar Props](./src/components/atoms/Forms/Avatar/Avatar.types.ts)     |
-| Badge      |       |
-| Checkbox   |       |
+| Badge      |  [Badge Props](./src/components/atoms/Forms/Badge/Badge.tsx)     |
+| Checkbox   |  [Checkbox Props](./src/components/atoms/Forms/Checkbox/Checkbox.types.ts)      |
 | Radios     |       |
 | SelectMenu |       |
 | Toggle     |       |

@@ -9,7 +9,7 @@ export interface SelectMenuProps extends React.SelectHTMLAttributes<HTMLSelectEl
   options: string[];
 }
 
-export function SelectMenus({ id, label, options, ...props }: SelectMenuProps) {
+export function SelectMenu({ id, label, options, ...props }: SelectMenuProps) {
   return (
     <div>
       <label htmlFor={id} className="block text-sm font-medium text-gray-700">

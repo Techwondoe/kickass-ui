@@ -10,6 +10,14 @@ const mapTheme: (variables: Theme) => MappedTheme = (variables: Theme) => {
     '--color-contrast-success': variables.contrast?.success || '',
     '--color-contrast-surface': variables.contrast?.surface || '',
     '--color-contrast-warning': variables.contrast?.warning || '',
+    '--color-custom-danger': variables.custom?.danger || '',
+    '--color-custom-info': variables.custom?.info || '',
+    '--color-custom-onSurface': variables.custom?.onSurface || '',
+    '--color-custom-primary': variables.custom?.primary || '',
+    '--color-custom-secondary': variables.custom?.secondary || '',
+    '--color-custom-success': variables.custom?.success || '',
+    '--color-custom-surface': variables.custom?.surface || '',
+    '--color-custom-warning': variables.custom?.warning || '',
     '--color-danger': variables.danger || '',
     '--color-info': variables.info || '',
     '--color-onSurface': variables.onSurface || '',
@@ -59,8 +67,8 @@ export const applyTheme = ({ theme, customTheme }: ApplyThemeProps): void => {
 };
 
 export const dark = extendTheme(base, {
-  primary: 'red',
-  secondary: 'blue',
+  primary: '#000',
+  secondary: '#fff',
 });
 
 export const themes = {

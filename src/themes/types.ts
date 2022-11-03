@@ -9,6 +9,16 @@ export interface Theme {
     surface: string;
     warning: string;
   };
+  custom?: {
+    danger: string;
+    info: string;
+    onSurface: string;
+    primary: string;
+    secondary: string;
+    success: string;
+    surface: string;
+    warning: string;
+  };
   danger?: string;
   info?: string;
   onSurface?: string;
@@ -31,6 +41,16 @@ export interface ApplyThemeProps {
 // default theme
 export const base = {
   contrast: {
+    danger: '#fff',
+    info: '#fff',
+    onSurface: '#fff',
+    primary: '#fff',
+    secondary: '#fff',
+    success: '#000',
+    surface: '#000',
+    warning: '#fff',
+  },
+  custom: {
     danger: '#fff',
     info: '#fff',
     onSurface: '#fff',

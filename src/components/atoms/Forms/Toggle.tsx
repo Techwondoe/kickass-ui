@@ -15,7 +15,7 @@ export interface ToggleProps extends HTMLAttributes<HTMLInputElement> {
   name: string;
 }
 
-export function Toggles({
+export function Toggle({
   color = ColorCodes.PRIMARY,
   checked,
   disabled,

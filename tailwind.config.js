@@ -21,6 +21,16 @@ module.exports = {
         surface: 'var(--color-contrast-surface)',
         onSurface: 'var(--color-contrast-onSurface)',
       },
+      custom: {
+        primary: 'var(--color-custom-primary)',
+        secondary: 'var(--color-custom-secondary)',
+        success: 'var(--color-custom-success)',
+        warning: 'var(--color-custom-warning)',
+        danger: 'var(--color-custom-danger)',
+        info: 'var(--color-custom-info)',
+        surface: 'var(--color-custom-surface)',
+        onSurface: 'var(--color-custom-onSurface)',
+      }
     },
   },
   variants: {
@@ -42,5 +52,10 @@ module.exports = {
         /(bg|border|text)-(contrast)-(primary|secondary|success|warning|danger|info|surface|onSurface)/,
       variants: ['lg', 'hover', 'focus', 'lg:hover'],
     },
+    {
+      pattern:
+      /(bg|border|text)-(custom)-(primary|secondary|success|warning|danger|info|surface|onSurface)/,
+    variants: ['lg', 'hover', 'focus', 'lg:hover'],
+    }
   ],
 };

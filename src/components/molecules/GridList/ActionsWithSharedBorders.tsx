@@ -1,18 +1,7 @@
 import React from 'react';
 import { Typography, TypographyVariants } from '~/components/atoms';
 import { classNames } from '~/helpers/class-merger';
-
-interface Action {
-  href: string;
-  icon: React.ReactNode;
-  iconBackground: string;
-  iconForeground: string;
-  title: string;
-}
-
-export interface ActionWithSharedBorderProps {
-  actions: Action[];
-}
+import { ActionWithSharedBorderProps } from './GridList.types';
 
 export function ActionsWithSharedBorders({ actions }: ActionWithSharedBorderProps) {
   return (

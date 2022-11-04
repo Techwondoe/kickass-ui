@@ -1,15 +1,6 @@
 import React from 'react';
 import { classNames } from '~/helpers/class-merger';
-
-export interface StatsWithSharedBordersProps {
-  stats: {
-    change: string;
-    changeType: 'increase' | 'decrease';
-    name: string;
-    previousStat: string;
-    stat: string;
-  }[];
-}
+import { StatItemChangeType, StatsWithSharedBordersProps } from './Stats.types';
 
 export function StatsWithSharedBorders({ stats }: StatsWithSharedBordersProps) {
   return (
@@ -27,25 +18,13 @@ export function StatsWithSharedBorders({ stats }: StatsWithSharedBordersProps) {
 
             <div
               className={classNames(
-                item.changeType === 'increase'
+                item.changeType === StatItemChangeType.INCREASE
                   ? 'bg-green-100 text-green-800'
                   : 'bg-red-100 text-red-800',
                 'inline-flex items-baseline px-2.5 py-0.5 rounded-full text-sm font-medium md:mt-2 lg:mt-0'
               )}>
-              {/* {item.changeType === 'increase' ? (
-                <ArrowSmUpIcon
-                  className="-ml-1 mr-0.5 flex-shrink-0 self-center h-5 w-5 text-green-500"
-                  aria-hidden="true"
-                />
-              ) : (
-                <ArrowSmDownIcon
-                  className="-ml-1 mr-0.5 flex-shrink-0 self-center h-5 w-5 text-red-500"
-                  aria-hidden="true"
-                />
-              )} */}
-
               <span className="sr-only">
-                {item.changeType === 'increase' ? 'Increased' : 'Decreased'} by
+                {item.changeType === StatItemChangeType.INCREASE ? 'Increased' : 'Decreased'} by
               </span>
               {item.change}
             </div>

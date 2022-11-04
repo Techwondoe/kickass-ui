@@ -1,23 +1,7 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
 import { PlusIcon } from '@heroicons/react/20/solid';
 import { Typography, Button, TypographyVariants } from '~/components/atoms';
-
-export interface WRGEmptyStateProps {
-  accesibilityLabel: string[];
-  description: string;
-  formData: {
-    buttonText: string;
-    label: string;
-  };
-  icon: ReactNode;
-  people: {
-    imageUrl: string;
-    name: string;
-    role: string;
-  }[];
-  peopleListLabel: string;
-  title: string;
-}
+import { WRGEmptyStateProps } from './EmptyState.types';
 
 export function WRGEmptyState({
   icon,

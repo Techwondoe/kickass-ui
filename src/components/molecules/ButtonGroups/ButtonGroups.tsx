@@ -2,21 +2,28 @@ import React from 'react';
 import { Button, ButtonVariants } from '~/components/atoms';
 import { ColorCodes } from '~/constants/types';
 
+/**
+ * @params buttons - Array of buttons ( label and onClick params )
+ */
 export interface ButtonGroupsProps extends React.HTMLAttributes<HTMLButtonElement> {
-  label: string[];
+  buttons: {
+    color?: ColorCodes;
+    label: string;
+    onClick: (value?: unknown) => void;
+  }[];
 }
 
-export function ButtonGroups({ label, ...props }: ButtonGroupsProps) {
+export function ButtonGroups({ buttons }: ButtonGroupsProps) {
   return (
     <span className="isolate inline-flex rounded-md shadow-sm">
-      {label.map((item, index) => {
+      {buttons.map((item, index) => {
         return (
           <Button
             key={index}
-            {...props}
-            color={ColorCodes.PRIMARY}
+            onClick={item.onClick}
+            color={item.color || ColorCodes.PRIMARY}
             variant={ButtonVariants.CONTAINED}>
-            {item}
+            {item.label}
           </Button>
         );
       })}

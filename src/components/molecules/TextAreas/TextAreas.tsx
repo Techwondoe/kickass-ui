@@ -3,30 +3,10 @@ import * as solid from '@heroicons/react/20/solid';
 import { Listbox, Transition } from '@headlessui/react';
 import { Button } from '~/components/atoms';
 import { classNames } from '~/helpers/class-merger';
+import { TextAreasProps } from './TextAreas.types';
 
-export interface TextAreasProps {
-  avatarSrc: string;
-  buttonText: string;
-  label: string;
-  moods: {
-    bgColor: string;
-    icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
-    iconColor: string;
-    name: string;
-    value: string;
-  }[];
-  placeholder: string;
-}
-
-export function TextAreas({
-  avatarSrc,
-  label,
-  placeholder,
-  buttonText,
-  moods,
-  ...props
-}: TextAreasProps) {
-  const [selected, setSelected] = useState(moods[5]);
+export function TextAreas({ avatarSrc, label, placeholder, buttonText, moods }: TextAreasProps) {
+  const [selected, setSelected] = useState(moods[0]);
 
   return (
     <div className="flex items-start space-x-4">
@@ -40,7 +20,6 @@ export function TextAreas({
               {label}
             </label>
             <textarea
-              {...props}
               rows={3}
               name="comment"
               id="comment"

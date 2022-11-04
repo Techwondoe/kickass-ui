@@ -1,5 +1,5 @@
 import React from 'react';
-import { StepsProps } from './Simple';
+import { StepsProps } from './Steps.types';
 
 export function PanelSteps({ steps }: StepsProps) {
   return (

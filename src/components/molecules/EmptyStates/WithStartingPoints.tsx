@@ -1,23 +1,14 @@
 import React from 'react';
 import { Typography, TypographyVariants } from '~/components/atoms';
 import { classNames } from '~/helpers/class-merger';
+import { EmptyStateWithLinkProps } from './EmptyState.types';
 
-export interface Props {
-  description: string;
-  externalLink: {
-    href: string;
-    label: string;
-  };
-  items: {
-    background: string;
-    description: string;
-    icon: React.ElementType;
-    title: string;
-  }[];
-  title: string;
-}
-
-export function WithStartingPoints({ title, description, items, externalLink }: Props) {
+export function WithStartingPoints({
+  title,
+  description,
+  items,
+  externalLink,
+}: EmptyStateWithLinkProps) {
   return (
     <div>
       <Typography variant={TypographyVariants.H2}>{title}</Typography>

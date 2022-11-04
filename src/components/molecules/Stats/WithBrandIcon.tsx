@@ -1,18 +1,8 @@
 import React from 'react';
 import { ArrowDownIcon, ArrowUpIcon } from '@heroicons/react/20/solid';
-import { Typography } from '../../atoms';
+import { Typography } from '~/components/atoms';
 import { classNames } from '~/helpers/class-merger';
-
-export interface StatsWithBrandIconProps {
-  stats: {
-    change: string;
-    changeType: string;
-    icon: React.ElementType;
-    id: number;
-    name: string;
-    stat: string;
-  }[];
-}
+import { StatItemChangeType, StatsWithBrandIconProps } from './Stats.types';
 
 export function StatsWithBrandIcon({ stats }: StatsWithBrandIconProps) {
   return (
@@ -31,10 +21,10 @@ export function StatsWithBrandIcon({ stats }: StatsWithBrandIconProps) {
             <Typography>{item.stat}</Typography>
             <Typography
               className={classNames(
-                item.changeType === 'increase' ? 'text-green-600' : 'text-red-600',
+                item.changeType === StatItemChangeType.INCREASE ? 'text-green-600' : 'text-red-600',
                 'ml-2 flex items-baseline'
               )}>
-              {item.changeType === 'increase' ? (
+              {item.changeType === StatItemChangeType.INCREASE ? (
                 <ArrowUpIcon
                   className="self-center flex-shrink-0 h-5 w-5 text-green-500"
                   aria-hidden="true"
@@ -47,7 +37,7 @@ export function StatsWithBrandIcon({ stats }: StatsWithBrandIconProps) {
               )}
 
               <span className="sr-only">
-                {item.changeType === 'increase' ? 'Increased' : 'Decreased'} by
+                {item.changeType === StatItemChangeType.INCREASE ? 'Increased' : 'Decreased'} by
               </span>
               {item.change}
             </Typography>

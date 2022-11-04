@@ -1,15 +1,6 @@
 import React from 'react';
 import { classNames } from '~/helpers/class-merger';
-
-export interface VerticalNavigationProps {
-  navigation: {
-    current: boolean;
-    href: string;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    icon?: any;
-    name: string;
-  }[];
-}
+import { VerticalNavigationProps } from './VerticalNavation.types';
 
 export function VerticalNavigation({ navigation }: VerticalNavigationProps) {
   return (

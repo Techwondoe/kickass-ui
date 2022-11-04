@@ -1,14 +1,6 @@
 import React from 'react';
 import { Button, ButtonVariants, Typography, TypographyVariants } from '../../atoms';
-
-export interface SectionHeadingProps {
-  actions?: {
-    active?: boolean;
-    label: string;
-  }[];
-  description?: string;
-  title: string;
-}
+import { SectionHeadingProps } from './SectionHeading.types';
 
 export function SectionHeading({ title, description, actions }: SectionHeadingProps) {
   return (

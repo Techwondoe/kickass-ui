@@ -1,9 +1,5 @@
 import React from 'react';
-
-export interface StepsProps extends React.HTMLAttributes<HTMLAllCollection> {
-  /** Provide the steps to be rendered in the component */
-  steps: { href: string; id: string; name: string; status: string }[];
-}
+import { StepsProps } from './Steps.types';
 
 export function Steps({ steps }: StepsProps) {
   return (

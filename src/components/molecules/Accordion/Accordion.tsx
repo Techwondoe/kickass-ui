@@ -2,17 +2,7 @@ import React from 'react';
 import { Disclosure, Transition } from '@headlessui/react';
 import { ChevronDownIcon } from '@heroicons/react/20/solid';
 import { ColorCodes } from '~/constants/types';
-
-export interface AccordionData {
-  content: string;
-  title: string;
-}
-
-export interface AccordionProps {
-  accordoinData: AccordionData[];
-  contentColor?: ColorCodes;
-  titleColor?: ColorCodes;
-}
+import { AccordionProps } from './Accordion.types';
 
 export function Accordion({
   titleColor = ColorCodes.PRIMARY,

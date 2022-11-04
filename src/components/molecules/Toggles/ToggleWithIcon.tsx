@@ -1,14 +1,18 @@
 import React, { useState } from 'react';
 import { Switch } from '@headlessui/react';
 import { classNames } from '~/helpers/class-merger';
+import { CommonToggleProps } from './Toggles.types';
 
-export function ToggleWithIcon() {
+export function ToggleWithIcon({ onToggle }: CommonToggleProps) {
   const [enabled, setEnabled] = useState(false);
-
+  const onChange = (value: boolean) => {
+    setEnabled(value);
+    onToggle(value);
+  };
   return (
     <Switch
       checked={enabled}
-      onChange={setEnabled}
+      onChange={onChange}
       className={classNames(
         enabled ? 'bg-indigo-600' : 'bg-gray-200',
         'relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'

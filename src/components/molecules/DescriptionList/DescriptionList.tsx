@@ -1,24 +1,7 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
 import { PaperClipIcon } from '@heroicons/react/20/solid';
 import { Typography, TypographyVariants } from '~/components/atoms';
-
-export interface DescriptionListProps {
-  attachments?: {
-    items: {
-      actionLabel: string;
-      attachmentIcon?: ReactNode;
-      label: string;
-    }[];
-    label: string;
-  };
-  description: string;
-  striped?: boolean;
-  tableData: {
-    label: string;
-    value: string;
-  }[];
-  title: string;
-}
+import { DescriptionListProps } from './DescriptionList.types';
 
 export function DescriptionList({
   title,

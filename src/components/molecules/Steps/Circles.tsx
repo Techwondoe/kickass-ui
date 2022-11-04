@@ -1,5 +1,5 @@
 import React from 'react';
-import { StepsProps } from './Simple';
+import { StepsProps } from './Steps.types';
 import { classNames } from '~/helpers/class-merger';
 
 export function CircleSteps({ steps }: StepsProps) {

@@ -1,24 +1,13 @@
 import React from 'react';
-import { Typography, Button, ButtonVariants, TypographyVariants } from '../../atoms';
+import { Typography, TypographyVariants } from '~/components/atoms';
 import { classNames } from '~/helpers/class-merger';
+import { SectionHeadingWithTabsProps } from './SectionHeading.types';
 
-export interface SectionHeadingWithTabsProps {
-  tabs: {
-    current: boolean;
-    href: string;
-    name: string;
-  }[];
-}
-
-export function SectionHeadingWithTabs({ tabs }: SectionHeadingWithTabsProps) {
+export function SectionHeadingWithTabs({ tabs, title }: SectionHeadingWithTabsProps) {
   return (
     <div className="relative border-b border-gray-200 pb-5 sm:pb-0">
       <div className="md:flex md:items-center md:justify-between">
-        <Typography variant={TypographyVariants.H3}>Candidates</Typography>
-        <div className="mt-3 flex md:absolute md:top-3 md:right-0 md:mt-0 space-x-4">
-          <Button variant={ButtonVariants.OUTLINED}>Share</Button>
-          <Button variant={ButtonVariants.CONTAINED}>Create</Button>
-        </div>
+        <Typography variant={TypographyVariants.H3}>{title}</Typography>
       </div>
       <div className="mt-4">
         <div className="sm:hidden">

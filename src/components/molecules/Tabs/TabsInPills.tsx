@@ -1,9 +1,6 @@
 import React from 'react';
 import { classNames } from '~/helpers/class-merger';
-
-export interface TabsProps extends React.HTMLAttributes<HTMLDivElement> {
-  tabs: { current: boolean; href: string; name: string }[];
-}
+import { TabsProps } from './Tabs.types';
 
 export function TabsInPills({ tabs }: TabsProps) {
   return (

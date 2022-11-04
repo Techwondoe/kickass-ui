@@ -2,23 +2,10 @@ import React, { Fragment, useState } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import { CheckIcon } from '@heroicons/react/24/outline';
 import { Typography, Button, ButtonVariants } from '../../atoms';
+import { CommonModalProps } from './Modal.types';
 
-export interface CenteredWithSingleActionModalProps extends React.HTMLAttributes<HTMLDivElement> {
-  actions: {
-    label: string;
-    onClick: () => void;
-    ref?: React.RefObject<HTMLButtonElement>;
-  }[];
-  description: string;
-  title: string;
-}
-
-export function CenteredWithSingleAction({
-  title,
-  description,
-  actions,
-}: CenteredWithSingleActionModalProps) {
-  const [open, setOpen] = useState(true);
+export function CenteredWithSingleAction({ title, description, actions }: CommonModalProps) {
+  const [open, setOpen] = useState<boolean>(true);
 
   return (
     <Transition.Root show={open} as={Fragment}>

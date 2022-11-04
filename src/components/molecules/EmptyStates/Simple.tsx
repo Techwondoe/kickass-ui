@@ -1,17 +1,7 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
 import { Button, Typography, TypographyVariants } from '~/components/atoms';
+import { SimpleEmptyStateProps } from './EmptyState.types';
 
-export interface SimpleEmptyStateProps {
-  action?: {
-    icon?: React.ElementType;
-    label: string;
-    onClick: () => void;
-  };
-  description?: string;
-  icon: ReactNode;
-  title: string;
-  withDashBorder?: boolean;
-}
 export function SimpleEmptyState({
   title,
   description,

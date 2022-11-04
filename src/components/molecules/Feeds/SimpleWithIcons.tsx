@@ -1,21 +1,7 @@
 import React from 'react';
 import { Typography } from '~/components/atoms';
 import { classNames } from '~/helpers/class-merger';
-
-interface Timeline {
-  content: string;
-  date: string;
-  datetime: string;
-  href: string;
-  icon: React.ElementType;
-  iconBackground: string;
-  id: number;
-  target: string;
-}
-
-export interface FeedsWithIconsProps {
-  timeline: Timeline[];
-}
+import { FeedsWithIconsProps } from './Feeds.types';
 
 export function FeedsWithIcons({ timeline }: FeedsWithIconsProps) {
   return (

@@ -1,18 +1,7 @@
 import React from 'react';
 import { Typography } from '~/components/atoms';
 import { classNames } from '~/helpers/class-merger';
-
-interface Projects {
-  bgColor: string;
-  href: string;
-  initials: string;
-  members: number;
-  name: string;
-}
-
-export interface SimpleGridListProps {
-  projects: Projects[];
-}
+import { SimpleGridListProps } from './GridList.types';
 
 export function SimpleCards({ projects }: SimpleGridListProps) {
   return (

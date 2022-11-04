@@ -3,8 +3,10 @@ import {
   extendTheme,
   base,
   ThemeProvider,
-} from 'react-tailwind-components';
-import 'react-tailwind-components/dist/index.css';
+  TypographyVariants,
+  ColorCodes,
+} from 'kickass-ui';
+import 'kickass-ui/dist/index.css';
 import React from 'react';
 
 const customTheme = extendTheme(base, {
@@ -19,7 +21,7 @@ const customTheme = extendTheme(base, {
 const App = () => {
   return (
     <ThemeProvider customTheme={customTheme}>
-      <Typography color="primary" variant="h1">
+      <Typography color={ColorCodes.PRIMARY} variant={TypographyVariants.H1}>
         Kickass UI Example project
       </Typography>
     </ThemeProvider>

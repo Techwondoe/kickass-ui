@@ -1,18 +1,9 @@
 import React, { useState } from 'react';
 import { RadioGroup } from '@headlessui/react';
 import { classNames } from '~/helpers/class-merger';
+import { RadioCardProps } from './RadioGroups.types';
 
-export interface CardProps {
-  mailingLists: {
-    description: string;
-    id: number;
-    title: string;
-    users: string;
-  }[];
-  title: string;
-}
-
-export function Cards({ title, mailingLists }: CardProps) {
+export function Cards({ title, mailingLists }: RadioCardProps) {
   const [selectedMailingLists, setSelectedMailingLists] = useState(mailingLists[0]);
 
   return (

@@ -1,17 +1,7 @@
 import React, { useState } from 'react';
 import { RadioGroup } from '@headlessui/react';
 import { classNames } from '~/helpers/class-merger';
-
-export interface StackedCardsProps {
-  label: string;
-  plans: {
-    cpus: string;
-    disk: string;
-    name: string;
-    price: string;
-    ram: string;
-  }[];
-}
+import { StackedCardsProps } from './RadioGroups.types';
 
 export function StackedCards({ label, plans }: StackedCardsProps) {
   const [selected, setSelected] = useState(plans[0]);

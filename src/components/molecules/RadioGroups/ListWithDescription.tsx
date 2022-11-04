@@ -1,21 +1,21 @@
 import React from 'react';
-import { Typography } from '../../atoms';
+import { Typography } from '~/components/atoms';
+import { RadioListWithDescriptionProps } from './RadioGroups.types';
 
-export interface ListWithDescriptionProps extends React.HTMLAttributes<HTMLInputElement> {
-  plans: { description: string; id: string; name: string }[];
-  title: string;
-}
-
-export function ListWithDescription({ title, plans, ...props }: ListWithDescriptionProps) {
+export function ListWithDescription({
+  title,
+  settings,
+  ...restProps
+}: RadioListWithDescriptionProps) {
   return (
     <fieldset>
       <legend className="sr-only">{title}</legend>
       <div className="space-y-5">
-        {plans.map((plan) => (
+        {settings.map((plan) => (
           <div key={plan.id} className="relative flex items-start">
             <div className="flex h-5 items-center">
               <input
-                {...props}
+                {...restProps}
                 id={plan.id}
                 aria-describedby={`${plan.id}-description`}
                 name="plan"

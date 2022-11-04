@@ -1,16 +1,7 @@
 import React, { useState } from 'react';
 import { RadioGroup } from '@headlessui/react';
 import { classNames } from '~/helpers/class-merger';
-
-export interface SimpleTableProps {
-  label: string;
-  plans: {
-    limit: string;
-    name: string;
-    priceMonthly: number;
-    priceYearly: number;
-  }[];
-}
+import { SimpleTableProps } from './RadioGroups.types';
 
 export function SimpleTable({ label, plans }: SimpleTableProps) {
   const [selected, setSelected] = useState(plans[0]);

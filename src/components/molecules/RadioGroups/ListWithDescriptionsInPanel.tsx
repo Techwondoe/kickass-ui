@@ -1,21 +1,14 @@
 import React, { useState } from 'react';
 import { RadioGroup } from '@headlessui/react';
 import { classNames } from '~/helpers/class-merger';
+import { RadioListWithDescriptionProps } from './RadioGroups.types';
 
-export interface ListWithDescriptionsInPanelProps {
-  label: string;
-  settings: {
-    description: string;
-    name: string;
-  }[];
-}
-
-export function ListWithDescriptionsInPanel({ label, settings }: ListWithDescriptionsInPanelProps) {
+export function ListWithDescriptionsInPanel({ title, settings }: RadioListWithDescriptionProps) {
   const [selected, setSelected] = useState(settings[0]);
 
   return (
     <RadioGroup value={selected} onChange={setSelected}>
-      <RadioGroup.Label className="sr-only"> {label} </RadioGroup.Label>
+      <RadioGroup.Label className="sr-only"> {title} </RadioGroup.Label>
       <div className="-space-y-px rounded-md bg-white">
         {settings.map((setting, settingIdx) => (
           <RadioGroup.Option

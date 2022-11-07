@@ -5,3 +5,4 @@ node_modules
 dist
 .eslintcache
 .tsbuild
+/src/helpers/index.css

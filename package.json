@@ -28,7 +28,8 @@
     "ts": "tsc --noEmit --skipLibCheck",
     "checks": "yarn lint && yarn ts",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "storybook-css": "cp -R ./dist/index.css ./src/helpers/"
   },
   "peerDependencies": {
     "react": "^18.2.0"

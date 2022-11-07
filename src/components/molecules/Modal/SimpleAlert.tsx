@@ -3,18 +3,7 @@ import { Dialog, Transition } from '@headlessui/react';
 import { ExclamationTriangleIcon } from '@heroicons/react/24/outline';
 import { XMarkIcon } from '@heroicons/react/20/solid';
 import { Button, ButtonVariants } from '../../atoms';
-
-export interface SimpleAlertProps {
-  actions: {
-    label: string;
-    onClick: () => void;
-  }[];
-  description: string;
-  dismissButton?: boolean;
-  grayFooter?: boolean;
-  leftAlignedButtons?: boolean;
-  title: string;
-}
+import { SimpleAlertProps } from './Modal.types';
 
 export function SimpleAlert({
   title,
@@ -24,7 +13,7 @@ export function SimpleAlert({
   grayFooter,
   leftAlignedButtons,
 }: SimpleAlertProps) {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState<boolean>(true);
 
   const cancelButtonRef = useRef(null);
 

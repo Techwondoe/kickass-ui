@@ -1,15 +1,14 @@
 import React, { useState } from 'react';
 import { Switch } from '@headlessui/react';
 import { classNames } from '~/helpers/class-merger';
+import { ToggleModuleProps } from './Toggles.types';
 
-export interface ToggleModuleProps {
-  details?: string;
-  label: string;
-}
-
-export function WithLeftLabelAndDescription({ label, details }: ToggleModuleProps) {
-  const [enabled, setEnabled] = useState(false);
-
+export function WithLeftLabelAndDescription({ label, details, onToggle }: ToggleModuleProps) {
+  const [enabled, setEnabled] = useState<boolean>(false);
+  const onChange = (value: boolean) => {
+    setEnabled(value);
+    onToggle(value);
+  };
   return (
     <Switch.Group as="div" className="flex items-center justify-between">
       <span className="flex flex-grow flex-col">
@@ -22,7 +21,7 @@ export function WithLeftLabelAndDescription({ label, details }: ToggleModuleProp
       </span>
       <Switch
         checked={enabled}
-        onChange={setEnabled}
+        onChange={onChange}
         className={classNames(
           enabled ? 'bg-indigo-600' : 'bg-gray-200',
           'relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'

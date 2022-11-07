@@ -19,8 +19,17 @@
     "suppressImplicitAnyIndexErrors": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "types": []
   },
   "include": ["src"],
-  "exclude": ["node_modules", "dist", "example"]
+  "exclude": [
+    "node_modules",
+    "dist",
+    "example",
+    "./node_modules",
+    "./node_modules/*",
+    "./node_modules/@types/node/index.d.ts"
+  ]
 }

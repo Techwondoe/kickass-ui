@@ -1,16 +1,6 @@
 import React from 'react';
 import { Typography } from '~/components/atoms';
-
-interface People {
-  email: string;
-  imageUrl: string;
-  name: string;
-  role: string;
-}
-
-export interface HorizontalLinkCardsProps {
-  people: People[];
-}
+import { HorizontalLinkCardsProps } from './GridList.types';
 
 export function HorizontalLinkCards({ people }: HorizontalLinkCardsProps) {
   return (

@@ -1,18 +1,6 @@
 import React from 'react';
 import { Typography, Button, TypographyVariants } from '~/components/atoms';
-
-export interface TableProps {
-  buttonText: string;
-  description: string;
-  people: {
-    email: string;
-    name: string;
-    role: string;
-    title: string;
-  }[];
-  title: string;
-  upperCaseTableHeader?: boolean;
-}
+import { TableProps } from './Tables.types';
 
 export function Simple({
   title,

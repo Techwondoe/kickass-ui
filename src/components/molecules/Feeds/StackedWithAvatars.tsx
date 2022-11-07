@@ -1,23 +1,6 @@
 import React from 'react';
 import { Typography, TypographyVariants } from '~/components/atoms';
-
-interface People {
-  imageUrl: string;
-  name: string;
-}
-
-interface ActivityItems {
-  commit: string;
-  environment: string;
-  id: number;
-  person: People;
-  project: string;
-  time: string;
-}
-
-export interface FeedsWithAvatarsProps {
-  activityItems: ActivityItems[];
-}
+import { FeedsWithAvatarsProps } from './Feeds.types';
 
 export function FeedsWithAvatars({ activityItems }: FeedsWithAvatarsProps) {
   return (

@@ -1,5 +1,5 @@
 import React from 'react';
-import { TabsProps } from './TabsInPills';
+import { TabsProps } from './Tabs.types';
 import { classNames } from '~/helpers/class-merger';
 
 export function TabsWithUnderline({ tabs }: TabsProps) {

@@ -2,19 +2,7 @@ import React from 'react';
 import { Avatar } from '../../atoms/Forms/Avatar/Avatar';
 import { Button, ButtonVariants, Typography, TypographyVariants } from '../../atoms';
 import { AvatarSizes } from '~/components/atoms/Forms/Avatar';
-
-export interface PageHeadingWithAvatarAndActionProps {
-  actions: {
-    active?: boolean;
-    buttonText: string;
-  }[];
-  profile: {
-    appliedFor: string;
-    avatar: string;
-    date: string;
-    name: string;
-  };
-}
+import { PageHeadingWithAvatarAndActionProps } from './PageHeading.types';
 
 export function PageHeadingWithAvatarAndActions({
   actions,

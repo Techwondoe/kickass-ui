@@ -1,13 +1,6 @@
 import React from 'react';
-import { Typography } from '../../atoms';
-
-export interface ImagesWithDetailsProps {
-  files: {
-    size: string;
-    source: string;
-    title: string;
-  }[];
-}
+import { Typography } from '~/components/atoms';
+import { ImagesWithDetailsProps } from './GridList.types';
 
 export function ImagesWithDetails({ files }: ImagesWithDetailsProps) {
   return (

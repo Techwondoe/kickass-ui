@@ -1,22 +1,6 @@
 import React from 'react';
 import { Button, ButtonVariants, Typography, TypographyVariants } from '~/components/atoms';
-
-export interface ActionPanelProps {
-  button?: {
-    label: string;
-    onClick: () => void;
-  };
-  buttonRight?: {
-    label: string;
-    onClick: () => void;
-  };
-  description: string;
-  link?: {
-    href: string;
-    label: string;
-  };
-  title: string;
-}
+import { ActionPanelProps } from './ActionPanel.types';
 
 export function ActionPanel({ title, description, button, link, buttonRight }: ActionPanelProps) {
   return (
@@ -29,7 +13,10 @@ export function ActionPanel({ title, description, button, link, buttonRight }: A
           </div>
           {button && (
             <div className="mt-5">
-              <Button variant={ButtonVariants.CONTAINED} className="sm:text-sm">
+              <Button
+                onClick={button.onClick}
+                variant={ButtonVariants.CONTAINED}
+                className="sm:text-sm">
                 {button.label}
               </Button>
             </div>
@@ -37,8 +24,8 @@ export function ActionPanel({ title, description, button, link, buttonRight }: A
 
           {link && (
             <div className="mt-3 text-sm">
-              <a href="#" className="font-medium text-indigo-600 hover:text-indigo-500">
-                Learn more about our CI features
+              <a href={link.href} className="font-medium text-indigo-600 hover:text-indigo-500">
+                {link.label}
                 <span aria-hidden="true"> &rarr;</span>
               </a>
             </div>
@@ -46,7 +33,9 @@ export function ActionPanel({ title, description, button, link, buttonRight }: A
 
           {buttonRight && (
             <div className="mt-5 sm:mt-0 sm:ml-6 sm:flex sm:flex-shrink-0 sm:items-center">
-              <Button className="sm:text-sm">Change plan</Button>
+              <Button onClick={buttonRight.onClick} className="sm:text-sm">
+                {buttonRight.label}
+              </Button>
             </div>
           )}
         </div>

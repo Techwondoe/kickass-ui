@@ -1,34 +1,34 @@
-# react-tailwind-components
+# Kickass UI
 
-> A React Component Library
+> A React Tailwind Component Library
 
-[![NPM](https://img.shields.io/npm/v/moduts.svg)](https://www.npmjs.com/package/react-tailwind-components) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/moduts.svg)](https://www.npmjs.com/package/kickass-ui) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Installation
-### react-tailwind-components
+### KICKASS-UI
 
-React tailwind components is available as an [npm package](https://www.npmjs.com/package/react-tailwind-components).
+ Kickass-UI is available as an [npm package](https://www.npmjs.com/package/kickass-ui).
 
 **npm:**
 
 ```sh
-npm install react-tailwind-components
+npm install kickass-ui
 ```
 
 **yarn:**
 
 ```sh
-yarn add react-tailwind-components
+yarn add kickass-ui
 ```
 
-## Getting started with React Tailwind Component
+## Getting started with Kickass-UI Component
 
-Here is an example of a basic app using React Tailwind Component's `Button` component:
+Here is an example of a basic app using Kickass-UI Component's `Button` component:
 
 ```jsx
 import * as React from 'react';
-import { Button } from 'react-tailwind-components';
-import 'react-tailwind-components/dist/index.css';
+import { Button } from 'kickass-ui';
+import 'kickass-ui/dist/index.css';
 
 function App() {
   return (
@@ -90,7 +90,7 @@ Here is an example of implementing custom theme using `extendTheme` method:
 
 ```jsx
 import * as React from 'react';
-import { extendTheme, ThemeProvider, Typography } from 'react-tailwind-components';
+import { extendTheme, ThemeProvider, Typography } from 'kickass-ui';
 
 const customTheme = extendTheme(base, {
   primary: 'pink',
@@ -124,6 +124,8 @@ const App = () => {
 
 ## Component list
 
+You can refer to the following component list and prop definitions to use the library
+
 ### Atoms
 
 | Component  | Props |
@@ -139,3 +141,59 @@ const App = () => {
 | Slider     | [Slider Props](./src/components/atoms/Slider/Slider.types.ts)
 | TextField   | [TextField Props](./src/components/atoms/TextField/TextField.types.tsx)      |
 | Typography   | [Typography Props](./src/components/atoms/Typography/Typography.types.ts)      |
+
+### Molecules
+
+| Component          | Variant                       | Props |
+|--------------------|-------------------------------|-------|
+| Accordion          |                               |[Accordion Props](./src/components/molecules/Accordion/Accordion.types.ts)        |
+| ActionPanel        |                               |[ActionPanel Props](./src/components/molecules/ActionPanel/ActionPanel.types.ts)        |
+| Alert              |                               |[Alert Props](./src/components/molecules/Alert/Alert.types.ts)        |
+| ButtonGroups       |                               |[ButtonGroups Props](./src/components/molecules/ButtonGroups/ButtonGroups.tsx)        |
+| DescriptionList    |                               |[DescriptionList Props](./src/components/molecules/DescriptionList/DescriptionList.types.ts)        |
+| EmptyStates        | Simple                        |[EmptyStates Props](./src/components/molecules/EmptyStates/EmptyState.types.ts)        |
+|                    | WithRecommendations           |       |
+|                    | WithRecommendationsGrid       |       |
+|                    | WithStartingPoints            |       |
+|                    | WithTemplates                 |       |
+| Feeds              | SimpleWithIcons               |[Feeds Props](./src/components/molecules/Feeds/Feeds.types.ts)        |
+|                    | StackedWithAvatars            |       |
+| GridList           | ActionsWithSharedBorders      |[GridList Props](./src/components/molecules/GridList/GridList.types.ts)       |
+|                    | ContactCardsWithSmallPotraits |       |
+|                    | HorizontalLinkCards           |       |
+|                    | ImagesWithDetails             |       |
+|                    | SimpleCards                   |       |
+| MediaObjects       |                               | [MediaObjects Props](./src/components/molecules/MediaObjects/MediaObjects.types.ts)       |
+| Modal              | CenteredWithSingleAction      |[Modal Props](./src/components/molecules/Modal/Modal.types.ts)        |
+|                    | SimpleAlert                   |       |
+| PageHeading        | CardWithAvatarAndStats        |[PageHeading Props](./src/components/molecules/PageHeading/PageHeading.types.ts)        |
+|                    | WithActions                   |[WithActions Props](./src/components/molecules/PageHeading/WithActions.tsx)        |
+|                    | WithAvatarAndActions          |       |
+|                    | WithBannerImage               |       |
+| RadioGroups        | Cards                         |[RadioGroups Props](./src/components/molecules/RadioGroups/RadioGroups.types.ts)        |
+|                    | ColorPicker                   |       |
+|                    | ListWithDescription           |       |
+|                    | ListWithDescriptionInPanel    |       |
+|                    | ListWithRadioOnRight          |       |
+|                    | SimpleList                    |       |
+|                    | SimpleTable                   |       |
+|                    | SmallCards                    |       |
+|                    | StackedCards                  |       |
+| SectionHeading     | Simple                        |[SectionHeading Props](./src/components/molecules/SectionHeading/SectionHeading.types.ts)        |
+|                    | WithTabs                      |       |
+| Stats              | Simple                        |[Stats Props](./src/components/molecules/Stats/Stats.types.ts)        |
+|                    | WithBrandIcon                 |       |
+|                    | WithSharedBorders             |       |
+| Steps              | Simple                        |[Steps Props](./src/components/molecules/Steps/Steps.types.ts)        |
+|                    | Panels                        |       |
+|                    | Circles                       |       |
+| Tables             |                               |[Tables Props](./src/components/molecules/Tables/Tables.types.ts)        |
+| Tabs               | TabsInPills                   |[Tabs Props](./src/components/molecules/Tabs/Tabs.types.ts)        |
+|                    | TabsWithUnderline             |       |
+| TextAreas          |                               |[TextAreas Props](./src/components/molecules/TextAreas/TextAreas.types.ts)        |
+| Toggles            | ShortToggle                   |[Toggles Props](./src/components/molecules/Toggles/Toggles.types.ts)        |
+|                    | ToggleWithIcon                |       |
+|                    | WithLeftLabelAndDescription   |       |
+|                    | WithRightLabel                |       |
+| Tooltip            |                               |[Tooltip Props](./src/components/molecules/Tooltip/Tooltip.tsx)        |
+| VerticalNavigation |                               |[Tooltip Props](./src/components/molecules/VerticalNavigation/VerticalNavation.types.ts)       |

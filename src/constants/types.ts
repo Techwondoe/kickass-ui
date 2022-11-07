@@ -17,3 +17,5 @@ export enum ColorCodes {
   SURFACE = 'surface',
   WARNING = 'warning',
 }
+
+export type IconType = React.ComponentType<React.SVGProps<SVGSVGElement>>;

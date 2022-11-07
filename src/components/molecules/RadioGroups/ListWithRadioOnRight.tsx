@@ -1,16 +1,11 @@
 import React from 'react';
 import { Typography, TypographyVariants } from '../../atoms';
-
-export interface ListWithRadioOnRightProps extends React.HTMLAttributes<HTMLInputElement> {
-  accounts: { description: string; id: string; name: string }[];
-  description?: string;
-  title: string;
-}
+import { ListWithRadioOnRightProps } from './RadioGroups.types';
 
 export function ListWithRadioOnRight({
   title,
   description,
-  accounts,
+  settings,
   ...props
 }: ListWithRadioOnRightProps) {
   return (
@@ -20,7 +15,7 @@ export function ListWithRadioOnRight({
       <fieldset className="mt-2">
         <legend className="sr-only">Bank account</legend>
         <div className="divide-y divide-gray-200">
-          {accounts.map((account, accountIdx) => (
+          {settings.map((account, accountIdx) => (
             <div key={accountIdx} className="relative flex items-start py-4">
               <div className="min-w-0 flex-1 text-sm">
                 <label htmlFor={`account-${account.id}`} className="font-medium text-gray-700">

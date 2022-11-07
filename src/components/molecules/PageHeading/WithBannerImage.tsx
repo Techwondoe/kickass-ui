@@ -2,20 +2,7 @@ import React from 'react';
 import { Avatar } from '../../atoms/Forms/Avatar/Avatar';
 import { Button, ButtonSizes, Typography, TypographyVariants } from '../../atoms';
 import { AvatarSizes } from '~/components/atoms/Forms/Avatar';
-
-export interface PageHeadingWithBannerProps {
-  actions: {
-    buttonText: string;
-    icon: React.ElementType;
-  }[];
-  profile: {
-    avatar: string;
-    backgroundImage: string;
-    email: string;
-    fields: string[][];
-    name: string;
-  };
-}
+import { PageHeadingWithBannerProps } from './PageHeading.types';
 
 export function PageHeadingWithBannerImage({ actions, profile }: PageHeadingWithBannerProps) {
   return (
@@ -40,7 +27,9 @@ export function PageHeadingWithBannerImage({ actions, profile }: PageHeadingWith
             <div className="justify-stretch mt-6 flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-4">
               {actions.map((action, index) => (
                 <Button key={index} size={ButtonSizes.SMALL}>
-                  <action.icon className="-ml-1 mr-2 h-5 w-5 text-gray-400" aria-hidden="true" />
+                  {action.icon && (
+                    <action.icon className="-ml-1 mr-2 h-5 w-5 text-gray-400" aria-hidden="true" />
+                  )}
                   <span>{action.buttonText}</span>
                 </Button>
               ))}

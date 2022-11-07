@@ -1,18 +1,7 @@
 import React from 'react';
 import { Avatar, Typography, TypographyVariants } from '~/components/atoms';
 import { AvatarSizes } from '~/components/atoms/Forms/Avatar';
-
-export interface PageHeadingCardProps {
-  stats: {
-    label: string;
-    value: number;
-  }[];
-  user: {
-    imageUrl: string;
-    name: string;
-    role: string;
-  };
-}
+import { PageHeadingCardProps } from './PageHeading.types';
 
 export function CardWithAvatarAndStats({ user, stats }: PageHeadingCardProps) {
   return (

@@ -2,15 +2,7 @@ import React, { useState } from 'react';
 import { RadioGroup } from '@headlessui/react';
 import { Typography, TypographyVariants } from '../../atoms';
 import { classNames } from '~/helpers/class-merger';
-
-export interface SmallCardsProps {
-  details: string;
-  label: string;
-  memoryOptions: {
-    inStock: boolean;
-    name: string;
-  }[];
-}
+import { SmallCardsProps } from './RadioGroups.types';
 
 export function SmallCards({ label, details, memoryOptions }: SmallCardsProps) {
   const [mem, setMem] = useState(memoryOptions[2]);

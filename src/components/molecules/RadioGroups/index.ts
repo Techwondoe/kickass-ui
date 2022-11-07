@@ -7,3 +7,4 @@ export * from './SimpleList';
 export * from './SimpleTable';
 export * from './SmallCards';
 export * from './StackedCards';
+export * from './RadioGroups.types';

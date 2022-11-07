@@ -1,17 +1,9 @@
 import React, { useState } from 'react';
 import { RadioGroup } from '@headlessui/react';
 import { classNames } from '~/helpers/class-merger';
+import { RadioColorPickerProps } from './RadioGroups.types';
 
-export interface ColorPickerProps {
-  colors: {
-    bgColor: string;
-    name: string;
-    selectedColor: string;
-  }[];
-  label: string;
-}
-
-export function ColorPicker({ label, colors }: ColorPickerProps) {
+export function ColorPicker({ label, colors }: RadioColorPickerProps) {
   const [selectedColor, setSelectedColor] = useState(colors[1]);
 
   return (

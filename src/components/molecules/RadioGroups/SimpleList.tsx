@@ -1,13 +1,8 @@
 import React from 'react';
 import { Typography } from '../../atoms';
+import { SimpleRadioListProps } from './RadioGroups.types';
 
-export interface SimpleListProps extends React.HTMLAttributes<HTMLInputElement> {
-  description?: string;
-  notificationMethods: { id: string; title: string }[];
-  title: string;
-}
-
-export function SimpleList({ title, description, notificationMethods, ...props }: SimpleListProps) {
+export function SimpleList({ title, description, settings, ...props }: SimpleRadioListProps) {
   return (
     <div>
       <label className="text-base font-medium text-gray-900">{title}</label>
@@ -15,7 +10,7 @@ export function SimpleList({ title, description, notificationMethods, ...props }
       <fieldset className="mt-4">
         <legend className="sr-only">{title}</legend>
         <div className="space-y-4">
-          {notificationMethods.map((notificationMethod) => (
+          {settings.map((notificationMethod) => (
             <div key={notificationMethod.id} className="flex items-center">
               <input
                 {...props}
@@ -28,7 +23,7 @@ export function SimpleList({ title, description, notificationMethods, ...props }
               <label
                 htmlFor={notificationMethod.id}
                 className="ml-3 block text-sm font-medium text-gray-700">
-                {notificationMethod.title}
+                {notificationMethod.name}
               </label>
             </div>
           ))}

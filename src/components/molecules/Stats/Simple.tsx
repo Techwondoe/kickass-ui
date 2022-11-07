@@ -1,8 +1,5 @@
 import React from 'react';
-
-export interface StatsProps {
-  stats: { name: string; stat: string }[];
-}
+import { StatsProps } from './Stats.types';
 
 export function SimpleStats({ stats }: StatsProps) {
   return (

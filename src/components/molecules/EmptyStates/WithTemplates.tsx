@@ -2,24 +2,14 @@ import { ChevronRightIcon } from '@heroicons/react/20/solid';
 import React from 'react';
 import { Typography, TypographyVariants } from '~/components/atoms';
 import { classNames } from '~/helpers/class-merger';
+import { EmptyStateWithTemplateProps } from './EmptyState.types';
 
-export interface WTEmptyStateProps {
-  description: string;
-  externalLink: {
-    href: string;
-    label: string;
-  };
-  items: {
-    description: string;
-    href: string;
-    icon: React.ElementType;
-    iconColor: string;
-    name: string;
-  }[];
-  title: string;
-}
-
-export function WTEmptyState({ title, description, items, externalLink }: WTEmptyStateProps) {
+export function WTEmptyState({
+  title,
+  description,
+  items,
+  externalLink,
+}: EmptyStateWithTemplateProps) {
   return (
     <div className="mx-auto max-w-lg">
       <Typography variant={TypographyVariants.H2}>{title}</Typography>

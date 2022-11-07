@@ -1,12 +1,6 @@
 import React from 'react';
 import { Typography, TypographyVariants } from '~/components/atoms';
-
-export interface MediaObjectProps extends React.HTMLAttributes<HTMLDivElement> {
-  align?: 'center' | 'bottom' | 'stretched';
-  body: string;
-  heading: string;
-  imgSrc: string;
-}
+import { MediaObjectProps } from './MediaObjects.types';
 
 export function MediaObjects({ imgSrc, heading, body, align }: MediaObjectProps) {
   return (

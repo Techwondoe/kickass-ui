@@ -1,22 +1,7 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
 import { PlusIcon } from '@heroicons/react/20/solid';
 import { Typography, Button, ButtonVariants, TypographyVariants } from '~/components/atoms';
-
-export interface WREmptyStateProps {
-  description: string;
-  formData: {
-    buttonText: string;
-    label: string;
-  };
-  icon: ReactNode;
-  people: {
-    imageUrl: string;
-    name: string;
-    role: string;
-  }[];
-  peopleListLabel: string;
-  title: string;
-}
+import { WREmptyStateProps } from './EmptyState.types';
 
 export function WREmptyState({
   icon,

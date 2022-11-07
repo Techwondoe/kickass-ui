@@ -1,18 +1,6 @@
 import React from 'react';
 import { Typography, TypographyVariants } from '~/components/atoms';
-
-interface Person {
-  email: string;
-  imageUrl: string;
-  name: string;
-  role: string;
-  telephone: string;
-  title: string;
-}
-
-export interface ContactCardsProps {
-  people: Person[];
-}
+import { ContactCardsProps } from './GridList.types';
 
 export function ContactCardsWithSmallPortraits({ people }: ContactCardsProps) {
   return (

@@ -5,3 +5,9 @@ node_modules
 dist
 .eslintcache
 .tsbuild
+package.json
+/src/helpers/index.css
+/src/stories
+.storybook
+/.storybook
+/docs/Storybook.md

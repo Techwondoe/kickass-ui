@@ -11,27 +11,27 @@ const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
-  color: 'primary',
   label: 'Button CTA',
+  className: 'btn btn-primary-600',
 };
 
 export const StartIcon = Template.bind({});
 StartIcon.args = {
   icon: 'placeholder',
-  color: 'warning',
+  className: 'btn-xl btn-error-600',
   label: 'Button CTA',
 };
 
 export const EndIcon = Template.bind({});
 EndIcon.args = {
-  color: 'warning',
+  className: 'btn-md btn-success-600',
   endIcon: 'placeholder',
   label: 'Button CTA',
 };
 
 export const Online = Template.bind({});
 Online.args = {
-  color: 'warning',
+  className: 'btn-sm btn-primary-600',
   label: 'Button CTA',
   online: true,
 };

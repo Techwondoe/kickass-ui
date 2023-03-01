@@ -70,7 +70,7 @@ module.exports = {
       pattern: /font-(thin|extralight|light|normal|medium|semibold|bold|extrabold|black)/,
     },
     {
-      pattern: /btn-.*/,
+      pattern: /btn.*/,
     },
   ],
   plugins: [require('@tailwindcss/forms'), kickAssPlugin],

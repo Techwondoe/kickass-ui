@@ -32,11 +32,11 @@ export interface ButtonProps extends HTMLAttributes<HTMLButtonElement | HTMLAnch
   selected?: boolean;
 }
 const sizes = {
-  sm: 'px-[7px] py-1',
-  md: 'px-2 py-[5px]',
-  lg: 'px-[9px] py-[5px]',
-  xl: 'px-2.5 py-1.5',
-  '2xl': 'px-3.5 py-2',
+  sm: 'btn-sm',
+  md: 'btn-md',
+  lg: 'btn-lg',
+  xl: 'btn-xl',
+  '2xl': 'btn-2xl',
 };
 
 const shapes = {
@@ -70,27 +70,27 @@ export function Button({
   const variants = {
     contained: {
       button: `${
-        selected ? `bg-${color}-700` : `bg-${color}-600`
-      } hover:bg-${color}-700 focus:ring-4 ring-${color}-100 disabled:bg-${color}-200`,
+        selected ? `btn-${color}-700` : `btn-${color}-600`
+      } hover:btn-${color}-700 focus:ring-4 ring-${color}-100 disabled:btn-${color}-200`,
       typo: ``,
       icon: ``,
     },
     outlined: {
       button: `${
-        selected ? `bg-${color}-50` : `bg-white`
-      } border border-${color}-300 hover:bg-${color}-50 focus:ring-4 ring-${color}-100 disabled:border-${color}-200`,
+        selected ? `btn-${color}-50` : `btn-white`
+      } border border-${color}-300 hover:btn-${color}-50 focus:ring-4 ring-${color}-100 disabled:border-${color}-200`,
       typo: ``,
       icon: ``,
     },
     light: {
       button: `${
-        selected ? `bg-${color}-100` : `bg-${color}-50`
-      } hover:bg-${color}-100 focus:ring-4 ring-${color}-100 disabled:bg-${color}-25`,
+        selected ? `btn-${color}-100` : `btn-${color}-50`
+      } hover:btn-${color}-100 focus:ring-4 ring-${color}-100 disabled:btn-${color}-25`,
       typo: ``,
       icon: ``,
     },
     text: {
-      button: `${selected ? `bg-${color}-50` : ``} hover:bg-${color}-50`,
+      button: `${selected ? `btn-${color}-50` : ``} hover:btn-${color}-50`,
       typo: ``,
       icon: ``,
     },
@@ -148,11 +148,11 @@ export function Button({
   );
 
   return variant === 'link' ? (
-    <a className={clsx('inline-block w-fit', classes)} href={href} {...restProps}>
+    <a className={clsx('inline-block w-fit', classes, className)} href={href} {...restProps}>
       {children}
     </a>
   ) : (
-    <button className={className} {...restProps} disabled={disabled}>
+    <button className={`${classes} ${className}`} {...restProps} disabled={disabled}>
       {children}
     </button>
   );

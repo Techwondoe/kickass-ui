@@ -3,7 +3,7 @@ const { colors } = require('../theme.json');
 
 const addColors = () => {
   const colorClasses = {};
-  const btnColors = ['primary', 'secondary', 'error', 'warning', 'success'];
+  const btnColors = ['primary', 'gray', 'error', 'warning', 'success'];
   for (const colorName of btnColors) {
     if (typeof colors[colorName] === 'string') {
       colorClasses[`.btn-${colorName}`] = {
@@ -14,7 +14,7 @@ const addColors = () => {
         if (color === 'DEFAULT') {
           colorClasses[`.btn-${colorName}`] = {
             backgroundColor: colors[colorName][color],
-            color:'black'
+            color: 'black',
           };
         } else {
           colorClasses[`.btn-${colorName}-${color}`] = {
@@ -62,7 +62,7 @@ const kickAssPlugin = plugin(function ({ addComponents }) {
     },
   };
   const colorClasses = addColors();
-  buttonClasses ={ ...buttonClasses, ...colorClasses }
+  buttonClasses = { ...buttonClasses, ...colorClasses };
   addComponents({ ...buttonClasses });
 });
 

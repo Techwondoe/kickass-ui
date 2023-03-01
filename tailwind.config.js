@@ -71,6 +71,7 @@ module.exports = {
     },
     {
       pattern: /btn.*/,
+      variants: ['hover', 'focus', 'disabled', 'group-hover', 'group-disabled', 'group-focus'],
     },
   ],
   plugins: [require('@tailwindcss/forms'), kickAssPlugin],

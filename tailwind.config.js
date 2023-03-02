@@ -1,6 +1,5 @@
-
 const { kickAssPlugin } = require('./src/plugins/kickAssPlugin');
-const { colors} = require('./src/theme.json')
+const { colors } = require('./src/theme.json');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -71,6 +70,10 @@ module.exports = {
     },
     {
       pattern: /btn.*/,
+      variants: ['hover', 'focus', 'disabled', 'group-hover', 'group-disabled', 'group-focus'],
+    },
+    {
+      pattern: /badge.*/,
       variants: ['hover', 'focus', 'disabled', 'group-hover', 'group-disabled', 'group-focus'],
     },
   ],

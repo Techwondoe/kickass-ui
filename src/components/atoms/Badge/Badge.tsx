@@ -4,10 +4,9 @@
  */
 
 import React from 'react';
-import { ColorType, ColorVariantType } from '../../../types/colors';
+import { ColorType } from '../../../types/colors';
 import { Avatar } from '../Avatar/Avatar';
 import { Icon, IconType } from '../icon';
-import { Typography } from '../Typography/Typography';
 
 export interface BadgeProps extends React.HTMLAttributes<HTMLDivElement> {
   color?: Exclude<ColorType, 'white' | 'black'>;
@@ -30,7 +29,7 @@ export function Badge({
   color = 'gray',
   icon,
   endIcon,
-  size = 'md',
+  size = 'sm',
   avatar,
   status = 'offline',
   ...props
@@ -44,7 +43,7 @@ export function Badge({
       {icon && <Icon name={icon} size={12} />}
       {status !== 'offline' && <div className={`w-1.5 h-1.5 bg-${color}-500 rounded-full`} />}
       {avatar && <Avatar src={avatar} name={label ?? ''} className="w-4 h-4" />}
-      <p className={`whitespace-nowrap font-medium `}> {label}</p>
+      <p className={`whitespace-nowrap font-medium`}> {label}</p>
       {endIcon && <Icon name={endIcon} size={12} color={`${color}-500` as ColorType} />}
     </div>
   );

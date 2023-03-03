@@ -62,17 +62,17 @@ const buttonClassesGenerator = () => {
 
 const iconBadgeClassesGenerator = () => {
   let sizeClasses = {
-    '.badge-sm': {
+    '.ibdge-sm': {
       width: '1.25rem',
       height: '1.25rem',
       justifyContent: 'center',
     },
-    '.badge-md': {
+    '.ibdge-md': {
       width: '1.5rem',
       height: '1.5rem',
       justifyContent: 'center',
     },
-    '.badge-lg': {
+    '.ibdge-lg': {
       width: '1.75rem',
       height: '1.75rem',
       justifyContent: 'center',
@@ -81,10 +81,34 @@ const iconBadgeClassesGenerator = () => {
   return { ...sizeClasses };
 };
 
+const badgeClassesGenerator = () => {
+  let sizeClasses = {
+    '.bdge-sm': {
+      padding: '0.125rem 0.5rem',
+      fontSize: '0.75rem',
+      lineHeight: '1rem',
+    },
+    '.bdge-md': {
+      height: '1.5rem',
+      padding: '0.125rem 0.625rem',
+      fontSize: '0.875rem',
+      lineHeight: '1.25rem',
+    },
+    '.bdge-lg': {
+      height: '1.75rem',
+      padding: '0.25rem 0.75rem',
+      fontSize: '0.875rem',
+      lineHeight: '1.25rem',
+    },
+  };
+  return { ...sizeClasses };
+};
+
 const kickAssPlugin = plugin(function ({ addComponents }) {
   const buttonClasses = buttonClassesGenerator();
   const iconBadgeClasses = iconBadgeClassesGenerator();
-  addComponents({ ...buttonClasses, ...iconBadgeClasses });
+  const badgeClasses = badgeClassesGenerator();
+  addComponents({ ...buttonClasses, ...iconBadgeClasses, ...badgeClasses });
 });
 
 module.exports = { kickAssPlugin };

@@ -14,9 +14,9 @@ export interface BadgeProps extends React.HTMLAttributes<HTMLDivElement> {
   className?: string;
 }
 const relevantStyleToSize: any = {
-  sm: 'badge-sm',
-  md: 'badge-md',
-  lg: 'badge-lg',
+  sm: 'ibdge-sm',
+  md: 'ibdge-md',
+  lg: 'ibdge-lg',
 };
 
 export function IconBadge({ color = 'gray', icon, size = 'md', ...props }: BadgeProps) {

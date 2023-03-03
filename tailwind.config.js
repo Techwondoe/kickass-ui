@@ -73,7 +73,11 @@ module.exports = {
       variants: ['hover', 'focus', 'disabled', 'group-hover', 'group-disabled', 'group-focus'],
     },
     {
-      pattern: /badge.*/,
+      pattern: /ibdge.*/,
+      variants: ['hover', 'focus', 'disabled', 'group-hover', 'group-disabled', 'group-focus'],
+    },
+    {
+      pattern: /bdge.*/,
       variants: ['hover', 'focus', 'disabled', 'group-hover', 'group-disabled', 'group-focus'],
     },
   ],

@@ -78,7 +78,16 @@ module.exports = {
     },
     {
       pattern: /bdge.*/,
-      variants: ['hover', 'focus', 'disabled', 'group-hover', 'group-disabled', 'group-focus'],
+      variants: [
+        'hover',
+        'focus',
+        'disabled',
+        'group-hover',
+        'group-disabled',
+        'group-focus',
+        'first',
+        'last',
+      ],
     },
   ],
   plugins: [require('@tailwindcss/forms'), kickAssPlugin],

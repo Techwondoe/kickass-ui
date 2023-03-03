@@ -78,6 +78,7 @@ const iconBadgeClassesGenerator = () => {
       justifyContent: 'center',
     },
   };
+
   return { ...sizeClasses };
 };
 
@@ -101,7 +102,21 @@ const badgeClassesGenerator = () => {
       lineHeight: '1.25rem',
     },
   };
-  return { ...sizeClasses };
+
+  let colorClasses = {};
+  for (const colorName in colors) {
+    if (colorName !== 'white' && colorName !== 'black') {
+      colorClasses[`.bdge-${colorName}`] = {
+        backgroundColor: colors[colorName][50],
+        color: colors[colorName][500],
+        '&:first': {
+          stroke: colors[colorName][500],
+        },
+      };
+    }
+  }
+
+  return { ...sizeClasses, ...colorClasses};
 };
 
 const kickAssPlugin = plugin(function ({ addComponents }) {

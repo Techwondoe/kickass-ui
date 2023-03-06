@@ -14,7 +14,7 @@ export interface IconProps {
 
 export const Icon: FC<IconProps> = ({
     name,
-    color = "gray-900",
+    color,
     size = 20,
     className,
     onClick,
@@ -35,4 +35,3 @@ export const Icon: FC<IconProps> = ({
     );
 };
 
-// export default Icon;

@@ -59,7 +59,7 @@ export interface TypographyProps {
 
 export function Typography({
   children,
-  color = 'gray-900',
+  color,
   variant = 'h1',
   size = 'md',
   weight = 'normal',

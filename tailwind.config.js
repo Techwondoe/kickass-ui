@@ -74,7 +74,16 @@ module.exports = {
     },
     {
       pattern: /ibdge.*/,
-      variants: ['hover', 'focus', 'disabled', 'group-hover', 'group-disabled', 'group-focus'],
+      variants: [
+        'hover',
+        'focus',
+        'disabled',
+        'group-hover',
+        'group-disabled',
+        'group-focus',
+        'first',
+        'last',
+      ],
     },
     {
       pattern: /bdge.*/,

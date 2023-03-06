@@ -109,14 +109,12 @@ const badgeClassesGenerator = () => {
       colorClasses[`.bdge-${colorName}`] = {
         backgroundColor: colors[colorName][50],
         color: colors[colorName][500],
-        '&:first': {
-          stroke: colors[colorName][500],
-        },
+        stroke: colors[colorName][500],
       };
     }
   }
 
-  return { ...sizeClasses, ...colorClasses};
+  return { ...sizeClasses, ...colorClasses };
 };
 
 const kickAssPlugin = plugin(function ({ addComponents }) {

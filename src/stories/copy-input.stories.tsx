@@ -4,7 +4,7 @@ import { CopyInputField } from "../components/atoms/CopyInput/CopyInput";
 
 const Story: ComponentMeta<typeof CopyInputField> = {
     component: CopyInputField,
-    title: "Forms/CopyInputField",
+    title: "Forms/Copy Input Field",
 };
 export default Story;
 

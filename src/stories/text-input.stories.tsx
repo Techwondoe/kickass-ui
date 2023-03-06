@@ -4,7 +4,7 @@ import { TextInputField } from "../components/atoms/TextInput/text-input";
 
 const Story: ComponentMeta<typeof TextInputField> = {
     component: TextInputField,
-    title: "Forms/TextInputField",
+    title: "Forms/Text Input Field",
 };
 export default Story;
 

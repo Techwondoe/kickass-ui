@@ -4,7 +4,7 @@ import { PasswordInputField } from '../components/atoms/PasswordInput/password-i
 
 const Story: ComponentMeta<typeof PasswordInputField> = {
   component: PasswordInputField,
-  title: 'Forms/PasswordInputField',
+  title: 'Forms/Password Input Field',
 };
 export default Story;
 

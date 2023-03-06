@@ -4,7 +4,7 @@ import { Checkbox } from "../components/atoms/checkbox/checkbox";
 
 const Story: ComponentMeta<typeof Checkbox> = {
     component: Checkbox,
-    title: "Checkbox",
+    title: "Forms/Checkbox",
 };
 export default Story;
 

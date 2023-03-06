@@ -4,7 +4,7 @@ import { ButtonWrapper } from "../components/atoms/ButtonWrapper/button-wrapper"
 
 const Story: ComponentMeta<typeof ButtonWrapper> = {
     component: ButtonWrapper,
-    title: "Button Wrapper",
+    title: "Buttons/Button Wrapper",
 };
 export default Story;
 

@@ -3,7 +3,7 @@ import { Button } from '../components/atoms/Button';
 import React from 'react';
 const Story: ComponentMeta<typeof Button> = {
   component: Button,
-  title: 'Button',
+  title: 'Buttons/Button',
 };
 export default Story;
 

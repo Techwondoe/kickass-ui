@@ -4,7 +4,7 @@ import { ColorPicker } from "../components/atoms/ColorPicker/ColorPicker";
 
 const Story: ComponentMeta<typeof ColorPicker> = {
     component: ColorPicker,
-    title: "ColorPicker",
+    title: "Forms/ColorPicker",
 };
 export default Story;
 

@@ -42,7 +42,7 @@ export function Badge({
         relevantStyleToSize[size]
       } ${props?.className ?? ''}`}>
       {icon && <Icon name={icon} size={12} />}
-      {status !== 'offline' && <div className={`w-1.5 h-1.5 bg-${color}-500 rounded-full`} />}
+      {status !== 'offline' && <div className={`w-1.5 h-1.5 bg-success-500 rounded-full`} />}
       {avatar && <Avatar src={avatar} name={label ?? ''} className="w-4 h-4" />}
       <Typography
         variant="p"

@@ -96,7 +96,7 @@ export function Avatar({
                 {type === "placeholder" && (
                     <Icon
                         name="user-01"
-                        color="gray-600"
+                        color="gray-700"
                         size={iconSize[size]}
                     />
                 )}

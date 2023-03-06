@@ -78,8 +78,18 @@ const iconBadgeClassesGenerator = () => {
       justifyContent: 'center',
     },
   };
+  let colorClasses = {};
+  for (const colorName in colors) {
+    if (colorName !== 'white' && colorName !== 'black') {
+      colorClasses[`.ibdge-${colorName}`] = {
+        backgroundColor: colors[colorName][50],
+        color: colors[colorName][500],
+        stroke: colors[colorName][500],
+      };
+    }
+  }
 
-  return { ...sizeClasses };
+  return { ...sizeClasses,...colorClasses };
 };
 
 const badgeClassesGenerator = () => {

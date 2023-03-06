@@ -43,3 +43,9 @@ Online.args = {
     label: "Label",
     status: "online",
 };
+export const ClassNameStyle = Template.bind({});
+ClassNameStyle.args = {
+  className: 'bdge-blue bdge-lg',
+  label: 'Label',
+  endIcon: 'arrow-right',
+};

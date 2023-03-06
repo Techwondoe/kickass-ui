@@ -4,7 +4,7 @@ import { Upload } from "../components/atoms/upload/upload";
 
 const Story: ComponentMeta<typeof Upload> = {
     component: Upload,
-    title: "Upload",
+    title: "Forms/Upload",
 };
 export default Story;
 

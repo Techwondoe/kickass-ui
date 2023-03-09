@@ -4,7 +4,7 @@ import { DatePicker } from "../components/atoms/date-picker/date-picker";
 
 const Story: ComponentMeta<typeof DatePicker> = {
     component: DatePicker,
-    title: "DatePicker",
+    title: "Forms/Date Picker",
 };
 export default Story;
 

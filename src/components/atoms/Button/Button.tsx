@@ -1,3 +1,4 @@
+/* eslint-disable sort-keys */
 import React, { HTMLAttributes } from 'react';
 import clsx from 'clsx';
 import { ColorType, PrimaryColorType } from '../../../types/colors';
@@ -17,19 +18,19 @@ import { Typography } from '../Typography/Typography';
  * @params variant - Variant of the button. It supports those theme variants that make sense for this component.
  */
 export interface ButtonProps extends HTMLAttributes<HTMLButtonElement | HTMLAnchorElement> {
-  endIcon?: IconType;
-  icon?: IconType;
-  label: string;
   className?: string;
   color?: Exclude<PrimaryColorType, 'white' | 'black'>;
+  disabled?: boolean;
+  endIcon?: IconType;
   href?: string;
+  icon?: IconType;
+  label: string;
+  online?: boolean;
+  selected?: boolean;
   shape?: 'rounded' | 'square';
   size?: 'sm' | 'md' | 'lg' | 'xl' | '2xl';
-  variant?: 'contained' | 'outlined' | 'light' | 'text' | 'link';
-  disabled?: boolean;
-  online?: boolean;
   textAlign?: 'left' | 'center' | 'right';
-  selected?: boolean;
+  variant?: 'contained' | 'outlined' | 'light' | 'text' | 'link';
 }
 const sizes = {
   sm: 'btn-sm',

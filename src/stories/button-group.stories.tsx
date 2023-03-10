@@ -1,36 +1,34 @@
-import React from "react";
-import type { ComponentStory, ComponentMeta } from "@storybook/react";
-import { ButtonGroup } from "../components/atoms/ButtonGroup/button-group";
+import React from 'react';
+import type { ComponentStory, ComponentMeta } from '@storybook/react';
+import { ButtonGroup } from '../components/atoms/ButtonGroup/button-group';
 
 const Story: ComponentMeta<typeof ButtonGroup> = {
-    component: ButtonGroup,
-    title: "Buttons/ButtonGroup",
+  component: ButtonGroup,
+  title: 'Buttons/ButtonGroup',
 };
 export default Story;
 
-const Template: ComponentStory<typeof ButtonGroup> = args => (
-    <ButtonGroup {...args} />
-);
+const Template: ComponentStory<typeof ButtonGroup> = (args) => <ButtonGroup {...args} />;
 
 const items = [
-    {
-        label: "Profile",
-    },
-    {
-        label: "Settings",
-    },
-    {
-        label: "Messages",
-    },
+  {
+    label: 'Profile',
+  },
+  {
+    label: 'Settings',
+  },
+  {
+    label: 'Messages',
+  },
 ];
 
 export const Horizontal = Template.bind({});
 Horizontal.args = {
-    items,
+  items,
 };
 
 export const Vertical = Template.bind({});
 Vertical.args = {
-    items,
-    orientation: "vertical",
+  items,
+  orientation: 'vertical',
 };

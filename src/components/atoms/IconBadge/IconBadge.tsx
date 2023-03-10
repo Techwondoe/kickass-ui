@@ -8,12 +8,12 @@ import { ColorType } from '../../../types/colors';
 import { Icon, IconType } from '../icon';
 
 export interface BadgeProps extends React.HTMLAttributes<HTMLDivElement> {
-  color?: Exclude<ColorType, 'white' | 'black'>;
-  size?: 'sm' | 'md' | 'lg';
-  icon: IconType;
   className?: string;
+  color?: Exclude<ColorType, 'white' | 'black'>;
+  icon: IconType;
+  size?: 'sm' | 'md' | 'lg';
 }
-const relevantStyleToSize: any = {
+const relevantStyleToSize: Record<string, string> = {
   sm: 'ibdge-sm',
   md: 'ibdge-md',
   lg: 'ibdge-lg',

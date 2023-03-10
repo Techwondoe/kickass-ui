@@ -43,11 +43,11 @@ export interface TypographyProps {
   children: ReactNode;
   className?: string;
   color?: ColorVariantType;
-  variant?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span';
-  size?: TypographySizeType;
-  weight?: TypographyWeightType;
-  type?: TypographyTextType;
   onClick?: () => void;
+  size?: TypographySizeType;
+  type?: TypographyTextType;
+  variant?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span';
+  weight?: TypographyWeightType;
 }
 
 /**

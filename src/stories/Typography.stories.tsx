@@ -9,7 +9,7 @@ const Story: ComponentMeta<typeof Typography> = {
 export default Story;
 
 const Template: ComponentStory<typeof Typography> = (args) => (
-  <Typography {...args} children="test" />
+  <Typography {...args}>test</Typography>
 );
 
 export const Primary = Template.bind({});

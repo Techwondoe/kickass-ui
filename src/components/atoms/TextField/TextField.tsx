@@ -76,7 +76,7 @@ export function TextField({
       {label && (
         <label
           htmlFor={id}
-          className={`block text-sm font-medium ${error ? `text-danger` : `text-secondary`} `}>
+          className={`block text-sm font-medium text-primary-600 ${error ? `text-danger` : `text-secondary`} `}>
           {label}
         </label>
       )}

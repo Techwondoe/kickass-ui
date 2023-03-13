@@ -6,12 +6,11 @@ import { extendTheme, base } from '~/themes';
 
 const TextFieldContainer = (props: TextFieldProps) => {
   const customTheme = extendTheme(base, {
-    primary: 'blue',
-    secondary: 'green',
-    contrast: {
-      ...base.contrast,
-      primary: 'red',
-    },
+    ...base,
+    primary: {
+      ...base.primary,
+      // '600': 'red'+
+    }
   });
   return (
     <ComponentWithColors

@@ -1,6 +1,8 @@
 import React from 'react';
 import type { ComponentStory, ComponentMeta } from '@storybook/react';
 import DirectionMetric from '../components/atoms/DirectionMetric/DirectionMetric';
+import { ComponentWithColors, ComponentName } from '~/helpers/extend-colors-storybook';
+import { extendTheme, base } from '~/themes';
 
 const Story: ComponentMeta<typeof DirectionMetric> = {
   component: DirectionMetric,
@@ -8,7 +10,22 @@ const Story: ComponentMeta<typeof DirectionMetric> = {
 };
 export default Story;
 
-const Template: ComponentStory<typeof DirectionMetric> = (args) => <DirectionMetric {...args} />;
+const Template: ComponentStory<typeof DirectionMetric> = (args) => {
+  const customTheme = extendTheme(base, {
+    ...base,
+    primary: {
+      ...base.primary,
+      // '700': 'red',
+    },
+  });
+  return (
+    <ComponentWithColors
+      componentName={ComponentName.DIRECTIONMETRIC}
+      componentProps={args}
+      customTheme={customTheme}
+    />
+  );
+};
 
 export const Primary = Template.bind({});
 Primary.args = {

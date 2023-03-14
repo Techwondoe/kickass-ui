@@ -77,13 +77,13 @@ export function Avatar({
         .join("");
     return (
         <div
-            className={`relative inline-block ${
+            className={`relative inline-block bg-gray-50 ${
                 onClick ? "cursor-pointer" : ""
             } ${sizes[size]} ${shapes[shape]} ${className}`}
             onClick={onClick}
         >
             <div
-                className={`flex items-center justify-center w-full h-full ${shapes[shape]} overflow-hidden bg-gray-50 hover:ring hover:ring-gray-100`}
+                className={`flex items-center justify-center w-full h-full ${shapes[shape]} overflow-hidden hover:ring hover:ring-gray-100`}
             >
                 {type === "image" && (
                     <img
@@ -102,7 +102,6 @@ export function Avatar({
                 )}
                 {type === "name" && (
                     <Typography
-                        color="gray-600"
                         type={size === "2xl" ? "display" : "text"}
                         size={size === "2xl" ? "xs" : size}
                     >

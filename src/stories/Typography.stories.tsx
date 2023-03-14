@@ -1,8 +1,8 @@
 import type { ComponentStory, ComponentMeta } from '@storybook/react';
-import React from 'react';
 import { ComponentWithColors, ComponentName } from '~/helpers/extend-colors-storybook';
 import { Typography } from '../components/atoms/Typography';
 import { extendTheme, base } from '~/themes';
+import React from 'react';
 
 const Story: ComponentMeta<typeof Typography> = {
   component: Typography,

@@ -1,13 +1,31 @@
 import type { ComponentStory, ComponentMeta } from '@storybook/react';
+import { ComponentWithColors, ComponentName } from '~/helpers/extend-colors-storybook';
+import { extendTheme, base } from '~/themes';
 import { Button } from '../components/atoms/Button';
 import React from 'react';
+
 const Story: ComponentMeta<typeof Button> = {
   component: Button,
   title: 'Buttons/Button',
 };
 export default Story;
 
-const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
+const Template: ComponentStory<typeof Button> = (args) => {
+  const customTheme = extendTheme(base, {
+    ...base,
+    primary: {
+      ...base.primary,
+      // '600': 'red',
+    },
+  });
+  return (
+    <ComponentWithColors
+      componentName={ComponentName.BUTTON}
+      componentProps={args}
+      customTheme={customTheme}
+    />
+  );
+};
 
 export const Primary = Template.bind({});
 Primary.args = {

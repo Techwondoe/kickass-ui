@@ -2,6 +2,21 @@ import { Theme, MappedTheme, ApplyThemeProps, base } from './types';
 
 const mapTheme: (variables: Theme) => MappedTheme = (variables: Theme) => {
   return {
+
+    '--color-black': variables.black || '',
+    '--color-white': variables.white || '',
+    '--color-gray-25': variables.gray?.[25] || '',
+    '--color-gray-50': variables.gray?.[50] || '',
+    '--color-gray-100': variables.gray?.[100] || '',
+    '--color-gray-200': variables.gray?.[200] || '',
+    '--color-gray-300': variables.gray?.[300] || '',
+    '--color-gray-400': variables.gray?.[400] || '',
+    '--color-gray-500': variables.gray?.[500] || '',
+    '--color-gray-600': variables.gray?.[600] || '',
+    '--color-gray-700': variables.gray?.[700] || '',
+    '--color-gray-800': variables.gray?.[800] || '',
+    '--color-gray-900': variables.gray?.[900] || '',
+    '--color-gray-DEFAULT': variables.gray?.DEFAULT || '',
     '--color-primary-25': variables.primary?.[25] || '',
     '--color-primary-50': variables.primary?.[50] || '',
     '--color-primary-100': variables.primary?.[100] || '',

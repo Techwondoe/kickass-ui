@@ -16,7 +16,14 @@ import { EmptySection, EmptySectionProps } from '~/components/atoms/EmptySection
 import { Pagination, PaginationProps } from '~/components/atoms/Pagination/pagination';
 import { Table, TableProps } from '~/components/atoms/table/table';
 import { Tag, TagProps } from '~/components/atoms/Tag/tag';
-
+import { UserProfile, UserProfileProps } from '~/components/atoms/UserProfile/user-profile';
+import { AmountInputField, AmountInputProps } from '~/components/atoms/AmountInput/amount-input';
+import { Calendar, CalendarProps } from '~/components/atoms/calendar/calendar';
+import { Checkbox, CheckboxProps } from '~/components/atoms/checkbox/checkbox';
+import { ColorPicker, ColorPickerProps } from '~/components/atoms/ColorPicker/ColorPicker';
+import { CopyInputField, CopyInputProps } from '~/components/atoms/CopyInput/CopyInput';
+import { DatePicker, DatePickerProps } from '~/components/atoms/date-picker/date-picker';
+import { DatePickerDropdown, DatePickerDropdownProps } from '~/components/atoms/date-picker-dropdown/date-picker-dropdown';
 // You need this file for themes to work as expected.
 // Please run the command storybook-css or copy them manually from /dist/index.css
 import './index.css';
@@ -24,20 +31,28 @@ import './index.css';
 export enum ComponentName {
   AVATAR = 'Avatar',
   BUTTON = 'Button',
-  CARD='Card',
+  CARD = 'Card',
   DIRECTIONMETRIC = 'DirectionMetric',
-  EMPTYSECTION='EmptySection',
+  EMPTYSECTION = 'EmptySection',
   TEXTFIELD = 'Textfield',
   TYPOGRAPHY = 'Typography',
   BADGE = 'Badge',
   DIVIDER = 'Divider',
-  ICONBADGE='IconBadge',
+  ICONBADGE = 'IconBadge',
   ICON = 'Icon',
-  PROGRESSBAR='ProgressBar',
-  TOGGLE='Toggle',
-  TABLE='Table',
-  PAGINATION='Pagination',
-  TAG='Tag',
+  PROGRESSBAR = 'ProgressBar',
+  TOGGLE = 'Toggle',
+  TABLE = 'Table',
+  PAGINATION = 'Pagination',
+  TAG = 'Tag',
+  USERPROFILE = 'UserProfile',
+  AMOUNTINPUT = 'AmountInputField',
+  CALENDAR = 'Calendar',
+  CHECKBOX = 'Checkbox',
+  COLORPICKER = 'ColorPicker',
+  COPYINPUT = 'CopyInputField',
+  DATEPICKER = 'DatePicker',
+  DATEPICKERDROPDOWN = 'DatePickerDropdown',
 }
 export type ComponentProps =
   | TextFieldProps
@@ -55,6 +70,15 @@ export type ComponentProps =
   | PaginationProps
   | TableProps
   | TagProps
+  | UserProfileProps
+  | AmountInputProps
+  | CalendarProps
+  | CheckboxProps
+  | ColorPickerProps
+  | CopyInputProps
+  | DatePickerProps
+  | DatePickerDropdownProps
+
 
 
 export const ComponentMapper: Record<ComponentName, ElementType> = {
@@ -74,6 +98,14 @@ export const ComponentMapper: Record<ComponentName, ElementType> = {
   [ComponentName.PAGINATION]: Pagination,
   [ComponentName.TABLE]: Table,
   [ComponentName.TAG]: Tag,
+  [ComponentName.USERPROFILE]: UserProfile,
+  [ComponentName.AMOUNTINPUT]: AmountInputField,
+  [ComponentName.CALENDAR]: Calendar,
+  [ComponentName.CHECKBOX]: Checkbox,
+  [ComponentName.COLORPICKER]: ColorPicker,
+  [ComponentName.COPYINPUT]: CopyInputField,
+  [ComponentName.DATEPICKER]: DatePicker,
+  [ComponentName.DATEPICKERDROPDOWN]: DatePickerDropdown,
 };
 
 export interface ComponentWithColorProps {

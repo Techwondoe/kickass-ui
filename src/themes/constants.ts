@@ -12,6 +12,26 @@ export const baseFont: Font = {
       lineHeight: '72px',
       letterSpacing: '-0.02em',
     },
+    [FontSize.LG]: {
+      size: '48px',
+      lineHeight: '60px',
+      letterSpacing: '-0.02em',
+    },
+    [FontSize.MD]: {
+      size: '36px',
+      lineHeight: '60px',
+      letterSpacing: '-0.02em',
+    },
+    [FontSize.SM]: {
+      size: '30px',
+      lineHeight: '38px',
+      letterSpacing: '',
+    },
+    [FontSize.XS]: {
+      size: '24px',
+      lineHeight: '32px',
+      letterSpacing: '',
+    },
   },
   text: {
     [FontSize['2XL']]: {
@@ -22,6 +42,26 @@ export const baseFont: Font = {
     [FontSize.XL]: {
       size: '20px',
       lineHeight: '30px',
+      letterSpacing: '',
+    },
+    [FontSize.LG]: {
+      size: '18px',
+      lineHeight: '28px',
+      letterSpacing: '',
+    },
+    [FontSize.MD]: {
+      size: '16px',
+      lineHeight: '24px',
+      letterSpacing: '',
+    },
+    [FontSize.SM]: {
+      size: '14px',
+      lineHeight: '20px',
+      letterSpacing: '',
+    },
+    [FontSize.XS]: {
+      size: '12px',
+      lineHeight: '18px',
       letterSpacing: '',
     },
   },

@@ -1,6 +1,6 @@
 /* eslint-disable sort-keys */
 import { base } from './constants';
-import { Theme, MappedTheme, ApplyThemeProps } from './types';
+import { Theme, MappedTheme, ApplyThemeProps, FontSize } from './types';
 
 const generateColors = (variables: Theme) => {
   return {
@@ -70,19 +70,27 @@ const generateColors = (variables: Theme) => {
 };
 
 const generateFonts = (variables: Theme) => {
+  const mapFont = (type: 'display' | 'text', size: FontSize) => {
+    const variable = type === 'display' ? variables.font.display : variables.font.text;
+    return {
+      [`--font-${type}-${size}-size`]: variable[size].size || '',
+      [`--font-${type}-${size}-lineHeight`]: variable[size].lineHeight || '',
+      [`--font-${type}-${size}-letterSpacing`]: variable[size].letterSpacing || '',
+    };
+  };
   return {
-    '--font-display-2xl-size': variables.font.display['2xl'].size || '',
-    '--font-display-2xl-lineHeight': variables.font.display['2xl'].lineHeight || '',
-    '--font-display-2xl-letterSpacing': variables.font.display['2xl'].letterSpacing || '',
-    '--font-display-xl-size': variables.font.display.xl.size || '',
-    '--font-display-xl-lineHeight': variables.font.display.xl.lineHeight || '',
-    '--font-display-xl-letterSpacing': variables.font.display.xl.letterSpacing || '',
-    '--font-text-2xl-size': variables.font.text['2xl'].size || '',
-    '--font-text-2xl-lineHeight': variables.font.text['2xl'].lineHeight || '',
-    '--font-text-2xl-letterSpacing': variables.font.text['2xl'].letterSpacing || '',
-    '--font-text-xl-size': variables.font.text.xl.size || '',
-    '--font-text-xl-lineHeight': variables.font.text.xl.lineHeight || '',
-    '--font-text-xl-letterSpacing': variables.font.text.xl.letterSpacing || '',
+    ...mapFont('display', FontSize['2XL']),
+    ...mapFont('display', FontSize.XL),
+    ...mapFont('display', FontSize.LG),
+    ...mapFont('display', FontSize.MD),
+    ...mapFont('display', FontSize.SM),
+    ...mapFont('display', FontSize.XS),
+    ...mapFont('text', FontSize['2XL']),
+    ...mapFont('text', FontSize.XL),
+    ...mapFont('text', FontSize.LG),
+    ...mapFont('text', FontSize.MD),
+    ...mapFont('text', FontSize.SM),
+    ...mapFont('text', FontSize.XS),
   };
 };
 

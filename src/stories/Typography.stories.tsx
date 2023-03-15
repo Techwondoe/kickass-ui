@@ -15,6 +15,17 @@ export default Story;
 const Template: ComponentStory<typeof Typography> = (args) => {
   const customTheme = extendTheme(base, {
     ...base,
+    font: {
+      ...base.font,
+      display: {
+        ...base.font.display,
+        sm: {
+          size: '10px',
+          lineHeight: '10px',
+          letterSpacing: '10px',
+        },
+      },
+    },
     color: {
       ...base.color,
       primary: {

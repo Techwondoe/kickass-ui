@@ -5,12 +5,12 @@ export interface FontParams {
 }
 
 export enum FontSize {
-  // XS = 'xs',
   '2XL' = '2xl',
-  // LG = 'lg',
-  // MD = 'md',
-  // sm = 'sm',
+  LG = 'lg',
+  MD = 'md',
+  SM = 'sm',
   XL = 'xl',
+  XS = 'xs',
 }
 
 export interface Font {

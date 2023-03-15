@@ -31,7 +31,7 @@ interface UsePaginationReturnType {
 }
 
 /* eslint-disable-next-line */
-interface PaginationProps extends UsePaginationProps {
+export interface PaginationProps extends UsePaginationProps {
   shape?: React.ComponentProps<typeof Button>['shape'];
 }
 

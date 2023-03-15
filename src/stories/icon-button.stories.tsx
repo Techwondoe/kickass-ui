@@ -4,7 +4,7 @@ import { IconButton } from "../components/atoms/iconButton/icon-button";
 
 const Story: ComponentMeta<typeof IconButton> = {
     component: IconButton,
-    title: "IconButton",
+    title: "Buttons/IconButton",
 };
 export default Story;
 

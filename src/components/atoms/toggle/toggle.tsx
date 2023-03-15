@@ -1,7 +1,7 @@
 import React, { FC, useState } from "react";
 import { ColorType } from "../../../types/colors";
 
-interface ToggleProps {
+export interface ToggleProps {
     defaultEnabled?: boolean;
     enabled?: boolean;
     onChange?: (value: boolean) => void;

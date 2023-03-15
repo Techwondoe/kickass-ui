@@ -1,7 +1,7 @@
 import type { ComponentStory, ComponentMeta } from '@storybook/react';
-import {Button} from '../components/atoms/Button/Button'
+import { Button } from '../components/atoms/Button/Button';
 import { Item } from '../components/atoms/sidebar/menu';
-import {UserProfile} from '../components/atoms/UserProfile/user-profile'
+import { UserProfile } from '../components/atoms/UserProfile/user-profile';
 import { Dropdown } from '../components/atoms/Dropdown/dropdown';
 import React from 'react';
 

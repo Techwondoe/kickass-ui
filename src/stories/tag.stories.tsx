@@ -4,8 +4,8 @@ import { Tag } from "../components/atoms/Tag/tag";
 import { ComponentWithColors, ComponentName } from '~/helpers/extend-colors-storybook';
 import { extendTheme, base } from '~/themes';
 const Story: ComponentMeta<typeof Tag> = {
-    component: Tag,
-    title: "Tag",
+  component: Tag,
+  title: 'Tag',
 };
 export default Story;
 
@@ -28,5 +28,5 @@ const Template: ComponentStory<typeof Tag> = (args) => {
 
 export const Regular = Template.bind({});
 Regular.args = {
-    label: "Label",
+  label: 'Label',
 };

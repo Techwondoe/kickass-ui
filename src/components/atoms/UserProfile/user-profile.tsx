@@ -3,11 +3,11 @@ import { Avatar } from '../Avatar/Avatar';
 import { Typography, TypographySizeType } from '../Typography/Typography';
 
 export interface UserProfileProps {
-  name: string;
-  subTitle: string;
   avatar?: string;
-  status?: 'online' | 'offline' | 'busy' | 'away';
+  name: string;
   size?: 'sm' | 'md' | 'lg' | 'xl';
+  status?: 'online' | 'offline' | 'busy' | 'away';
+  subTitle: string;
 }
 
 const nameSizes = {

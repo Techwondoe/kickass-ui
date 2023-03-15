@@ -5,8 +5,8 @@ import { ComponentWithColors, ComponentName } from '~/helpers/extend-colors-stor
 import { extendTheme, base } from '~/themes';
 
 const Story: ComponentMeta<typeof Badge> = {
-    component: Badge,
-    title: "Badge",
+  component: Badge,
+  title: 'Badge',
 };
 export default Story;
 
@@ -30,36 +30,36 @@ const Template: ComponentStory<typeof Badge> = (args) => {
 
 export const Regular = Template.bind({});
 Regular.args = {
-    color: "success",
-    label: "Label",
+  color: 'success',
+  label: 'Label',
 };
 
 export const EndIcon = Template.bind({});
 EndIcon.args = {
-    color: "success",
-    label: "Label",
-    endIcon: "arrow-right",
+  color: 'success',
+  label: 'Label',
+  endIcon: 'arrow-right',
 };
 
 export const StartIcon = Template.bind({});
 StartIcon.args = {
-    color: "success",
-    label: "Label",
-    icon: "x-close",
+  color: 'success',
+  label: 'Label',
+  icon: 'x-close',
 };
 
 export const Avatar = Template.bind({});
 Avatar.args = {
-    color: "success",
-    label: "Label",
-    avatar: "https://avatars.githubusercontent.com/u/28987707?s=96&v=4",
+  color: 'success',
+  label: 'Label',
+  avatar: 'https://avatars.githubusercontent.com/u/28987707?s=96&v=4',
 };
 
 export const Online = Template.bind({});
 Online.args = {
-    color: "success",
-    label: "Label",
-    status: "online",
+  color: 'success',
+  label: 'Label',
+  status: 'online',
 };
 export const ClassNameStyle = Template.bind({});
 ClassNameStyle.args = {

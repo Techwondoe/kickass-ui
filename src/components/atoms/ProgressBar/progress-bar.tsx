@@ -3,29 +3,29 @@ import { PrimaryColorVariantType } from '../../../types/colors';
 import { Typography } from '../Typography/Typography';
 
 export interface ProgressBarProps {
-  value: number;
-  color?: Exclude<PrimaryColorVariantType, 'white' | 'black'>;
-  showPercentage?: boolean;
-  percentagePosition?: 'right' | 'left' | 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right';
   className?: string;
+  color?: Exclude<PrimaryColorVariantType, 'white' | 'black'>;
+  percentagePosition?: 'right' | 'left' | 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right';
+  showPercentage?: boolean;
+  value: number;
 }
 
 const containerClass = {
-  right: 'items-center',
-  left: 'flex-row-reverse items-center',
-  'top-left': 'flex-col-reverse',
-  'top-right': 'flex-col-reverse items-end',
   'bottom-left': 'flex-col',
   'bottom-right': 'flex-col items-end',
+  left: 'flex-row-reverse items-center',
+  right: 'items-center',
+  'top-left': 'flex-col-reverse',
+  'top-right': 'flex-col-reverse items-end',
 };
 
 const percentageClass = {
-  right: 'ml-3',
-  left: 'mr-3',
-  'top-left': 'mb-2',
-  'top-right': 'mb-2',
   'bottom-left': 'mt-2',
   'bottom-right': 'mt-2',
+  left: 'mr-3',
+  right: 'ml-3',
+  'top-left': 'mb-2',
+  'top-right': 'mb-2',
 };
 
 export const ProgressBar: FC<ProgressBarProps> = ({

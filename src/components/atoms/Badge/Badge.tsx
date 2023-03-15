@@ -1,22 +1,21 @@
-/**
- * @params color - Text color for badge with color/20 background
- * @params label - Text within badge
- */
-
 import React from 'react';
-import { ColorType, ColorVariantType } from '../../../types/colors';
+import { ColorType } from '../../../types/colors';
 import { Avatar } from '../Avatar/Avatar';
 import { Icon, IconType } from '../icon';
 import { Typography } from '../Typography';
 
+/**
+ * @params color - Text color for badge with color/20 background
+ * @params label - Text within badge
+ */
 export interface BadgeProps extends React.HTMLAttributes<HTMLDivElement> {
-  color?: Exclude<ColorType, 'white' | 'black'>;
-  label: string;
-  size?: 'sm' | 'md' | 'lg';
-  icon?: IconType;
-  endIcon?: IconType;
   avatar?: string;
   className?: string;
+  color?: Exclude<ColorType, 'white' | 'black'>;
+  endIcon?: IconType;
+  icon?: IconType;
+  label: string;
+  size?: 'sm' | 'md' | 'lg';
   status?: 'online' | 'offline' | 'away';
 }
 const relevantStyleToSize = {
@@ -51,7 +50,7 @@ export function Badge({
         className="whitespace-nowrap">
         {label}
       </Typography>
-      {endIcon && <Icon name={endIcon} size={12}/>}
+      {endIcon && <Icon name={endIcon} size={12} />}
     </div>
   );
 }

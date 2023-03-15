@@ -5,8 +5,8 @@ import { ComponentWithColors, ComponentName } from '~/helpers/extend-colors-stor
 import { extendTheme, base } from '~/themes';
 
 const Story: ComponentMeta<typeof Pagination> = {
-    component: Pagination,
-    title: "Pagination",
+  component: Pagination,
+  title: 'Pagination',
 };
 export default Story;
 
@@ -29,5 +29,5 @@ const Template: ComponentStory<typeof Pagination> = (args) => {
 
 export const Regular = Template.bind({});
 Regular.args = {
-    count: 12,
+  count: 12,
 };

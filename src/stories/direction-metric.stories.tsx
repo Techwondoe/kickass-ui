@@ -47,4 +47,3 @@ High.args = {
   value: 36,
   limit: 24,
 };
-

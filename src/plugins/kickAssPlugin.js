@@ -1,8 +1,10 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
+/* eslint-disable sort-keys */
 const plugin = require('tailwindcss/plugin');
 const { colors } = require('../theme.json');
 
 const buttonClassesGenerator = () => {
-  let sizeClasses = {
+  const sizeClasses = {
     '.btn-sm': {
       padding: '0.5rem 0.875rem',
       borderRadius: '.25rem',
@@ -61,7 +63,7 @@ const buttonClassesGenerator = () => {
 };
 
 const iconBadgeClassesGenerator = () => {
-  let sizeClasses = {
+  const sizeClasses = {
     '.ibdge-sm': {
       width: '1.25rem',
       height: '1.25rem',
@@ -78,7 +80,7 @@ const iconBadgeClassesGenerator = () => {
       justifyContent: 'center',
     },
   };
-  let colorClasses = {};
+  const colorClasses = {};
   for (const colorName in colors) {
     if (colorName !== 'white' && colorName !== 'black') {
       colorClasses[`.ibdge-${colorName}`] = {
@@ -89,11 +91,11 @@ const iconBadgeClassesGenerator = () => {
     }
   }
 
-  return { ...sizeClasses,...colorClasses };
+  return { ...sizeClasses, ...colorClasses };
 };
 
 const badgeClassesGenerator = () => {
-  let sizeClasses = {
+  const sizeClasses = {
     '.bdge-sm': {
       padding: '0.125rem 0.5rem',
       fontSize: '0.75rem',
@@ -113,7 +115,7 @@ const badgeClassesGenerator = () => {
     },
   };
 
-  let colorClasses = {};
+  const colorClasses = {};
   for (const colorName in colors) {
     if (colorName !== 'white' && colorName !== 'black') {
       colorClasses[`.bdge-${colorName}`] = {

@@ -1,12 +1,11 @@
-import React from "react";
-import { ReactNode } from "react";
+import React, { ReactNode } from 'react';
 
 export interface WrapperProps {
-    children: ReactNode;
+  children: ReactNode;
 }
 
 export function Wrapper({ children }: WrapperProps) {
-    return <div className="border rounded-md shadow-sm">{children}</div>;
+  return <div className="border rounded-md shadow-sm">{children}</div>;
 }
 
 export default Wrapper;

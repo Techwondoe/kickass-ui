@@ -5,29 +5,29 @@ import { IconButton } from '../iconButton/icon-button';
 import { Typography } from '../Typography/Typography';
 
 interface UsePaginationProps {
+  boundaryCount?: number;
   count?: number;
   defaultPage?: number;
-  page?: number;
   onChange?: (page: number) => void;
-  boundaryCount?: number;
+  page?: number;
   siblingCount?: number;
 }
 
 interface UsePaginationReturnType {
-  items: {
-    page?: number;
-    type: 'page' | 'start-ellipsis' | 'end-ellipsis';
-    selected?: boolean;
-    goToThisPage?: () => void;
-  }[];
   currentPage: number;
-  goToNextPage: () => void;
-  goToPrevPage: () => void;
   goToFirstPage: () => void;
   goToLastPage: () => void;
+  goToNextPage: () => void;
   goToPage: (page: number) => void;
-  prevPageExists: boolean;
+  goToPrevPage: () => void;
+  items: {
+    goToThisPage?: () => void;
+    page?: number;
+    selected?: boolean;
+    type: 'page' | 'start-ellipsis' | 'end-ellipsis';
+  }[];
   nextPageExists: boolean;
+  prevPageExists: boolean;
 }
 
 /* eslint-disable-next-line */
@@ -107,15 +107,15 @@ export function usePagination({
   }
 
   return {
-    items,
     currentPage: pageIndex,
     goToFirstPage,
     goToLastPage,
     goToNextPage,
     goToPage,
     goToPrevPage,
-    prevPageExists,
+    items,
     nextPageExists,
+    prevPageExists,
   } as UsePaginationReturnType;
 }
 
@@ -130,11 +130,11 @@ export function Pagination({
 }: PaginationProps) {
   const { items, prevPageExists, nextPageExists, currentPage, goToNextPage, goToPrevPage } =
     usePagination({
-      page,
-      onChange,
-      count,
       boundaryCount,
+      count,
       defaultPage,
+      onChange,
+      page,
       siblingCount,
     });
 
@@ -150,9 +150,10 @@ export function Pagination({
           disabled={!prevPageExists}
         />
         <div className="hidden sm:flex items-end">
-          {items.map(({ page, type, selected, goToThisPage }) => {
+          {items.map(({ page, type, selected, goToThisPage }, index) => {
             return (
               <div
+                key={index}
                 className={clsx(
                   'w-10 h-10 flex items-center justify-center cursor-pointer hover:bg-gray-50',
                   {

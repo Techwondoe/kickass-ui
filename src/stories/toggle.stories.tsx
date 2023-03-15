@@ -5,8 +5,8 @@ import { ComponentWithColors, ComponentName } from '~/helpers/extend-colors-stor
 import { extendTheme, base } from '~/themes';
 
 const Story: ComponentMeta<typeof Toggle> = {
-    component: Toggle,
-    title: "Toggle",
+  component: Toggle,
+  title: 'Toggle',
 };
 export default Story;
 

@@ -5,8 +5,8 @@ import { ComponentWithColors, ComponentName } from '~/helpers/extend-colors-stor
 import { extendTheme, base } from '~/themes';
 
 const Story: ComponentMeta<typeof ProgressBar> = {
-    component: ProgressBar,
-    title: "ProgressBar",
+  component: ProgressBar,
+  title: 'ProgressBar',
 };
 export default Story;
 

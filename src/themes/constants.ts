@@ -2,6 +2,11 @@ import { Font, FontSize, Color, Theme } from './types';
 
 export const baseFont: Font = {
   display: {
+    [FontSize['2XL']]: {
+      size: '72px',
+      lineHeight: '90px',
+      letterSpacing: '-0.02em',
+    },
     [FontSize.XL]: {
       size: '60px',
       lineHeight: '72px',
@@ -9,6 +14,11 @@ export const baseFont: Font = {
     },
   },
   text: {
+    [FontSize['2XL']]: {
+      size: '30px',
+      lineHeight: '40px',
+      letterSpacing: '',
+    },
     [FontSize.XL]: {
       size: '20px',
       lineHeight: '30px',

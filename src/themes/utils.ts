@@ -71,9 +71,15 @@ const generateColors = (variables: Theme) => {
 
 const generateFonts = (variables: Theme) => {
   return {
+    '--font-display-2xl-size': variables.font.display['2xl'].size || '',
+    '--font-display-2xl-lineHeight': variables.font.display['2xl'].lineHeight || '',
+    '--font-display-2xl-letterSpacing': variables.font.display['2xl'].letterSpacing || '',
     '--font-display-xl-size': variables.font.display.xl.size || '',
     '--font-display-xl-lineHeight': variables.font.display.xl.lineHeight || '',
     '--font-display-xl-letterSpacing': variables.font.display.xl.letterSpacing || '',
+    '--font-text-2xl-size': variables.font.text['2xl'].size || '',
+    '--font-text-2xl-lineHeight': variables.font.text['2xl'].lineHeight || '',
+    '--font-text-2xl-letterSpacing': variables.font.text['2xl'].letterSpacing || '',
     '--font-text-xl-size': variables.font.text.xl.size || '',
     '--font-text-xl-lineHeight': variables.font.text.xl.lineHeight || '',
     '--font-text-xl-letterSpacing': variables.font.text.xl.letterSpacing || '',

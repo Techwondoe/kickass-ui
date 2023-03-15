@@ -7,7 +7,4 @@ dist
 .tsbuild
 /docs/
 /src/helpers/index.css
-/src/helpers/extend-colors-storybook
-/src/stories/
-.storybook
-package.json
+/src/helpers/extend-colors-storybook.tsx

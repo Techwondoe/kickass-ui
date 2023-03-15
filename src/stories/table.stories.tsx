@@ -1,12 +1,12 @@
-import { faker } from "@faker-js/faker";
-import type { ComponentStory, ComponentMeta } from "@storybook/react";
+import { faker } from '@faker-js/faker';
+import type { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ComponentWithColors, ComponentName } from '~/helpers/extend-colors-storybook';
-import { extendTheme, base } from '~/themes';
-import { ColumnDef } from "@tanstack/react-table";
-import {Button} from "../components/atoms/Button/Button";
-import {Typography} from "../components/atoms/Typography/Typography";
-import { Table } from "../components/atoms/table/table";
-import React from "react";
+import { extendTheme, base, ColorShade } from '~/themes';
+import { ColumnDef } from '@tanstack/react-table';
+import { Button } from '../components/atoms/Button/Button';
+import { Typography } from '../components/atoms/Typography/Typography';
+import { Table } from '../components/atoms/table/table';
+import React from 'react';
 
 export type Person = {
   age: number;
@@ -66,9 +66,12 @@ export default Story;
 const Template: ComponentStory<typeof Table> = (args) => {
   const customTheme = extendTheme(base, {
     ...base,
-    gray: {
-      ...base.gray,
-    //   '700': 'red',
+    color: {
+      ...base.color,
+      gray: {
+        ...(base.color['gray'] as Record<ColorShade, string>),
+        //   '700': 'red',
+      },
     },
   });
   return (
@@ -79,7 +82,6 @@ const Template: ComponentStory<typeof Table> = (args) => {
     />
   );
 };
-
 
 const columns: ColumnDef<Person>[] = [
   {

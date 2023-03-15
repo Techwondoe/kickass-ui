@@ -1,5 +1,7 @@
 const { kickAssPlugin } = require('./src/plugins/kickAssPlugin');
 const { colors } = require('./src/theme.json');
+const { fontSize } = require('./src/font.json');
+
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -12,44 +14,8 @@ module.exports = {
         'eudoxus-sans': ['"Eudoxus Sans"'],
       },
     },
-    colors: colors,
-    fontSize: {
-      'd-2xl': [
-        '72px',
-        {
-          lineHeight: '90px',
-          letterSpacing: '-0.02em',
-        },
-      ],
-      'd-xl': [
-        '60px',
-        {
-          lineHeight: '72px',
-          letterSpacing: '-0.02em',
-        },
-      ],
-      'd-lg': [
-        '48px',
-        {
-          lineHeight: '60px',
-          letterSpacing: '-0.02em',
-        },
-      ],
-      'd-md': [
-        '36px',
-        {
-          lineHeight: '60px',
-          letterSpacing: '-0.02em',
-        },
-      ],
-      'd-sm': ['30px', '38px'],
-      'd-xs': ['24px', '32px'],
-      't-xl': ['20px', '30px'],
-      't-lg': ['18px', '28px'],
-      't-md': ['16px', '24px'],
-      't-sm': ['14px', '20px'],
-      't-xs': ['12px', '18px'],
-    },
+    colors,
+    fontSize,
   },
   safelist: [
     {

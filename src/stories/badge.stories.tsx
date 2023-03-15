@@ -1,8 +1,8 @@
-import type { ComponentStory, ComponentMeta } from "@storybook/react";
-import React from "react";
-import { Badge } from "../components/atoms/Badge/Badge";
+import type { ComponentStory, ComponentMeta } from '@storybook/react';
+import React from 'react';
+import { Badge } from '../components/atoms/Badge/Badge';
 import { ComponentWithColors, ComponentName } from '~/helpers/extend-colors-storybook';
-import { extendTheme, base } from '~/themes';
+import { extendTheme, base, ColorShade } from '~/themes';
 
 const Story: ComponentMeta<typeof Badge> = {
   component: Badge,
@@ -13,9 +13,12 @@ export default Story;
 const Template: ComponentStory<typeof Badge> = (args) => {
   const customTheme = extendTheme(base, {
     ...base,
-    primary: {
-      ...base.primary,
-      '500': 'red',
+    color: {
+      ...base.color,
+      primary: {
+        ...(base.color.primary as Record<ColorShade, string>),
+        // '600': 'red',
+      },
     },
   });
   return (
@@ -26,7 +29,6 @@ const Template: ComponentStory<typeof Badge> = (args) => {
     />
   );
 };
-
 
 export const Regular = Template.bind({});
 Regular.args = {

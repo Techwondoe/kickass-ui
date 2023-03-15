@@ -1,8 +1,8 @@
-import type { ComponentStory, ComponentMeta } from "@storybook/react";
+import type { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ComponentWithColors, ComponentName } from '~/helpers/extend-colors-storybook';
-import { extendTheme, base } from '~/themes';
-import React from "react";
-import { Avatar } from "../components/atoms/Avatar/Avatar";
+import { extendTheme, base, ColorShade } from '~/themes';
+import React from 'react';
+import { Avatar } from '../components/atoms/Avatar/Avatar';
 
 const Story: ComponentMeta<typeof Avatar> = {
   component: Avatar,
@@ -13,9 +13,12 @@ export default Story;
 const Template: ComponentStory<typeof Avatar> = (args) => {
   const customTheme = extendTheme(base, {
     ...base,
-    primary: {
-      ...base.primary,
-    //   '600': 'red',
+    color: {
+      ...base.color,
+      primary: {
+        ...(base.color.primary as Record<ColorShade, string>),
+        // '600': 'red',
+      },
     },
   });
   return (

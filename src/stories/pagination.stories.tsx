@@ -1,8 +1,8 @@
-import type { ComponentStory, ComponentMeta } from "@storybook/react";
-import React from "react";
-import { Pagination } from "../components/atoms/Pagination/pagination";
+import type { ComponentStory, ComponentMeta } from '@storybook/react';
+import React from 'react';
+import { Pagination } from '../components/atoms/Pagination/pagination';
 import { ComponentWithColors, ComponentName } from '~/helpers/extend-colors-storybook';
-import { extendTheme, base } from '~/themes';
+import { extendTheme, base, ColorShade } from '~/themes';
 
 const Story: ComponentMeta<typeof Pagination> = {
   component: Pagination,
@@ -13,9 +13,12 @@ export default Story;
 const Template: ComponentStory<typeof Pagination> = (args) => {
   const customTheme = extendTheme(base, {
     ...base,
-    gray: {
-      ...base.gray,
-    //   '700': 'red',
+    color: {
+      ...base.color,
+      gray: {
+        ...(base.color['gray'] as Record<ColorShade, string>),
+        //   '700': 'red',
+      },
     },
   });
   return (

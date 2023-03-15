@@ -29,7 +29,7 @@
     "checks": "yarn lint && yarn ts",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
-    "storybook-css": "cp -R ./dist/index.css ./src/helpers/"
+    "storybook-css": "cp -R ./dist/index.css ./src/helpers/ && start-storybook -p 6006 -s public"
   },
   "peerDependencies": {
     "react": "^18.2.0"

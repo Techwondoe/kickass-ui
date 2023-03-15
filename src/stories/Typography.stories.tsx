@@ -1,24 +1,37 @@
 import type { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ComponentWithColors, ComponentName } from '~/helpers/extend-colors-storybook';
 import { Typography } from '../components/atoms/Typography';
-import { extendTheme, base } from '~/themes';
+import { extendTheme, ColorShade } from '~/themes';
 import React from 'react';
+import { base } from '~/themes/constants';
 
 const Story: ComponentMeta<typeof Typography> = {
   component: Typography,
   title: 'Typography',
-  argTypes: {
-    color: { defaultValue: 'primary-600' },
-  },
+  argTypes: {},
 };
 export default Story;
 
 const Template: ComponentStory<typeof Typography> = (args) => {
   const customTheme = extendTheme(base, {
     ...base,
-    primary: {
-      ...base.primary,
-      // '600': 'red',
+    font: {
+      ...base.font,
+      display: {
+        ...base.font.display,
+        sm: {
+          size: '10px',
+          lineHeight: '10px',
+          letterSpacing: '10px',
+        },
+      },
+    },
+    color: {
+      ...base.color,
+      primary: {
+        ...(base.color.primary as Record<ColorShade, string>),
+        '600': 'red',
+      },
     },
   });
   return (

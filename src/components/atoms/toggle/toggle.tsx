@@ -2,12 +2,12 @@ import React, { FC, useState } from 'react';
 import { ColorType } from '../../../types/colors';
 
 export interface ToggleProps {
-    defaultEnabled?: boolean;
-    enabled?: boolean;
-    onChange?: (value: boolean) => void;
-    color?: ColorType;
-    disabled?: boolean;
-    size?: "sm" | "md" | "lg";
+  color?: ColorType;
+  defaultEnabled?: boolean;
+  disabled?: boolean;
+  enabled?: boolean;
+  onChange?: (value: boolean) => void;
+  size?: 'sm' | 'md' | 'lg';
 }
 
 const toggleSize = {

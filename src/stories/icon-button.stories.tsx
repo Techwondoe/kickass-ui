@@ -3,8 +3,8 @@ import React from 'react';
 import { IconButton } from '../components/atoms/iconButton/icon-button';
 
 const Story: ComponentMeta<typeof IconButton> = {
-    component: IconButton,
-    title: "Buttons/IconButton",
+  component: IconButton,
+  title: 'Buttons/IconButton',
 };
 export default Story;
 

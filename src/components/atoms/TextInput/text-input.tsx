@@ -80,4 +80,3 @@ export const TextInputField: FC<TextInputProps> = ({
   );
 };
 
-export default TextInputField;

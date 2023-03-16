@@ -36,5 +36,3 @@ export const UploadItem: FC<UploadItemsProps> = ({ label, size, progress = 0 }) 
     </div>
   );
 };
-
-export default UploadItem;

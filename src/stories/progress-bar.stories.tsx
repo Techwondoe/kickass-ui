@@ -23,7 +23,7 @@ const Template: ComponentStory<typeof ProgressBar> = (args) => {
   });
   return (
     <ComponentWithColors
-      componentName={ComponentName.ICON}
+      componentName={ComponentName.PROGRESSBAR}
       componentProps={args}
       customTheme={customTheme}
     />

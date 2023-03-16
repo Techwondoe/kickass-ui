@@ -28,4 +28,3 @@ export const Radio: FC<RadioProps> = ({
   );
 };
 
-export default Radio;

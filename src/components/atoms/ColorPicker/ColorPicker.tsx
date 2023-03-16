@@ -28,5 +28,3 @@ export const ColorPicker: FC<ColorPickerProps> = ({ value: valueProp, onChange, 
     />
   );
 };
-
-export default ColorPicker;

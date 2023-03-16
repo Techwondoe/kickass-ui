@@ -30,5 +30,3 @@ export function IconBadge({ color = 'gray', icon, size = 'md', ...props }: Badge
     </div>
   );
 }
-
-export default IconBadge;

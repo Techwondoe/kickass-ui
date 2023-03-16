@@ -26,5 +26,3 @@ export function DirectionMetric({ value, limit, displayValue = `${value}` }: Dir
     </div>
   );
 }
-
-export default DirectionMetric;

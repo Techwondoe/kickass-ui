@@ -45,4 +45,3 @@ export function Card({ title, value, status, directionMetric }: CardProps) {
   );
 }
 
-export default Card;

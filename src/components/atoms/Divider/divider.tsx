@@ -9,5 +9,3 @@ export interface DividerProps {
 export const Divider: FC<DividerProps> = ({ color = 'gray-200', className = '' }) => {
   return <div className={`h-[1px] bg-${color} ${className}`} />;
 };
-
-export default Divider;

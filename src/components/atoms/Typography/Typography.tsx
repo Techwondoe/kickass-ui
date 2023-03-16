@@ -89,5 +89,3 @@ export function Typography({
     children
   );
 }
-
-// export default Typography;

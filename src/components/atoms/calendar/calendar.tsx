@@ -133,5 +133,3 @@ export const Calendar: FC<CalendarProps> = ({ className, ...props }) => {
     </div>
   );
 };
-
-export default Calendar;

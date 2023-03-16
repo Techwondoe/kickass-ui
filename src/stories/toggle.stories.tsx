@@ -23,7 +23,7 @@ const Template: ComponentStory<typeof Toggle> = (args) => {
   });
   return (
     <ComponentWithColors
-      componentName={ComponentName.ICON}
+      componentName={ComponentName.TOGGLE}
       componentProps={args}
       customTheme={customTheme}
     />

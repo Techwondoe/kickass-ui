@@ -23,7 +23,7 @@ const Template: ComponentStory<typeof Tag> = (args) => {
   });
   return (
     <ComponentWithColors
-      componentName={ComponentName.PAGINATION}
+      componentName={ComponentName.TAG}
       componentProps={args}
       customTheme={customTheme}
     />

@@ -1,5 +1,5 @@
 import React, { FC, useState } from 'react';
-import DisplayItem, { DisplayItemProps } from './display-item';
+import {DisplayItem, DisplayItemProps } from './display-item';
 
 export interface ItemProps extends Omit<DisplayItemProps, 'open' | 'dropdown' | 'defaultOpen'> {
   id: string;
@@ -57,5 +57,3 @@ export const Menu: FC<MenuProps> = ({
 export const Item: FC<Omit<DisplayItemProps, 'open' | 'dropdown'>> = (props) => (
   <DisplayItem {...props} />
 );
-
-export default Menu;

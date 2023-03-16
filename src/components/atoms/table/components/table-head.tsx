@@ -15,7 +15,7 @@ interface TableHeadProps<TData = unknown> {
   table: Table<TData>;
 }
 
-const TableHead: FC<TableHeadProps> = ({
+export const TableHead: FC<TableHeadProps> = ({
   table,
   headerCellProps,
   enableSorting = false,
@@ -104,5 +104,3 @@ const TableHead: FC<TableHeadProps> = ({
     </thead>
   );
 };
-
-export default TableHead;

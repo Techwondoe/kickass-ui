@@ -55,4 +55,3 @@ export const Toggle: FC<ToggleProps> = ({
   );
 };
 
-export default Toggle;

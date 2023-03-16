@@ -141,4 +141,3 @@ export const PhoneInputField: FC<PhoneInputProps> = ({
   );
 };
 
-export default PhoneInputField;

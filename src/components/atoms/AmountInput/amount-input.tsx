@@ -129,5 +129,3 @@ export const AmountInputField: FC<AmountInputProps> = ({
     </div>
   );
 };
-
-export default AmountInputField;

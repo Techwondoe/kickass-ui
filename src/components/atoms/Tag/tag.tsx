@@ -88,4 +88,3 @@ export const Tag: FC<TagProps> = ({
   );
 };
 
-export default Tag;

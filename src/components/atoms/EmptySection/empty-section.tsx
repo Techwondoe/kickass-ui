@@ -16,5 +16,3 @@ export const EmptySection: FC<EmptySectionProps> = ({
     </div>
   );
 };
-
-export default EmptySection;

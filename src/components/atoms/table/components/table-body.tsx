@@ -15,7 +15,7 @@ interface TableBodyProps<TData = unknown> {
   table: Table<TData>;
 }
 
-const TableBody: FC<TableBodyProps> = ({
+export const TableBody: FC<TableBodyProps> = ({
   table,
   cellProps,
   rowProps,
@@ -70,5 +70,3 @@ const TableBody: FC<TableBodyProps> = ({
     </tbody>
   );
 };
-
-export default TableBody;

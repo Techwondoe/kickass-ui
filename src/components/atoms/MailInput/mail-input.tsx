@@ -78,4 +78,3 @@ export const MailInputField: FC<MailInputProps> = ({
   );
 };
 
-export default MailInputField;

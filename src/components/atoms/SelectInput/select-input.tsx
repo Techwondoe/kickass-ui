@@ -115,4 +115,3 @@ export const SelectInputField: FC<SelectInputProps> = ({
   );
 };
 
-export default SelectInputField;

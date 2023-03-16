@@ -89,5 +89,3 @@ export const SiteInputField: FC<SiteInputProps> = ({
     </div>
   );
 };
-
-export default SiteInputField;

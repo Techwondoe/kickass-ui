@@ -1,7 +1,7 @@
 import React, { FC, useState } from 'react';
 import { Button, ButtonProps } from '../Button/Button';
 import { CalendarValue } from '../calendar/hooks/useCalendar';
-import DatePicker, { DatePickerProps } from '../date-picker/date-picker';
+import {DatePicker, DatePickerProps } from '../date-picker/date-picker';
 import toDatePickerInput from '../date-picker/utils/toDatePickerInput';
 import { Dropdown } from '../Dropdown/dropdown';
 
@@ -72,4 +72,3 @@ export const DatePickerDropdown: FC<DatePickerDropdownProps> = ({
   );
 };
 
-export default DatePickerDropdown;

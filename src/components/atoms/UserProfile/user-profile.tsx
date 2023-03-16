@@ -56,4 +56,3 @@ export const UserProfile: FC<UserProfileProps> = ({
   );
 };
 
-export default UserProfile;

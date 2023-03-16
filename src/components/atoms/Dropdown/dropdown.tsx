@@ -151,5 +151,3 @@ Dropdown.Panel = ({ children }) => {
 Dropdown.Button = ({ children }) => {
   return <>{children}</>;
 };
-
-export default Dropdown;

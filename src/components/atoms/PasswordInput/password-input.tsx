@@ -85,4 +85,3 @@ export const PasswordInputField: FC<PasswordInputProps> = ({
   );
 };
 
-export default PasswordInputField;

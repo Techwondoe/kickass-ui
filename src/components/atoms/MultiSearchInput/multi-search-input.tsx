@@ -186,4 +186,3 @@ export const MultiSearchInputField: FC<MultiSearchInputProps> = ({
   );
 };
 
-export default MultiSearchInputField;

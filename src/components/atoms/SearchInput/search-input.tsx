@@ -143,4 +143,3 @@ export const SearchInputField: FC<SearchInputProps> = ({
   );
 };
 
-export default SearchInputField;

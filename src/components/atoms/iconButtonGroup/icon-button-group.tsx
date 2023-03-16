@@ -63,4 +63,3 @@ export function IconButtonGroup({
   );
 }
 
-export default IconButtonGroup;

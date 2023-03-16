@@ -72,4 +72,3 @@ export const DisplayItem: FC<DisplayItemProps> = ({
   );
 };
 
-export default DisplayItem;

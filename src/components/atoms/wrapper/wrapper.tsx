@@ -7,5 +7,3 @@ export interface WrapperProps {
 export function Wrapper({ children }: WrapperProps) {
   return <div className="border rounded-md shadow-sm">{children}</div>;
 }
-
-export default Wrapper;

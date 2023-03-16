@@ -4,16 +4,33 @@ import { Tag } from '../components/atoms/Tag/tag';
 import { Typography } from '../components/atoms/Typography/Typography';
 import { MultiSearchInputField } from '../components/atoms/MultiSearchInput/multi-search-input';
 import React from 'react';
-
+import { ComponentWithColors, ComponentName } from '~/helpers/extend-colors-storybook';
+import { extendTheme, base, ColorShade } from '~/themes';
 const Story: ComponentMeta<typeof MultiSearchInputField> = {
   component: MultiSearchInputField,
   title: 'Forms/MultiSearchInputField',
 };
 export default Story;
 
-const Template: ComponentStory<typeof MultiSearchInputField> = (args) => (
-  <MultiSearchInputField {...args} />
-);
+const Template: ComponentStory<typeof MultiSearchInputField> = (args) => {
+  const customTheme = extendTheme(base, {
+    ...base,
+    color: {
+      ...base.color,
+      gray: {
+        ...(base.color.gray as Record<ColorShade, string>),
+        // '500': 'red',
+      },
+    },
+  });
+  return (
+    <ComponentWithColors
+      componentName={ComponentName.MULTISEARCHINPUT}
+      componentProps={args}
+      customTheme={customTheme}
+    />
+  );
+};
 
 export const Text = Template.bind({});
 Text.args = {

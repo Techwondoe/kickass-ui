@@ -2,7 +2,7 @@ import React from 'react';
 import type { ComponentStory, ComponentMeta } from '@storybook/react';
 import DirectionMetric from '../components/atoms/DirectionMetric/DirectionMetric';
 import { ComponentWithColors, ComponentName } from '~/helpers/extend-colors-storybook';
-import { extendTheme, base } from '~/themes';
+import { extendTheme, base, ColorShade } from '~/themes';
 
 const Story: ComponentMeta<typeof DirectionMetric> = {
   component: DirectionMetric,
@@ -13,9 +13,12 @@ export default Story;
 const Template: ComponentStory<typeof DirectionMetric> = (args) => {
   const customTheme = extendTheme(base, {
     ...base,
-    primary: {
-      ...base.primary,
-      // '700': 'red',
+    color: {
+      ...base.color,
+      primary: {
+        ...(base.color.primary as Record<ColorShade, string>),
+        // '600': 'red',
+      },
     },
   });
   return (

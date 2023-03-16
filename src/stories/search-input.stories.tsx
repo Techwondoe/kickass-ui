@@ -3,6 +3,8 @@ import { Avatar } from '../components/atoms/Avatar/Avatar';
 import { Typography } from '../components/atoms/Typography/Typography';
 import { SearchInputField } from '../components/atoms/SearchInput/search-input';
 import React from 'react';
+import { ComponentWithColors, ComponentName } from '~/helpers/extend-colors-storybook';
+import { extendTheme, base, ColorShade } from '~/themes';
 
 const Story: ComponentMeta<typeof SearchInputField> = {
   component: SearchInputField,
@@ -10,7 +12,26 @@ const Story: ComponentMeta<typeof SearchInputField> = {
 };
 export default Story;
 
-const Template: ComponentStory<typeof SearchInputField> = (args) => <SearchInputField {...args} />;
+const Template: ComponentStory<typeof SearchInputField> = (args) => {
+  const customTheme = extendTheme(base, {
+    ...base,
+    color: {
+      ...base.color,
+      gray: {
+        ...(base.color.gray as Record<ColorShade, string>),
+        // '500': 'red',
+      },
+    },
+  });
+  return (
+    <ComponentWithColors
+      componentName={ComponentName.SEARCHINPUT}
+      componentProps={args}
+      customTheme={customTheme}
+    />
+  );
+};
+
 
 export const Text = Template.bind({});
 Text.args = {

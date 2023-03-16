@@ -2,7 +2,7 @@ import type { ComponentStory, ComponentMeta } from '@storybook/react';
 import React from 'react';
 import { IconBadge } from '../components/atoms/IconBadge/IconBadge';
 import { ComponentWithColors, ComponentName } from '~/helpers/extend-colors-storybook';
-import { extendTheme, base } from '~/themes';
+import { extendTheme, base, ColorShade } from '~/themes';
 
 const Story: ComponentMeta<typeof IconBadge> = {
   component: IconBadge,
@@ -13,9 +13,12 @@ export default Story;
 const Template: ComponentStory<typeof IconBadge> = (args) => {
   const customTheme = extendTheme(base, {
     ...base,
-    primary: {
-      ...base.primary,
-      // '500': 'red',
+    color: {
+      ...base.color,
+      primary: {
+        ...(base.color.primary as Record<ColorShade, string>),
+        // '600': 'red',
+      },
     },
   });
   return (

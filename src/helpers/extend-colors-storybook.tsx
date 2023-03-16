@@ -26,7 +26,35 @@ import { Checkbox, CheckboxProps } from '~/components/atoms/checkbox/checkbox';
 import { ColorPicker, ColorPickerProps } from '~/components/atoms/ColorPicker/ColorPicker';
 import { CopyInputField, CopyInputProps } from '~/components/atoms/CopyInput/CopyInput';
 import { DatePicker, DatePickerProps } from '~/components/atoms/date-picker/date-picker';
-import { DatePickerDropdown, DatePickerDropdownProps } from '~/components/atoms/date-picker-dropdown/date-picker-dropdown';
+import {
+  DatePickerDropdown,
+  DatePickerDropdownProps,
+} from '~/components/atoms/date-picker-dropdown/date-picker-dropdown';
+import { MailInputField, MailInputProps } from '~/components/atoms/MailInput/mail-input';
+import {
+  MultiSearchInputField,
+  MultiSearchInputProps,
+} from '~/components/atoms/MultiSearchInput/multi-search-input';
+import {
+  PasswordInputField,
+  PasswordInputProps,
+} from '~/components/atoms/PasswordInput/password-input';
+import { PhoneInputField, PhoneInputProps } from '~/components/atoms/PhoneInput/phone-input';
+import { Radio, RadioProps } from '~/components/atoms/Radio/Radio';
+import { SearchInputField, SearchInputProps } from '~/components/atoms/SearchInput/search-input';
+import { SelectInputField, SelectInputProps } from '~/components/atoms/SelectInput/select-input';
+import { SiteInputField, SiteInputProps } from '~/components/atoms/SelectInput/site-input';
+import { TextInputField, TextInputProps } from '~/components/atoms/TextInput/text-input';
+import { UploadItem, UploadItemsProps } from '~/components/atoms/uploadItem/upload-item';
+import { Upload, UploadProps } from '~/components/atoms/upload/upload';
+import { ButtonGroup, ButtonGroupProps } from '~/components/atoms/ButtonGroup/button-group';
+import { ButtonWrapper } from '~/components/atoms/ButtonWrapper/button-wrapper';
+import {
+  IconButtonGroup,
+  IconButtonGroupProps,
+} from '~/components/atoms/iconButtonGroup/icon-button-group';
+import { IconButton, IconButtonProps } from '~/components/atoms/iconButton/icon-button';
+
 // You need this file for themes to work as expected.
 // Please run the command storybook-css or copy them manually from /dist/index.css
 import './index.css';
@@ -56,6 +84,21 @@ export enum ComponentName {
   COPYINPUT = 'CopyInputField',
   DATEPICKER = 'DatePicker',
   DATEPICKERDROPDOWN = 'DatePickerDropdown',
+  MAILINPUT = 'MailInputField',
+  MULTISEARCHINPUT = 'MultiSearchInputField',
+  PASSWORDINPUT = 'PasswordInputField',
+  PHONEINPUT = 'PhoneInputField',
+  RADIO = 'Radio',
+  SEARCHINPUT = 'SearchInputField',
+  SELECTINPUT = 'SelectInputField',
+  SITEINPUT = 'SiteInputField',
+  TEXTINPUT = 'TextInputField',
+  UPLOADITEM = 'UploadItem',
+  UPLOAD = 'Upload',
+  BUTTONGROUP = 'ButtonGroup',
+  BUTTONWRAPPER = 'ButtonWrapper',
+  ICONBUTTONGROUP = 'IconButtonGroup',
+  ICONBUTTON = 'IconButton',
 }
 export type ComponentProps =
   | TextFieldProps
@@ -81,8 +124,20 @@ export type ComponentProps =
   | CopyInputProps
   | DatePickerProps
   | DatePickerDropdownProps
-
-
+  | MailInputProps
+  | MultiSearchInputProps
+  | PasswordInputProps
+  | PhoneInputProps
+  | RadioProps
+  | SearchInputProps
+  | SelectInputProps
+  | SiteInputProps
+  | TextInputProps
+  | UploadItemsProps
+  | UploadProps
+  | ButtonGroupProps
+  | IconButtonGroupProps
+  | IconButtonProps;
 
 export const ComponentMapper: Record<ComponentName, ElementType> = {
   [ComponentName.TYPOGRAPHY]: Typography,
@@ -109,6 +164,21 @@ export const ComponentMapper: Record<ComponentName, ElementType> = {
   [ComponentName.COPYINPUT]: CopyInputField,
   [ComponentName.DATEPICKER]: DatePicker,
   [ComponentName.DATEPICKERDROPDOWN]: DatePickerDropdown,
+  [ComponentName.MAILINPUT]: MailInputField,
+  [ComponentName.MULTISEARCHINPUT]: MultiSearchInputField,
+  [ComponentName.PASSWORDINPUT]: PasswordInputField,
+  [ComponentName.PHONEINPUT]: PhoneInputField,
+  [ComponentName.RADIO]: Radio,
+  [ComponentName.SEARCHINPUT]: SearchInputField,
+  [ComponentName.SELECTINPUT]: SelectInputField,
+  [ComponentName.SITEINPUT]: SiteInputField,
+  [ComponentName.TEXTINPUT]: TextInputField,
+  [ComponentName.UPLOADITEM]: UploadItem,
+  [ComponentName.UPLOAD]: Upload,
+  [ComponentName.BUTTONGROUP]: ButtonGroup,
+  [ComponentName.BUTTONWRAPPER]: ButtonWrapper,
+  [ComponentName.ICONBUTTONGROUP]: IconButtonGroup,
+  [ComponentName.ICONBUTTON]: IconButton,
 };
 
 export interface ComponentWithColorProps {

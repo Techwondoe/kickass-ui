@@ -2,7 +2,7 @@ import type { ComponentStory, ComponentMeta } from '@storybook/react';
 import React from 'react';
 import { CopyInputField } from '../components/atoms/CopyInput/CopyInput';
 import { ComponentWithColors, ComponentName } from '~/helpers/extend-colors-storybook';
-import { extendTheme, base } from '~/themes';
+import { extendTheme, base, ColorShade } from '~/themes';
 
 const Story: ComponentMeta<typeof CopyInputField> = {
   component: CopyInputField,
@@ -13,9 +13,12 @@ export default Story;
 const Template: ComponentStory<typeof CopyInputField> = (args) => {
   const customTheme = extendTheme(base, {
     ...base,
-    gray: {
-      ...base.gray,
-      // '700': 'red',
+    color: {
+      ...base.color,
+      primary: {
+        ...(base.color.primary as Record<ColorShade, string>),
+        // '600': 'red',
+      },
     },
   });
   return (

@@ -2,7 +2,7 @@ import type { ComponentStory, ComponentMeta } from '@storybook/react';
 import React from 'react';
 import { AmountInputField } from '../components/atoms/AmountInput/amount-input';
 import { ComponentWithColors, ComponentName } from '~/helpers/extend-colors-storybook';
-import { extendTheme, base } from '~/themes';
+import { extendTheme, base, ColorShade } from '~/themes';
 const Story: ComponentMeta<typeof AmountInputField> = {
   component: AmountInputField,
   title: 'Forms/Amount Input Field',
@@ -12,9 +12,12 @@ export default Story;
 const Template: ComponentStory<typeof AmountInputField> = (args) => {
   const customTheme = extendTheme(base, {
     ...base,
-    gray: {
-      ...base.gray,
-      // '500': 'red',
+    color: {
+      ...base.color,
+      primary: {
+        ...(base.color.primary as Record<ColorShade, string>),
+        // '600': 'red',
+      },
     },
   });
   return (

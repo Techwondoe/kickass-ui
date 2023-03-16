@@ -3,6 +3,8 @@ import { Avatar } from '../components/atoms/Avatar/Avatar';
 import { Typography } from '../components/atoms/Typography/Typography';
 import { SelectInputField } from '../components/atoms/SelectInput/select-input';
 import React from 'react';
+import { ComponentWithColors, ComponentName } from '~/helpers/extend-colors-storybook';
+import { extendTheme, base, ColorShade } from '~/themes';
 
 const Story: ComponentMeta<typeof SelectInputField> = {
   component: SelectInputField,
@@ -10,7 +12,25 @@ const Story: ComponentMeta<typeof SelectInputField> = {
 };
 export default Story;
 
-const Template: ComponentStory<typeof SelectInputField> = (args) => <SelectInputField {...args} />;
+const Template: ComponentStory<typeof SelectInputField> = (args) => {
+  const customTheme = extendTheme(base, {
+    ...base,
+    color: {
+      ...base.color,
+      gray: {
+        ...(base.color.gray as Record<ColorShade, string>),
+        // '500': 'red',
+      },
+    },
+  });
+  return (
+    <ComponentWithColors
+      componentName={ComponentName.SELECTINPUT}
+      componentProps={args}
+      customTheme={customTheme}
+    />
+  );
+};
 
 export const Text = Template.bind({});
 Text.args = {

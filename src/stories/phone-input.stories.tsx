@@ -30,7 +30,6 @@ const Template: ComponentStory<typeof PhoneInputField> = (args) => {
   );
 };
 
-
 export const Regular = Template.bind({});
 Regular.args = {
   label: 'Phone',

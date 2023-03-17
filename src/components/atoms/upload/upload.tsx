@@ -53,4 +53,3 @@ export const Upload: FC<UploadProps> = ({ disabled = false, accept, onChange }) 
     </div>
   );
 };
-

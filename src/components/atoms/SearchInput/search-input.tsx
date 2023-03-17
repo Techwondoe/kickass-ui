@@ -142,4 +142,3 @@ export const SearchInputField: FC<SearchInputProps> = ({
     </div>
   );
 };
-

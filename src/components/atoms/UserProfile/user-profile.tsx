@@ -55,4 +55,3 @@ export const UserProfile: FC<UserProfileProps> = ({
     </div>
   );
 };
-

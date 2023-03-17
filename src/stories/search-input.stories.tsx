@@ -32,7 +32,6 @@ const Template: ComponentStory<typeof SearchInputField> = (args) => {
   );
 };
 
-
 export const Text = Template.bind({});
 Text.args = {
   hint: 'This is a sample hint',

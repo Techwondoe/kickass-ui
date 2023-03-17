@@ -38,16 +38,14 @@ export function ButtonGroup({
   return (
     <div className={`inline-flex ${flexDirection} ${className}`} role="group">
       {items.map((props, index, array) => {
-        let btnClassName = '';
-        if (array.length > 1) {
-          if (index === 0) {
-            btnClassName = firstBtnClassName;
-          } else if (index === array.length - 1) {
-            btnClassName = lastBtnClassName;
-          } else {
-            btnClassName = midBtnClassName;
-          }
-        }
+        const btnClassName =
+          array &&
+          array.length > 1 &&
+          (index === 0
+            ? firstBtnClassName
+            : index === array.length - 1
+            ? lastBtnClassName
+            : midBtnClassName);
         return (
           <Button
             key={index}
@@ -67,4 +65,3 @@ export function ButtonGroup({
     </div>
   );
 }
-

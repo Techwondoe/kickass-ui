@@ -44,4 +44,3 @@ export function Card({ title, value, status, directionMetric }: CardProps) {
     </div>
   );
 }
-

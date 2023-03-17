@@ -14,8 +14,8 @@ import {
 } from '@tanstack/react-table';
 import clsx from 'clsx';
 import { Pagination } from '../Pagination/pagination';
-import {TableHead} from './components/table-head';
-import {TableBody} from './components/table-body';
+import { TableHead } from './components/table-head';
+import { TableBody } from './components/table-body';
 
 export interface TableProps<TData = unknown> {
   cellProps?: (context: CellContext<TData, unknown>) => React.HTMLProps<HTMLTableCellElement>;
@@ -127,4 +127,3 @@ export function Table({
     </div>
   );
 }
-

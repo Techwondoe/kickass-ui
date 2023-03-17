@@ -8,3 +8,5 @@ dist
 .gitignore
 /docs/
 /src/helpers/index.css
+.storybook
+/src/stories/

@@ -5,6 +5,7 @@ node_modules
 dist
 .eslintcache
 .tsbuild
+.gitignore
 /docs/
 /src/helpers/index.css
 /src/helpers/extend-colors-storybook.tsx

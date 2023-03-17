@@ -185,4 +185,3 @@ export const MultiSearchInputField: FC<MultiSearchInputProps> = ({
     </div>
   );
 };
-

@@ -30,7 +30,6 @@ const Template: ComponentStory<typeof IconButtonGroup> = (args) => {
   );
 };
 
-
 export const Horizontal = Template.bind({});
 
 Horizontal.args = {

@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { CalendarValue } from '../calendar/hooks/useCalendar';
-import  DateRangePicker from './components/date-range-picker';
+import DateRangePicker from './components/date-range-picker';
 import DateSinglePicker from './components/date-single-picker';
 
 export interface DatePickerProps {

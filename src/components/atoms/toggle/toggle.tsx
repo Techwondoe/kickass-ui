@@ -54,4 +54,3 @@ export const Toggle: FC<ToggleProps> = ({
     </div>
   );
 };
-

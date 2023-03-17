@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { Controller, useForm } from 'react-hook-form';
 import { Button } from '../../Button/Button';
-import {Calendar} from '../../calendar/calendar';
+import { Calendar } from '../../calendar/calendar';
 import CalendarHeader from '../../calendar/components/calendar-header';
 import useCalendarDate, { CalendarDate } from '../../calendar/hooks/useCalendarDate';
 import { Typography } from '../../Typography/Typography';

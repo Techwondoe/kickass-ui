@@ -4,7 +4,6 @@ import { UploadItem } from '../components/atoms/uploadItem/upload-item';
 import { ComponentWithColors, ComponentName } from '~/helpers/extend-colors-storybook';
 import { extendTheme, base, ColorShade } from '~/themes';
 
-
 const Story: ComponentMeta<typeof UploadItem> = {
   component: UploadItem,
   title: 'Forms/Upload Item',
@@ -30,7 +29,6 @@ const Template: ComponentStory<typeof UploadItem> = (args) => {
     />
   );
 };
-
 
 export const Regular = Template.bind({});
 Regular.args = {

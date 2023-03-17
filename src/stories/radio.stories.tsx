@@ -30,6 +30,5 @@ const Template: ComponentStory<typeof Radio> = (args) => {
   );
 };
 
-
 export const Regular = Template.bind({});
 Regular.args = {};

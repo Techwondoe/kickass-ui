@@ -71,4 +71,3 @@ export const DisplayItem: FC<DisplayItemProps> = ({
     </div>
   );
 };
-

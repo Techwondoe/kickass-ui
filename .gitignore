@@ -7,3 +7,5 @@ dist
 .tsbuild
 /docs/
 /src/helpers/index.css
+.storybook
+/src/stories/

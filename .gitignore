@@ -8,6 +8,3 @@ dist
 .gitignore
 /docs/
 /src/helpers/index.css
-/src/helpers/extend-colors-storybook.tsx
-.storybook
-/src/stories/

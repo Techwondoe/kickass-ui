@@ -3,7 +3,7 @@
 const plugin = require('tailwindcss/plugin');
 const { colors } = require('../theme.json');
 
-const buttonClassesGenerator = () => {
+const buttonClassesGenerator = (colors) => {
   const sizeClasses = {
     '.btn-sm': {
       padding: '0.5rem 0.875rem',
@@ -37,7 +37,7 @@ const buttonClassesGenerator = () => {
     },
   };
   const colorClasses = {};
-  const btnColors = ['primary', 'gray', 'error', 'warning', 'success'];
+  const btnColors = Object.keys(colors);
   for (const colorName of btnColors) {
     if (typeof colors[colorName] === 'string') {
       colorClasses[`.btn-${colorName}`] = {
@@ -129,11 +129,14 @@ const badgeClassesGenerator = () => {
   return { ...sizeClasses, ...colorClasses };
 };
 
-const kickAssPlugin = plugin(function ({ addComponents }) {
-  const buttonClasses = buttonClassesGenerator();
-  const iconBadgeClasses = iconBadgeClassesGenerator();
-  const badgeClasses = badgeClassesGenerator();
-  addComponents({ ...buttonClasses, ...iconBadgeClasses, ...badgeClasses });
+const kickAssPlugin = plugin.withOptions(function (_options = {}) {
+  const { colors: userColors } = _options;
+  return function ({ addComponents }) {
+    const buttonClasses = buttonClassesGenerator({ ...colors, ...userColors });
+    const iconBadgeClasses = iconBadgeClassesGenerator();
+    const badgeClasses = badgeClassesGenerator();
+    addComponents({ ...buttonClasses, ...iconBadgeClasses, ...badgeClasses });
+  };
 });
 
 module.exports = { kickAssPlugin };

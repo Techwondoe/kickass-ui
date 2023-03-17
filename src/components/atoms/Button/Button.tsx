@@ -1,18 +1,43 @@
-import React from 'react';
-import { twMerge } from 'tailwind-merge';
-import { ColorCodes } from '~/constants/types';
-import { ButtonProps, ButtonShapes, ButtonSizes, ButtonVariants } from './Button.types';
+/* eslint-disable sort-keys */
+import React, { HTMLAttributes } from 'react';
+import clsx from 'clsx';
+import { ColorType, PrimaryColorType } from '../../../types/colors';
+import { Icon, IconType } from '../icon';
+import { Typography } from '../Typography/Typography';
 
+/**
+ * @params EndIcon - The icon to be displayed at the end of the button
+ * @params StartIcon - The icon to be displayed at the start of the button
+ * @params children - The content of the button
+ * @params className - Override or extend the styles applied to the component
+ * @params color - Color of the button. It supports those theme colors that make sense for this component.
+ * @params fullWidth - If true, the button will take up the full width of its container.
+ * @params href - The URL to link to when the button is clicked.
+ * @params shape - Shape of the button. It supports those theme shapes that make sense for this component.
+ * @params size - Size of the button. It supports those theme sizes that make sense for this component.
+ * @params variant - Variant of the button. It supports those theme variants that make sense for this component.
+ */
+export interface ButtonProps extends HTMLAttributes<HTMLButtonElement | HTMLAnchorElement> {
+  className?: string;
+  color?: Exclude<PrimaryColorType, 'white' | 'black'>;
+  disabled?: boolean;
+  endIcon?: IconType;
+  href?: string;
+  icon?: IconType;
+  label: string;
+  online?: boolean;
+  selected?: boolean;
+  shape?: 'rounded' | 'square';
+  size?: 'sm' | 'md' | 'lg' | 'xl' | '2xl';
+  textAlign?: 'left' | 'center' | 'right';
+  variant?: 'contained' | 'outlined' | 'light' | 'text' | 'link';
+}
 const sizes = {
-  small: 'px-2 py-1 text-sm',
-  medium: 'px-3 py-2 text-base',
-  large: 'px-4 py-3 text-lg',
-};
-
-const iconSizes = {
-  small: 'w-4 h-4',
-  medium: 'w-5 h-5',
-  large: 'w-6 h-6',
+  sm: 'btn-sm',
+  md: 'btn-md',
+  lg: 'btn-lg',
+  xl: 'btn-xl',
+  '2xl': 'btn-2xl',
 };
 
 const shapes = {
@@ -26,42 +51,110 @@ const shapes = {
  * @description This component is used to render a button
  * @example <Button color="primary" size="medium" onClick={handleClick}>Click Me</Button>
  */
+
 export function Button({
-  children,
-  variant = ButtonVariants.CONTAINED,
-  color = ColorCodes.PRIMARY,
-  size = ButtonSizes.MEDIUM,
-  fullWidth = false,
-  StartIcon,
-  EndIcon,
+  label,
+  variant = 'contained',
+  color = 'primary',
+  size = 'md',
+  icon,
+  endIcon,
   href,
-  shape = ButtonShapes.ROUNDED,
+  shape = 'square',
   className = '',
+  disabled = false,
+  online = false,
+  textAlign = 'center',
+  selected = false,
   ...restProps
 }: ButtonProps) {
   const variants = {
-    contained: `bg-${color} text-contrast-${color}`,
-    outlined: `border border-${color} text-${color} hover:bg-${color}/20`,
-    text: `text-${color} hover:bg-${color}/20`,
+    contained: {
+      button: `${
+        selected ? `btn-${color}-700` : `btn-${color}-600`
+      } hover:btn-${color}-700 focus:ring-4 ring-${color}-100 disabled:btn-${color}-200`,
+      typo: ``,
+      icon: ``,
+    },
+    outlined: {
+      button: `${
+        selected ? `btn-${color}-50` : `btn-white`
+      } border border-${color}-300 hover:btn-${color}-50 focus:ring-4 ring-${color}-100 disabled:border-${color}-200`,
+      typo: ``,
+      icon: ``,
+    },
+    light: {
+      button: `${
+        selected ? `btn-${color}-100` : `btn-${color}-50`
+      } hover:btn-${color}-100 focus:ring-4 ring-${color}-100 disabled:btn-${color}-25`,
+      typo: ``,
+      icon: ``,
+    },
+    text: {
+      button: `${selected ? `btn-${color}-50` : ``} hover:btn-${color}-50`,
+      typo: ``,
+      icon: ``,
+    },
+    link: {
+      button: `cursor-pointer`,
+      typo: ``,
+      icon: ``,
+    },
   };
 
-  const classes = twMerge(
-    `flex items-center justify-center font-medium hover:brightness-90 active:brightness-100 ${
-      sizes[size]
-    } ${variants[variant]} ${fullWidth ? 'w-full' : 'w-fit'} ${shapes[shape]} ${className}`
+  const classes = `group disabled:cursor-not-allowed ${variants[variant].button} ${shapes[shape]} ${sizes[size]} whitespace-nowrap ${className}`;
+
+  const typoClassName =
+    variant !== 'contained' ? `group-hover:text-${color}-800 group-disabled:text-${color}-300` : '';
+  const iconClassName =
+    variant !== 'contained'
+      ? `${
+          selected ? `stroke-${color}-800` : ``
+        } group-hover:stroke-${color}-800 group-disabled:stroke-${color}-300`
+      : '';
+  const typoColor =
+    variant === 'contained' ? 'white' : ((selected ? `${color}-800` : `${color}-700`) as ColorType);
+  const typoSize = size === '2xl' ? 'lg' : size === 'xl' || size === 'lg' ? 'md' : 'sm';
+  const iconSize = size === '2xl' ? 24 : 20;
+
+  const statusDotColor =
+    variant === 'contained' ? 'white' : disabled ? `${color}-300` : 'success-500';
+
+  const children = (
+    <div
+      className={clsx(
+        `w-full h-full flex flex-row items-center`,
+        size === '2xl' ? 'gap-3' : 'gap-2'
+      )}>
+      {icon && <Icon name={icon} color={typoColor} size={iconSize} className={iconClassName} />}
+      {online && <div className={`w-1.5 h-1.5 bg-${statusDotColor} rounded-full`} />}
+      <div className="flex-1">
+        <Typography
+          color={typoColor}
+          className={`${typoClassName} ${
+            textAlign === 'left'
+              ? 'text-left'
+              : textAlign === 'right'
+              ? 'text-right'
+              : 'text-center'
+          }`}
+          size={typoSize}>
+          {label}
+        </Typography>
+      </div>
+      {endIcon && (
+        <Icon name={endIcon} color={typoColor} size={iconSize} className={iconClassName} />
+      )}
+    </div>
   );
 
-  return href ? (
-    <a className={classes} href={href} {...restProps}>
-      {StartIcon && <StartIcon className={`mr-2 ${iconSizes[size]}`} />}
+  return variant === 'link' ? (
+    <a className={clsx('inline-block w-fit', classes, className)} href={href} {...restProps}>
       {children}
-      {EndIcon && <EndIcon className={`ml-2 ${iconSizes[size]}`} />}
     </a>
   ) : (
-    <button className={classes} {...restProps}>
-      {StartIcon && <StartIcon className={`mr-2 ${iconSizes[size]}`} />}
+    <button className={`${classes} ${className}`} {...restProps} disabled={disabled}>
       {children}
-      {EndIcon && <EndIcon className={`ml-2 ${iconSizes[size]}`} />}
     </button>
   );
 }

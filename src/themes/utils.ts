@@ -1,31 +1,61 @@
-import { Theme, MappedTheme, ApplyThemeProps, base } from './types';
+/* eslint-disable sort-keys */
+import { base } from './constants';
+import { Theme, MappedTheme, ApplyThemeProps, FontSize } from './types';
+
+const generateColors = (variables: Theme) => {
+  let allColors = {};
+  const colorTypes = ['white', 'black', 'gray', 'primary', 'error', 'warning', 'success'];
+  const variantTypes = ['25', '50', '100', '200', '300', '400', '500', '600', '700', '800', '900', 'DEFAULT'];
+
+  for (const colorName of colorTypes) {
+    if (colorName === 'white' || colorName === 'black') {
+      allColors = {
+        ...allColors,
+        [`--color-${colorName}`]: (variables.color[colorName] as string) || '',
+      };
+    } else {
+      for (const variant of variantTypes) {
+        allColors = {
+          ...allColors,
+          [`--color-${colorName}-${variant}`]: (variables.color[colorName][variant]) || '',
+        };
+      }
+    }
+  }
+  return allColors;
+};
+
+const generateFonts = (variables: Theme) => {
+  const mapFont = (type: 'display' | 'text', size: FontSize) => {
+    const variable = type === 'display' ? variables.font.display : variables.font.text;
+    return {
+      [`--font-${type}-${size}-size`]: variable[size].size || '',
+      [`--font-${type}-${size}-lineHeight`]: variable[size].lineHeight || '',
+      [`--font-${type}-${size}-letterSpacing`]: variable[size].letterSpacing || '',
+    };
+  };
+  return {
+    ...mapFont('display', FontSize['2XL']),
+    ...mapFont('display', FontSize.XL),
+    ...mapFont('display', FontSize.LG),
+    ...mapFont('display', FontSize.MD),
+    ...mapFont('display', FontSize.SM),
+    ...mapFont('display', FontSize.XS),
+    ...mapFont('text', FontSize['2XL']),
+    ...mapFont('text', FontSize.XL),
+    ...mapFont('text', FontSize.LG),
+    ...mapFont('text', FontSize.MD),
+    ...mapFont('text', FontSize.SM),
+    ...mapFont('text', FontSize.XS),
+  };
+};
 
 const mapTheme: (variables: Theme) => MappedTheme = (variables: Theme) => {
+  const colors = generateColors(variables);
+  const fonts = generateFonts(variables);
   return {
-    '--color-contrast-danger': variables.contrast?.danger || '',
-    '--color-contrast-info': variables.contrast?.info || '',
-    '--color-contrast-onSurface': variables.contrast?.onSurface || '',
-    '--color-contrast-primary': variables.contrast?.primary || '',
-    '--color-contrast-secondary': variables.contrast?.secondary || '',
-    '--color-contrast-success': variables.contrast?.success || '',
-    '--color-contrast-surface': variables.contrast?.surface || '',
-    '--color-contrast-warning': variables.contrast?.warning || '',
-    '--color-custom-danger': variables.custom?.danger || '',
-    '--color-custom-info': variables.custom?.info || '',
-    '--color-custom-onSurface': variables.custom?.onSurface || '',
-    '--color-custom-primary': variables.custom?.primary || '',
-    '--color-custom-secondary': variables.custom?.secondary || '',
-    '--color-custom-success': variables.custom?.success || '',
-    '--color-custom-surface': variables.custom?.surface || '',
-    '--color-custom-warning': variables.custom?.warning || '',
-    '--color-danger': variables.danger || '',
-    '--color-info': variables.info || '',
-    '--color-onSurface': variables.onSurface || '',
-    '--color-primary': variables.primary || '',
-    '--color-secondary': variables.secondary || '',
-    '--color-success': variables.success || '',
-    '--color-surface': variables.surface || '',
-    '--color-warning': variables.warning || '',
+    ...colors,
+    ...fonts,
   };
 };
 
@@ -66,12 +96,12 @@ export const applyTheme = ({ theme, customTheme }: ApplyThemeProps): void => {
   });
 };
 
-export const dark = extendTheme(base, {
-  primary: '#000',
-  secondary: '#fff',
-});
+// export const dark = extendTheme(base, {
+//   primary: '#000',
+//   secondary: '#fff',
+// });
 
 export const themes = {
   base,
-  dark,
+  // dark,
 };

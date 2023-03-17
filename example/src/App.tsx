@@ -1,29 +1,32 @@
-import {
-  Typography,
-  extendTheme,
-  base,
-  ThemeProvider,
-  TypographyVariants,
-  ColorCodes,
-} from 'kickass-ui';
+import { base, ColorShade, extendTheme, ThemeProvider, Typography } from 'kickass-ui';
 import 'kickass-ui/dist/index.css';
 import React from 'react';
-
 const customTheme = extendTheme(base, {
-  primary: 'blue',
-  secondary: 'green',
-  contrast: {
-    ...base.contrast,
-    primary: 'red',
+  ...base,
+  font: {
+    ...base.font,
+    display: {
+      ...base.font.display,
+      sm: {
+        size: '10px',
+        lineHeight: '10px',
+        letterSpacing: '10px',
+      },
+    },
+  },
+  color: {
+    ...base.color,
+    primary: {
+      ...(base.color.primary as Record<ColorShade, string>),
+      '600': 'red',
+    },
   },
 });
 
 const App = () => {
   return (
     <ThemeProvider customTheme={customTheme}>
-      <Typography color={ColorCodes.PRIMARY} variant={TypographyVariants.H1}>
-        Kickass UI Example project
-      </Typography>
+      <Typography>Kickass UI Example project</Typography>
     </ThemeProvider>
   );
 };

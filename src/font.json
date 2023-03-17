@@ -1,0 +1,88 @@
+{
+  "fontSize": {
+    "d-2xl": [
+      "var(--font-display-2xl-size)",
+      {
+        "lineHeight": "var(--font-display-2xl-lineHeight)",
+        "letterSpacing": "var(--font-display-2xl-lineHeight)"
+      }
+    ],
+    "d-xl": [
+      "var(--font-display-xl-size)",
+      {
+        "lineHeight": "var(--font-display-xl-lineHeight)",
+        "letterSpacing": "var(--font-display-xl-letterSpacing)"
+      }
+    ],
+    "d-lg": [
+      "var(--font-display-lg-size)",
+      {
+        "lineHeight": "var(--font-display-lg-lineHeight)",
+        "letterSpacing": "var(--font-display-lg-letterSpacing)"
+      }
+    ],
+    "d-md": [
+      "var(--font-display-md-size)",
+      {
+        "lineHeight": "var(--font-display-md-lineHeight)",
+        "letterSpacing": "var(--font-display-md-letterSpacing)"
+      }
+    ],
+    "d-sm": [
+      "var(--font-display-sm-size)",
+      {
+        "lineHeight": "var(--font-display-sm-lineHeight)",
+        "letterSpacing": "var(--font-display-sm-letterSpacing)"
+      }
+    ],
+    "d-xs": [
+      "var(--font-display-xs-size)",
+      {
+        "lineHeight": "var(--font-display-xs-lineHeight)",
+        "letterSpacing": "var(--font-display-xs-letterSpacing)"
+      }
+    ],
+    "t-2xl": [
+      "var(--font-text-2xl-size)",
+      {
+        "lineHeight": "var(--font-text-2xl-lineHeight)",
+        "letterSpacing": "var(--font-text-2xl-letterSpacing)"
+      }
+    ],
+    "t-xl": [
+      "var(--font-text-xl-size)",
+      {
+        "lineHeight": "var(--font-text-xl-lineHeight)",
+        "letterSpacing": "var(--font-text-xl-letterSpacing)"
+      }
+    ],
+    "t-lg": [
+      "var(--font-text-lg-size)",
+      {
+        "lineHeight": "var(--font-text-lg-lineHeight)",
+        "letterSpacing": "var(--font-text-lg-letterSpacing)"
+      }
+    ],
+    "t-md": [
+      "var(--font-text-md-size)",
+      {
+        "lineHeight": "var(--font-text-md-lineHeight)",
+        "letterSpacing": "var(--font-text-md-letterSpacing)"
+      }
+    ],
+    "t-sm": [
+      "var(--font-text-sm-size)",
+      {
+        "lineHeight": "var(--font-text-sm-lineHeight)",
+        "letterSpacing": "var(--font-text-sm-letterSpacing)"
+      }
+    ],
+    "t-xs": [
+      "var(--font-text-xs-size)",
+      {
+        "lineHeight": "var(--font-text-xs-lineHeight)",
+        "letterSpacing": "var(--font-text-xs-letterSpacing)"
+      }
+    ]
+  }
+}

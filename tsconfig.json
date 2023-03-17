@@ -21,6 +21,7 @@
     "noUnusedParameters": true,
     "allowSyntheticDefaultImports": true,
     "skipLibCheck": true,
+    "resolveJsonModule": true,
     "types": []
   },
   "include": ["src"],

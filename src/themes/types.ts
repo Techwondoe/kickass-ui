@@ -1,32 +1,44 @@
+export interface FontParams {
+  letterSpacing: string;
+  lineHeight: string;
+  size: string;
+}
+
+export enum FontSize {
+  '2XL' = '2xl',
+  LG = 'lg',
+  MD = 'md',
+  SM = 'sm',
+  XL = 'xl',
+  XS = 'xs',
+}
+
+export interface Font {
+  display: Record<FontSize, FontParams>;
+  text: Record<FontSize, FontParams>;
+}
+
+export type ColorShade =
+  | '25'
+  | '50'
+  | '100'
+  | '200'
+  | '300'
+  | '400'
+  | '500'
+  | '600'
+  | '700'
+  | '800'
+  | '900'
+  | 'DEFAULT';
+
+export type ColorNames = 'white' | 'black' | 'gray' | 'primary' | 'error' | 'warning' | 'success';
+export type Color = Record<ColorNames, Record<ColorShade, string> | string>;
+//
+
 export interface Theme {
-  contrast?: {
-    danger: string;
-    info: string;
-    onSurface: string;
-    primary: string;
-    secondary: string;
-    success: string;
-    surface: string;
-    warning: string;
-  };
-  custom?: {
-    danger: string;
-    info: string;
-    onSurface: string;
-    primary: string;
-    secondary: string;
-    success: string;
-    surface: string;
-    warning: string;
-  };
-  danger?: string;
-  info?: string;
-  onSurface?: string;
-  primary?: string;
-  secondary?: string;
-  success?: string;
-  surface?: string;
-  warning?: string;
+  color: Color;
+  font: Font;
 }
 
 export interface MappedTheme {
@@ -37,35 +49,3 @@ export interface ApplyThemeProps {
   customTheme?: Theme;
   theme: string;
 }
-
-// default theme
-export const base = {
-  contrast: {
-    danger: '#fff',
-    info: '#fff',
-    onSurface: '#fff',
-    primary: '#fff',
-    secondary: '#fff',
-    success: '#000',
-    surface: '#000',
-    warning: '#fff',
-  },
-  custom: {
-    danger: '#fff',
-    info: '#fff',
-    onSurface: '#fff',
-    primary: '#fff',
-    secondary: '#fff',
-    success: '#000',
-    surface: '#000',
-    warning: '#fff',
-  },
-  danger: '#ff4e4e',
-  info: '#5F9DF7',
-  onSurface: '#000',
-  primary: '#4d89ff',
-  secondary: '#999999',
-  success: '#4dff4d',
-  surface: '#fff',
-  warning: '#ff965f',
-};

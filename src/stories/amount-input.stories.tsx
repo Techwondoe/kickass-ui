@@ -1,6 +1,6 @@
 import type { ComponentStory, ComponentMeta } from '@storybook/react';
 import React from 'react';
-import { AmountInputField } from '../components/atoms/AmountInput/amount-input';
+import { AmountInputField } from '../components/atoms/AmountInput/AmountInput';
 import { ComponentWithColors, ComponentName } from '~/helpers/extend-colors-storybook';
 import { extendTheme, base, ColorShade } from '~/themes';
 const Story: ComponentMeta<typeof AmountInputField> = {

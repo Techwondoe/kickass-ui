@@ -3,18 +3,8 @@ import clsx from 'clsx';
 import { Dropdown } from '../Dropdown/dropdown';
 import { Typography } from '../Typography/Typography';
 import { Icon } from '../icon';
+import { AmountInputProps } from './AmountInput.types';
 import currencyToSymbolsMap from './currency-symbols.json';
-
-export interface AmountInputProps {
-  disabled?: boolean;
-  error?: string;
-  fullWidth?: boolean;
-  hint?: string;
-  label?: string;
-  onChange?: (value: string) => void;
-  placeholder?: string;
-  value?: string;
-}
 
 export const AmountInputField: FC<AmountInputProps> = ({
   label,

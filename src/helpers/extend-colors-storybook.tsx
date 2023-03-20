@@ -20,7 +20,7 @@ import { Pagination, PaginationProps } from '~/components/atoms/Pagination/pagin
 import { Table, TableProps } from '~/components/atoms/table/table';
 import { Tag, TagProps } from '~/components/atoms/Tag/tag';
 import { UserProfile, UserProfileProps } from '~/components/atoms/UserProfile/user-profile';
-import { AmountInputField, AmountInputProps } from '~/components/atoms/AmountInput/amount-input';
+import { AmountInputField, AmountInputProps } from '~/components/atoms/AmountInput/AmountInput';
 import { Calendar, CalendarProps } from '~/components/atoms/calendar/calendar';
 import { Checkbox, CheckboxProps } from '~/components/atoms/checkbox/checkbox';
 import { ColorPicker, ColorPickerProps } from '~/components/atoms/ColorPicker/ColorPicker';
@@ -47,8 +47,8 @@ import { SiteInputField, SiteInputProps } from '~/components/atoms/SelectInput/s
 import { TextInputField, TextInputProps } from '~/components/atoms/TextInput/text-input';
 import { UploadItem, UploadItemsProps } from '~/components/atoms/uploadItem/upload-item';
 import { Upload, UploadProps } from '~/components/atoms/upload/upload';
-import { ButtonGroup, ButtonGroupProps } from '~/components/atoms/ButtonGroup/button-group';
-import { ButtonWrapper } from '~/components/atoms/ButtonWrapper/button-wrapper';
+import { ButtonGroup, ButtonGroupProps } from '~/components/atoms/ButtonGroup/ButtonGroup';
+import { ButtonWrapper } from '~/components/atoms/ButtonWrapper/ButtonWrapper';
 import {
   IconButtonGroup,
   IconButtonGroupProps,

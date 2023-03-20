@@ -1,11 +1,7 @@
-import { Button, ButtonProps } from '../Button/Button';
+import { Button } from '../Button/Button';
+import { ButtonGroupProps } from './ButtonGroup.types';
 import React from 'react';
-export interface ButtonGroupProps
-  extends Pick<ButtonProps, 'color' | 'size' | 'variant' | 'icon' | 'endIcon'> {
-  className?: string;
-  items: Array<Omit<ButtonProps, 'color' | 'size' | 'variant' | 'shape'>>;
-  orientation?: 'horizontal' | 'vertical';
-}
+
 
 export function ButtonGroup({
   items,

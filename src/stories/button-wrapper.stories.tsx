@@ -1,6 +1,6 @@
 import type { ComponentStory, ComponentMeta } from '@storybook/react';
 import React from 'react';
-import { ButtonWrapper } from '../components/atoms/ButtonWrapper/button-wrapper';
+import { ButtonWrapper } from '../components/atoms/ButtonWrapper/ButtonWrapper';
 import { ComponentWithColors, ComponentName } from '~/helpers/extend-colors-storybook';
 import { extendTheme, base, ColorShade } from '~/themes';
 

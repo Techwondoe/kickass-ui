@@ -3,26 +3,7 @@ import clsx from 'clsx';
 import { Dropdown } from '../Dropdown/dropdown';
 import { Typography } from '../Typography/Typography';
 import { Icon } from '../icon';
-
-interface SearchInputValue {
-  [key: string]: string;
-  id: string;
-}
-
-export interface SearchInputProps<Value = SearchInputValue> {
-  disabled?: boolean;
-  error?: string;
-  fullWidth?: boolean;
-  hint?: string;
-  items?: Value[];
-  label?: string;
-  onChange?: (value: Value | null) => void;
-  placeholder?: string;
-  renderItem?: (value: Value) => React.ReactNode;
-  renderSelectedItem?: (value: Value) => React.ReactNode;
-  searchKeys?: [keyof Value];
-  value?: Value;
-}
+import { SearchInputProps, SearchInputValue } from './SearchInput.types';
 
 export const SearchInputField: FC<SearchInputProps> = ({
   label,

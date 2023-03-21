@@ -4,20 +4,9 @@ import { Dropdown } from '../Dropdown/dropdown';
 import { Typography } from '../Typography/Typography';
 import { Icon } from '../icon';
 import countryCodesMap from './country-codes.json';
+import { PhoneInputProps } from './PhoneInput.types';
 
 const countryCodes = Object.values(countryCodesMap);
-
-export interface PhoneInputProps {
-  disabled?: boolean;
-  error?: string;
-  fullWidth?: boolean;
-  hint?: string;
-  label?: string;
-  onChange?: (value: string) => void;
-  placeholder?: string;
-  value?: string;
-}
-
 export const PhoneInputField: FC<PhoneInputProps> = ({
   label,
   placeholder = '(555) 000-0000',

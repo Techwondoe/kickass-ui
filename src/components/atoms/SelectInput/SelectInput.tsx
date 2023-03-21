@@ -3,26 +3,7 @@ import clsx from 'clsx';
 import { Dropdown } from '../Dropdown/dropdown';
 import { Typography } from '../Typography/Typography';
 import { Icon } from '../icon';
-
-interface SelectInputValue {
-  [key: string]: string;
-  id: string;
-}
-
-export interface SelectInputProps {
-  chevronLeft?: boolean;
-  disabled?: boolean;
-  error?: string;
-  fullWidth?: boolean;
-  hint?: string;
-  items?: SelectInputValue[];
-  label?: string;
-  onChange?: (value: SelectInputValue) => void;
-  placeholder?: string;
-  renderItem?: (value: SelectInputValue) => React.ReactNode;
-  renderSelectedItem?: (value: SelectInputValue) => React.ReactNode;
-  value?: SelectInputValue;
-}
+import { SelectInputProps, SelectInputValue } from './SelectInput.types';
 
 export const SelectInputField: FC<SelectInputProps> = ({
   label,

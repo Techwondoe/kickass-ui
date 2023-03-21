@@ -1,6 +1,6 @@
 import type { ComponentStory, ComponentMeta } from '@storybook/react';
 import React from 'react';
-import { MailInputField } from '../components/atoms/MailInput/mail-input';
+import { MailInputField } from '../components/atoms/MailInput/MailInput';
 import { ComponentWithColors, ComponentName } from '~/helpers/extend-colors-storybook';
 import { extendTheme, base, ColorShade } from '~/themes';
 const Story: ComponentMeta<typeof MailInputField> = {

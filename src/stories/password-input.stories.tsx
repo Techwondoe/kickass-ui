@@ -1,6 +1,6 @@
 import type { ComponentStory, ComponentMeta } from '@storybook/react';
 import React from 'react';
-import { PasswordInputField } from '../components/atoms/PasswordInput/password-input';
+import { PasswordInputField } from '../components/atoms/PasswordInput/PasswordInput';
 import { ComponentWithColors, ComponentName } from '~/helpers/extend-colors-storybook';
 import { extendTheme, base, ColorShade } from '~/themes';
 

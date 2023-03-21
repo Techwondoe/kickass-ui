@@ -1,14 +1,14 @@
 import { ColorType } from '../../../types/colors';
 import { IconType } from '../icon';
 /**
- * @params avatar - Provide an avatar in badge
- * @params className - Custom CSS classes
- * @params color - Provide color for badges
- * @params endIcon - Provides icon at the end of the badge
- * @params icon - Provides icon at the end of the badge
- * @params label - Provides text to the badge
- * @params size - Provides size to the badge
- * @params status - Provides Online/Offline/Away status
+ * @param avatar - Provide an avatar in badge
+ * @param className - Custom CSS classes
+ * @param color - Provide color for badges
+ * @param endIcon - Provides icon at the end of the badge
+ * @param icon - Provides icon at the end of the badge
+ * @param label - Provides text to the badge
+ * @param size - Provides size to the badge
+ * @param status - Provides Online/Offline/Away status
  */
 export interface BadgeProps extends React.HTMLAttributes<HTMLDivElement> {
   avatar?: string;

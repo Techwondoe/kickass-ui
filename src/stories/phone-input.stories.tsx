@@ -1,6 +1,6 @@
 import type { ComponentStory, ComponentMeta } from '@storybook/react';
 import React from 'react';
-import { PhoneInputField } from '../components/atoms/PhoneInput/phone-input';
+import { PhoneInputField } from '../components/atoms/PhoneInput/PhoneInput';
 import { ComponentWithColors, ComponentName } from '~/helpers/extend-colors-storybook';
 import { extendTheme, base, ColorShade } from '~/themes';
 

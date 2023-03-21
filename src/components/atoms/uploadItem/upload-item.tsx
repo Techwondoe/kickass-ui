@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { Icon } from '../icon';
-import { ProgressBar } from '../ProgressBar/progress-bar';
+import { ProgressBar } from '../ProgressBar/ProgressBar';
 import { Typography } from '../Typography/Typography';
 
 export interface UploadItemsProps {

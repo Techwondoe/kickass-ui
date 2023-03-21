@@ -2,7 +2,7 @@ import type { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Avatar } from '../components/atoms/Avatar/Avatar';
 import { Tag } from '../components/atoms/Tag/tag';
 import { Typography } from '../components/atoms/Typography/Typography';
-import { MultiSearchInputField } from '../components/atoms/MultiSearchInput/multi-search-input';
+import { MultiSearchInputField } from '../components/atoms/MultiSearchInput/MultiSearchInput';
 import React from 'react';
 import { ComponentWithColors, ComponentName } from '~/helpers/extend-colors-storybook';
 import { extendTheme, base, ColorShade } from '~/themes';

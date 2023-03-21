@@ -3,32 +3,8 @@ import clsx from 'clsx';
 import { Dropdown } from '../Dropdown/dropdown';
 import { Typography } from '../Typography/Typography';
 import { Icon } from '../icon';
+import {MultiSearchInputValue, MultiSearchInputProps } from './MultiSearchInput.types'
 
-interface MultiSearchInputValue {
-  [key: string]: string;
-  id: string;
-}
-
-interface MultiSearchInputItemControls {
-  select: () => void;
-  toggle: () => void;
-  unselect: () => void;
-}
-
-export interface MultiSearchInputProps<Value = MultiSearchInputValue> {
-  disabled?: boolean;
-  error?: string;
-  fullWidth?: boolean;
-  hint?: string;
-  items?: Value[];
-  label?: string;
-  onChange?: (value: Value[] | null) => void;
-  placeholder?: string;
-  renderItem?: (value: Value, controls: MultiSearchInputItemControls) => React.ReactNode;
-  renderSelectedItem?: (value: Value, controls: MultiSearchInputItemControls) => React.ReactNode;
-  searchKeys?: [keyof Value];
-  value?: Value[];
-}
 
 export const MultiSearchInputField: FC<MultiSearchInputProps> = ({
   label,

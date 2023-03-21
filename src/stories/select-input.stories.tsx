@@ -1,7 +1,7 @@
 import type { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Avatar } from '../components/atoms/Avatar/Avatar';
 import { Typography } from '../components/atoms/Typography/Typography';
-import { SelectInputField } from '../components/atoms/SelectInput/select-input';
+import { SelectInputField } from '../components/atoms/SelectInput/SelectInput';
 import React from 'react';
 import { ComponentWithColors, ComponentName } from '~/helpers/extend-colors-storybook';
 import { extendTheme, base, ColorShade } from '~/themes';

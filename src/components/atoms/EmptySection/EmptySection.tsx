@@ -1,9 +1,6 @@
 import React, { FC } from 'react';
 import { Typography } from '../Typography/Typography';
-
-export interface EmptySectionProps {
-  title?: string;
-}
+import { EmptySectionProps } from './EmptySection.types';
 
 export const EmptySection: FC<EmptySectionProps> = ({
   title = 'This page is under construction.',

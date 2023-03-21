@@ -1,43 +1,9 @@
 /* eslint-disable sort-keys */
-import React, { HTMLAttributes } from 'react';
-import { ColorType, PrimaryColorType } from '../../../types/colors';
-import { Icon, IconType } from '../icon';
+import React from 'react';
+import { ColorType } from '../../../types/colors';
+import { Icon } from '../icon';
+import { IconButtonProps, sizes, shapes } from './IconButton.types';
 
-/**
- * @params EndIcon - The icon to be displayed at the end of the button
- * @params StartIcon - The icon to be displayed at the start of the button
- * @params children - The content of the button
- * @params className - Override or extend the styles applied to the component
- * @params color - Color of the button. It supports those theme colors that make sense for this component.
- * @params fullWidth - If true, the button will take up the full width of its container.
- * @params href - The URL to link to when the button is clicked.
- * @params shape - Shape of the button. It supports those theme shapes that make sense for this component.
- * @params size - Size of the button. It supports those theme sizes that make sense for this component.
- * @params variant - Variant of the button. It supports those theme variants that make sense for this component.
- */
-export interface IconButtonProps extends HTMLAttributes<HTMLButtonElement | HTMLAnchorElement> {
-  className?: string;
-  color?: Exclude<PrimaryColorType, 'white' | 'black'>;
-  disabled?: boolean;
-  href?: string;
-  icon: IconType;
-  selected?: boolean;
-  shape?: 'rounded' | 'square';
-  size?: 'sm' | 'md' | 'lg' | 'xl' | '2xl';
-  variant?: 'contained' | 'outlined' | 'light' | 'text' | 'link';
-}
-const sizes = {
-  sm: 'w-9 h-9',
-  md: 'w-10 h-10',
-  lg: 'w-11 h-11',
-  xl: 'w-12 h-12',
-  '2xl': 'w-14 h-14',
-};
-
-const shapes = {
-  rounded: 'rounded-full',
-  square: 'rounded',
-};
 
 /**
  * @param {ButtonProps} props

@@ -1,19 +1,11 @@
 import React, { FC, useState } from 'react';
-import { Button, ButtonProps } from '../Button/Button';
+import { Button } from '../Button';
 import { CalendarValue } from '../calendar/hooks/useCalendar';
-import { DatePicker, DatePickerProps } from '../date-picker/date-picker';
-import toDatePickerInput from '../date-picker/utils/toDatePickerInput';
+import { DatePicker } from '../DatePicker';
+import toDatePickerInput from '../DatePicker/utils/toDatePickerInput';
 import { Dropdown } from '../Dropdown/dropdown';
+import { DatePickerDropdownProps } from './DatePickerDropdown.types';
 
-export interface DatePickerDropdownProps {
-  buttonColor?: ButtonProps['color'];
-  buttonSelected?: boolean;
-  buttonVariant?: ButtonProps['variant'];
-  hidePresetRanges?: DatePickerProps['hidePresetRanges'];
-  onChange?: (value: CalendarValue) => void;
-  type?: DatePickerProps['type'];
-  value?: CalendarValue;
-}
 
 export const DatePickerDropdown: FC<DatePickerDropdownProps> = ({
   type = 'single',

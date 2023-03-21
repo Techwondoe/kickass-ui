@@ -1,11 +1,7 @@
 import React from 'react';
-import { IconButton, IconButtonProps } from '../iconButton/icon-button';
+import { IconButton } from '../iconButton';
+import { IconButtonGroupProps } from './IconButtonGroup.types';
 
-export interface IconButtonGroupProps extends Pick<IconButtonProps, 'color' | 'size' | 'variant'> {
-  className?: string;
-  items: Array<Omit<IconButtonProps, 'color' | 'size' | 'variant' | 'shape'>>;
-  orientation?: 'horizontal' | 'vertical';
-}
 
 export function IconButtonGroup({
   items,

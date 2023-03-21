@@ -1,9 +1,9 @@
 
 /**
- * @params directionMetric- The content of the button
- * @params status - Status array
- * @params title - Title in a card
- * @params value - Value in card
+ * @param directionMetric- The content of the button
+ * @param status - Status array
+ * @param title - Title in a card
+ * @param value - Value in card
  */
 
 export interface CardProps {

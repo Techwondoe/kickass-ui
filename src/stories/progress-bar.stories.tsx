@@ -1,6 +1,6 @@
 import type { ComponentStory, ComponentMeta } from '@storybook/react';
 import React from 'react';
-import { ProgressBar } from '../components/atoms/ProgressBar/progress-bar';
+import { ProgressBar } from '../components/atoms/ProgressBar/ProgressBar';
 import { ComponentWithColors, ComponentName } from '~/helpers/extend-colors-storybook';
 import { extendTheme, base, ColorShade } from '~/themes';
 

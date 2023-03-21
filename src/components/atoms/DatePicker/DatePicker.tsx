@@ -1,16 +1,7 @@
 import React, { FC } from 'react';
-import { CalendarValue } from '../calendar/hooks/useCalendar';
 import DateRangePicker from './components/date-range-picker';
 import DateSinglePicker from './components/date-single-picker';
-
-export interface DatePickerProps {
-  defaultValue?: CalendarValue;
-  hideActions?: boolean;
-  hidePresetRanges?: boolean;
-  onApply?: (value: CalendarValue) => void;
-  onCancel?: () => void;
-  type?: 'single' | 'range';
-}
+import { DatePickerProps } from './DatePicker.types'
 
 export const DatePicker: FC<DatePickerProps> = ({
   type = 'single',

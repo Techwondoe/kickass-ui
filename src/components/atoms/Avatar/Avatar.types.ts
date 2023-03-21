@@ -1,12 +1,12 @@
 import { HTMLAttributes } from 'react';
 /**
- * @params alt - Provide an alt text for the image tag
- * @params className - Custom CSS classes
- * @params currentStatus - Provide user current status
- * @params onClick - Provides onClick function
- * @params shape - Shape of the Avatar
- * @params size - Size of the Avatar component
- * @params src - Source for image tag
+ * @param alt - Provide an alt text for the image tag
+ * @param className - Custom CSS classes
+ * @param currentStatus - Provide user current status
+ * @param onClick - Provides onClick function
+ * @param shape - Shape of the Avatar
+ * @param size - Size of the Avatar component
+ * @param src - Source for image tag
  */
 
 export interface AvatarProps extends HTMLAttributes<HTMLImageElement> {

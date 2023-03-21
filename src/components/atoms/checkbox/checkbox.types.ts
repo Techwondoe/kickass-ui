@@ -1,5 +1,16 @@
 import { PrimaryColorType } from '../../../types/colors';
 
+/**
+ * @param checked- Current state of checkbox True/False
+ * @param color - Status array
+ * @param disabled - If checkbox needs to be disabled
+ * @param indeterminate - indeterminate in checkbox
+ * @param initiallyChecked - Checkbox should be checked when loaded or not
+ * @param name - Name associated with checkbox
+ * @param onChange - OnChange function to be passed
+ * @param size - Size of the checkbox
+ */
+
 export interface CheckboxProps {
   checked?: boolean;
   color?: Omit<PrimaryColorType, 'white' | 'black'>;

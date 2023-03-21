@@ -2,17 +2,7 @@ import React, { FC, useState } from 'react';
 import clsx from 'clsx';
 import { Typography } from '../Typography/Typography';
 import { Icon } from '../icon';
-
-export interface SiteInputProps {
-  disabled?: boolean;
-  error?: string;
-  fullWidth?: boolean;
-  hint?: string;
-  label?: string;
-  onChange?: (value: string) => void;
-  placeholder?: string;
-  value?: string;
-}
+import { SiteInputProps } from './SiteInput.types';
 
 export const SiteInputField: FC<SiteInputProps> = ({
   label,

@@ -1,6 +1,6 @@
 import React from 'react';
 import type { ComponentStory, ComponentMeta } from '@storybook/react';
-import DirectionMetric from '../components/atoms/DirectionMetric/DirectionMetric';
+import {DirectionMetric} from '../components/atoms/DirectionMetric';
 import { ComponentWithColors, ComponentName } from '~/helpers/extend-colors-storybook';
 import { extendTheme, base, ColorShade } from '~/themes';
 

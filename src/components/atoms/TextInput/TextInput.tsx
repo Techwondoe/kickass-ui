@@ -2,18 +2,9 @@ import React, { FC, useState } from 'react';
 import clsx from 'clsx';
 import { Typography } from '../Typography/Typography';
 import { Icon } from '../icon';
+import { TextInputProps } from './TextInput.types';
 
-export interface TextInputProps {
-  disabled?: boolean;
-  error?: string;
-  fullWidth?: boolean;
-  hint?: string;
-  label?: string;
-  onBlur?: () => void;
-  onChange?: (value: string) => void;
-  placeholder?: string;
-  value?: string;
-}
+
 
 export const TextInputField: FC<TextInputProps> = ({
   label,

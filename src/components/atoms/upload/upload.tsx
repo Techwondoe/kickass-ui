@@ -1,12 +1,9 @@
 import React, { FC, useRef } from 'react';
 import { Icon } from '../icon';
 import { Typography } from '../Typography/Typography';
+import { UploadProps } from './upload.types';
 
-export interface UploadProps {
-  accept?: string;
-  disabled?: boolean;
-  onChange?: (fileList: FileList | null) => void;
-}
+
 
 export const Upload: FC<UploadProps> = ({ disabled = false, accept, onChange }) => {
   const fileInputRef = useRef<HTMLInputElement>(null);

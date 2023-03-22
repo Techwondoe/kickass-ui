@@ -2,12 +2,7 @@ import React, { FC } from 'react';
 import { Icon } from '../icon';
 import { ProgressBar } from '../ProgressBar/ProgressBar';
 import { Typography } from '../Typography/Typography';
-
-export interface UploadItemsProps {
-  label: string;
-  progress: number;
-  size: string;
-}
+import { UploadItemsProps } from './UploadItem.types';
 
 export const UploadItem: FC<UploadItemsProps> = ({ label, size, progress = 0 }) => {
   return (

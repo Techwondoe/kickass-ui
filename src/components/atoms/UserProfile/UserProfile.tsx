@@ -1,28 +1,9 @@
 import React, { FC } from 'react';
 import { Avatar } from '../Avatar/Avatar';
-import { Typography, TypographySizeType } from '../Typography/Typography';
+import { Typography, TypographySizeType } from '../Typography';
+import { UserProfileProps, nameSizes, roleSizes } from './UserProfile.types';
 
-export interface UserProfileProps {
-  avatar?: string;
-  name: string;
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-  status?: 'online' | 'offline' | 'busy' | 'away';
-  subTitle: string;
-}
 
-const nameSizes = {
-  sm: 'sm',
-  md: 'sm',
-  lg: 'md',
-  xl: 'lg',
-};
-
-const roleSizes = {
-  sm: 'xs',
-  md: 'sm',
-  lg: 'md',
-  xl: 'md',
-};
 
 export const UserProfile: FC<UserProfileProps> = ({
   name,

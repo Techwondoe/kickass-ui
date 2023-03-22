@@ -1,6 +1,6 @@
 import type { ComponentStory, ComponentMeta } from '@storybook/react';
 import React from 'react';
-import { UserProfile } from '../components/atoms/UserProfile/user-profile';
+import { UserProfile } from '../components/atoms/UserProfile/UserProfile';
 import { ComponentWithColors, ComponentName } from '~/helpers/extend-colors-storybook';
 import { extendTheme, base } from '~/themes';
 const Story: ComponentMeta<typeof UserProfile> = {

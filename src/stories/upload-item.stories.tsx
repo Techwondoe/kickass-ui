@@ -1,6 +1,6 @@
 import type { ComponentStory, ComponentMeta } from '@storybook/react';
 import React from 'react';
-import { UploadItem } from '../components/atoms/uploadItem/upload-item';
+import { UploadItem } from '../components/atoms/uploadItem/UploadItem';
 import { ComponentWithColors, ComponentName } from '~/helpers/extend-colors-storybook';
 import { extendTheme, base, ColorShade } from '~/themes';
 

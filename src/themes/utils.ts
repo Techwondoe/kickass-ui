@@ -5,7 +5,20 @@ import { Theme, MappedTheme, ApplyThemeProps, FontSize } from './types';
 const generateColors = (variables: Theme) => {
   let allColors = {};
   const colorTypes = ['white', 'black', 'gray', 'primary', 'error', 'warning', 'success'];
-  const variantTypes = ['25', '50', '100', '200', '300', '400', '500', '600', '700', '800', '900', 'DEFAULT'];
+  const variantTypes = [
+    '25',
+    '50',
+    '100',
+    '200',
+    '300',
+    '400',
+    '500',
+    '600',
+    '700',
+    '800',
+    '900',
+    'DEFAULT',
+  ];
 
   for (const colorName of colorTypes) {
     if (colorName === 'white' || colorName === 'black') {
@@ -17,7 +30,7 @@ const generateColors = (variables: Theme) => {
       for (const variant of variantTypes) {
         allColors = {
           ...allColors,
-          [`--color-${colorName}-${variant}`]: (variables.color[colorName][variant]) || '',
+          [`--color-${colorName}-${variant}`]: variables.color[colorName][variant] || '',
         };
       }
     }

@@ -26,7 +26,9 @@ const customTheme = extendTheme(base, {
 const App = () => {
   return (
     <ThemeProvider customTheme={customTheme}>
-      <Typography>Kickass UI Example project</Typography>
+      <Typography size={'sm'} className="text-primary-600">
+        Kickass UI Example project
+      </Typography>
     </ThemeProvider>
   );
 };

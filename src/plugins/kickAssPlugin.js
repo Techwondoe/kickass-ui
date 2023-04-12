@@ -6,34 +6,22 @@ const { colors } = require('../theme.json');
 const buttonClassesGenerator = (colors) => {
   const sizeClasses = {
     '.btn-sm': {
-      padding: '0.5rem 0.875rem',
-      borderRadius: '.25rem',
-      fontSize: '14px',
+      '@apply px-3.5 py-2 h-9 rounded-lg': true,
     },
     '.btn-md': {
-      padding: '0.625rem 1rem',
-      borderRadius: '.25rem',
-      fontSize: '14px',
+      '@apply px-4 py-2.5 h-10 rounded-lg': true,
     },
     '.btn-lg': {
-      padding: '0.625rem 1.125rem',
-      borderRadius: '.25rem',
-      fontSize: '16px',
+      '@apply px-[18px] py-2.5 h-11 rounded-lg': true,
     },
     '.btn-xl': {
-      padding: '0.75rem 1.25rem',
-      borderRadius: '.25rem',
-      fontSize: '16px',
+      '@apply px-5 py-3 h-12 rounded-lg': true,
     },
     '.btn-2xl': {
-      borderRadius: '.25rem',
-      padding: '1rem 1.75rem',
-      fontSize: '18px',
+      '@apply px-[28px] py-4 h-14 rounded-lg': true,
     },
     '.btn': {
-      borderRadius: '.25rem',
-      padding: '0.5rem 0.875rem',
-      fontSize: '14px',
+      '@apply px-4 py-2.5 h-10 rounded-lg': true,
     },
   };
   const colorClasses = {};
@@ -65,19 +53,13 @@ const buttonClassesGenerator = (colors) => {
 const iconBadgeClassesGenerator = () => {
   const sizeClasses = {
     '.ibdge-sm': {
-      width: '1.25rem',
-      height: '1.25rem',
-      justifyContent: 'center',
+      '@apply w-5 h-5': true,
     },
     '.ibdge-md': {
-      width: '1.5rem',
-      height: '1.5rem',
-      justifyContent: 'center',
+      '@apply w-6 h-6': true,
     },
     '.ibdge-lg': {
-      width: '1.75rem',
-      height: '1.75rem',
-      justifyContent: 'center',
+      '@apply w-7 h-7': true,
     },
   };
   const colorClasses = {};
@@ -97,21 +79,13 @@ const iconBadgeClassesGenerator = () => {
 const badgeClassesGenerator = () => {
   const sizeClasses = {
     '.bdge-sm': {
-      padding: '0.125rem 0.5rem',
-      fontSize: '0.75rem',
-      lineHeight: '1rem',
+      '@apply px-2 py-0.5': true,
     },
     '.bdge-md': {
-      height: '1.5rem',
-      padding: '0.125rem 0.625rem',
-      fontSize: '0.875rem',
-      lineHeight: '1.25rem',
+      '@apply px-2.5 py-0.5 h-6': true,
     },
     '.bdge-lg': {
-      height: '1.75rem',
-      padding: '0.25rem 0.75rem',
-      fontSize: '0.875rem',
-      lineHeight: '1.25rem',
+      '@apply px-3 py-1 h-7': true,
     },
   };
 

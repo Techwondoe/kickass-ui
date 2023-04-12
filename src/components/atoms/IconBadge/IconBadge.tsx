@@ -6,7 +6,7 @@ export function IconBadge({ color = 'gray', icon, size = 'md', ...props }: Badge
   return (
     <div
       {...props}
-      className={`inline-flex gap-1.5 items-center rounded-full ibdge-${color} ${
+      className={`inline-flex gap-1.5 items-center justify-center rounded-full ibdge-${color} ${
         relevantStyleToSize[size]
       } ${props?.className ?? ''}`}>
       <Icon name={icon} size={12} />

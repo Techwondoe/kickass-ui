@@ -1,9 +1,5 @@
 import React from 'react';
-
-export interface LogoProps {
-  className?: string;
-  darkMode: boolean;
-}
+import { LogoProps } from './logo.types';
 
 export function Logo({ className }: LogoProps) {
   return (

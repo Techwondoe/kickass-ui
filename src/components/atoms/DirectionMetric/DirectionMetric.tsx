@@ -1,12 +1,7 @@
 import React from 'react';
 import { Typography } from '../Typography/Typography';
 import { Icon } from '../icon/icon';
-
-export interface DirectionMetricProps {
-  displayValue?: string;
-  limit: number;
-  value: number;
-}
+import {DirectionMetricProps} from './DirectionMetric.types'
 
 export function DirectionMetric({ value, limit, displayValue = `${value}` }: DirectionMetricProps) {
   return (

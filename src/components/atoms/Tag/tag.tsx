@@ -3,32 +3,8 @@ import { Avatar } from '../Avatar/Avatar';
 import { Checkbox } from '../checkbox/checkbox';
 import { Icon } from '../icon';
 import { Typography } from '../Typography/Typography';
+import { TagProps, sizes, countSizes } from './tag.types';
 
-export interface TagProps {
-  avatar?: string;
-  checkable?: boolean;
-  className?: string;
-  closable?: boolean;
-  count?: number;
-  label: string;
-  onCheck?: () => void;
-  onClose?: () => void;
-  onUnCheck?: () => void;
-  size?: 'sm' | 'md' | 'lg';
-  status?: 'online' | 'offline' | 'away';
-}
-
-const sizes = {
-  sm: 'px-2 py-0.5',
-  md: 'px-[9px] py-[3px]',
-  lg: 'px-2.5 py-1',
-};
-
-const countSizes = {
-  sm: 'px-1',
-  md: 'px-[5px]',
-  lg: 'px-1.5',
-};
 
 export const Tag: FC<TagProps> = ({
   label,

@@ -1,14 +1,6 @@
 import React, { FC } from 'react';
 import clsx from 'clsx';
-import { ColorType } from '../../../types/colors';
-
-export interface RadioProps {
-  checked?: boolean;
-  className?: string;
-  color?: ColorType;
-  name?: string;
-  onChange?: () => void;
-}
+import { RadioProps } from './Radio.types';
 
 export const Radio: FC<RadioProps> = ({
   name,

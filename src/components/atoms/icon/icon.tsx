@@ -1,14 +1,7 @@
 import React, { FC, useMemo } from 'react';
-import { iconPack, IconType } from './icon-list';
-import { ColorVariantType } from '../../../types/colors';
+import { iconPack } from './icon-list';
+import { IconProps } from './icon.types';
 
-export interface IconProps {
-  className?: string;
-  color?: ColorVariantType;
-  name: IconType;
-  onClick?: () => void;
-  size?: number;
-}
 
 export const Icon: FC<IconProps> = ({ name, color, size = 20, className, onClick }) => {
   const SVGIcon = useMemo(() => iconPack[name], [name]);

@@ -2,7 +2,7 @@ import type { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ComponentWithColors, ComponentName } from '~/helpers/extend-colors-storybook';
 import { extendTheme, base, ColorShade } from '~/themes';
 import React from 'react';
-import { EmptySection } from '../components/atoms/EmptySection/empty-section';
+import { EmptySection } from '../components/atoms/EmptySection/EmptySection';
 
 const Story: ComponentMeta<typeof EmptySection> = {
   component: EmptySection,

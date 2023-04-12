@@ -1,6 +1,6 @@
 import type { ComponentStory, ComponentMeta } from '@storybook/react';
 import React from 'react';
-import { IconButtonGroup } from '../components/atoms/iconButtonGroup/icon-button-group';
+import { IconButtonGroup } from '../components/atoms/iconButtonGroup/IconButtonGroup';
 import { ComponentWithColors, ComponentName } from '~/helpers/extend-colors-storybook';
 import { extendTheme, base, ColorShade } from '~/themes';
 

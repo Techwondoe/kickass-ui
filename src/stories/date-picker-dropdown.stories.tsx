@@ -1,6 +1,6 @@
 import type { ComponentStory, ComponentMeta } from '@storybook/react';
 import React from 'react';
-import { DatePickerDropdown } from '../components/atoms/date-picker-dropdown/date-picker-dropdown';
+import { DatePickerDropdown } from '../components/atoms/DatePickerDropdown';
 import { ComponentWithColors, ComponentName } from '~/helpers/extend-colors-storybook';
 import { extendTheme, base, ColorShade } from '~/themes';
 const Story: ComponentMeta<typeof DatePickerDropdown> = {

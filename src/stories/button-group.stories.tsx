@@ -1,6 +1,6 @@
 import React from 'react';
 import type { ComponentStory, ComponentMeta } from '@storybook/react';
-import { ButtonGroup } from '../components/atoms/ButtonGroup/button-group';
+import { ButtonGroup } from '../components/atoms/ButtonGroup/ButtonGroup';
 import { ComponentWithColors, ComponentName } from '~/helpers/extend-colors-storybook';
 import { extendTheme, base, ColorShade } from '~/themes';
 const Story: ComponentMeta<typeof ButtonGroup> = {

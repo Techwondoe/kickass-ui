@@ -1,39 +1,10 @@
 import React, { useCallback, useState } from 'react';
 import clsx from 'clsx';
 import { Button } from '../Button/Button';
-import { IconButton } from '../iconButton/icon-button';
+import { IconButton } from '../iconButton/IconButton';
 import { Typography } from '../Typography/Typography';
+import { UsePaginationProps, UsePaginationReturnType, PaginationProps } from './pagination.types';
 
-interface UsePaginationProps {
-  boundaryCount?: number;
-  count?: number;
-  defaultPage?: number;
-  onChange?: (page: number) => void;
-  page?: number;
-  siblingCount?: number;
-}
-
-interface UsePaginationReturnType {
-  currentPage: number;
-  goToFirstPage: () => void;
-  goToLastPage: () => void;
-  goToNextPage: () => void;
-  goToPage: (page: number) => void;
-  goToPrevPage: () => void;
-  items: {
-    goToThisPage?: () => void;
-    page?: number;
-    selected?: boolean;
-    type: 'page' | 'start-ellipsis' | 'end-ellipsis';
-  }[];
-  nextPageExists: boolean;
-  prevPageExists: boolean;
-}
-
-/* eslint-disable-next-line */
-export interface PaginationProps extends UsePaginationProps {
-  shape?: React.ComponentProps<typeof Button>['shape'];
-}
 
 const range = (start: number, stop: number, step = 1) =>
   Array(Math.ceil((stop - start) / step))

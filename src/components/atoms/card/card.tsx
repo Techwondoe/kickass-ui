@@ -2,23 +2,10 @@ import React from 'react';
 import { Badge } from '../Badge/Badge';
 import { DirectionMetric } from '../DirectionMetric/DirectionMetric';
 import { Typography } from '../Typography/Typography';
+import { CardProps } from './card.types';
 
 /* eslint-disable-next-line */
-export interface CardProps {
-  directionMetric: {
-    data: {
-      limit: number;
-      value: number;
-    };
-    description: string;
-  };
-  status: {
-    isComplete: boolean;
-    label: string;
-  }[];
-  title: string;
-  value: number;
-}
+
 export function Card({ title, value, status, directionMetric }: CardProps) {
   return (
     <div className="border rounded-md shadow-sm max-w-sm">

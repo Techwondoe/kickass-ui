@@ -2,17 +2,9 @@ import React, { FC, useState } from 'react';
 import clsx from 'clsx';
 import { Typography } from '../Typography/Typography';
 import { Icon } from '../icon';
+import { CopyInputProps } from './CopyInput.types';
 
-export interface CopyInputProps {
-  disabled?: boolean;
-  error?: string;
-  fullWidth?: boolean;
-  hint?: string;
-  label?: string;
-  onChange?: (value: string) => void;
-  placeholder?: string;
-  value?: string;
-}
+
 
 export const CopyInputField: FC<CopyInputProps> = ({
   label,

@@ -1,23 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
-import { PrimaryColorType } from '../../../types/colors';
 import { Icon } from '../icon';
-
-export interface CheckboxProps {
-  checked?: boolean;
-  color?: Omit<PrimaryColorType, 'white' | 'black'>;
-  disabled?: boolean;
-  indeterminate?: boolean;
-  initiallyChecked?: boolean;
-  name?: string;
-  onChange?: (value: boolean) => void;
-  size?: 'sm' | 'md' | 'lg';
-}
-
-const sizes = {
-  sm: 'w-4 h-4',
-  md: 'w-5 h-5',
-  lg: 'w-6 h-6',
-};
+import { CheckboxProps, sizes } from './checkbox.types';
 
 export function Checkbox({
   name,

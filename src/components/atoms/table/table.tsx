@@ -4,42 +4,14 @@ import {
   getCoreRowModel,
   getFilteredRowModel,
   getPaginationRowModel,
-  ColumnDef,
   getSortedRowModel,
-  Table as ReactTable,
-  CellContext,
-  HeaderContext,
-  SortingState,
-  Row,
 } from '@tanstack/react-table';
 import clsx from 'clsx';
 import { Pagination } from '../Pagination/pagination';
 import { TableHead } from './components/table-head';
 import { TableBody } from './components/table-body';
+import { TableProps } from './table.types';
 
-export interface TableProps<TData = unknown> {
-  cellProps?: (context: CellContext<TData, unknown>) => React.HTMLProps<HTMLTableCellElement>;
-  columns: ColumnDef<TData, unknown>[];
-  data: TData[];
-  defaultPageSize?: number;
-  defaultSorting?: SortingState;
-  enablePagination?: boolean;
-  enableRowSelection?: boolean;
-  enableSorting?: boolean;
-  footer?: (table: ReactTable<TData>) => React.ReactNode;
-  header?: (table: ReactTable<TData>) => React.ReactNode;
-  headerCellProps?: (
-    context: HeaderContext<TData, unknown>
-  ) => React.HTMLProps<HTMLTableCellElement>;
-  onAllRowsSelectionChange?: (checked: boolean) => void;
-  onRowSelection?: (v: { checked: boolean; row: Row<TData> }) => void;
-  onSortingChange?: (sorting: SortingState) => void;
-  rowProps?: (context: {
-    row: Row<TData>;
-    table: ReactTable<TData>;
-  }) => React.HTMLProps<HTMLTableRowElement>;
-  sorting?: SortingState;
-}
 
 export function Table({
   data,

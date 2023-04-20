@@ -20,7 +20,7 @@ export interface CheckboxProps {
   name?: string;
   onChange?: (value: boolean) => void;
   size?: 'sm' | 'md' | 'lg';
-  className:string
+  className?:string
 }
 
 export const sizes = {

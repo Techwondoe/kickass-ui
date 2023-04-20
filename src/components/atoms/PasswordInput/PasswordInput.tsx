@@ -15,6 +15,7 @@ export const PasswordInputField: FC<PasswordInputProps> = ({
   disabled = false,
   onChange,
   onBlur,
+  className = '',
   fullWidth = false,
 }) => {
   const [internalValue, setInternalValue] = useState('');
@@ -42,7 +43,8 @@ export const PasswordInputField: FC<PasswordInputProps> = ({
             ? 'border-error-300 focus-within:ring-4 focus-within:ring-error-100'
             : 'border-gray-300 focus-within:ring-4 focus-within:ring-primary-100',
           disabled ? 'bg-gray-50 pointer-events-none hover:cursor-not-allowed' : 'bg-white',
-          fullWidth ? 'w-full' : 'w-80'
+          fullWidth ? 'w-full' : 'w-80',
+          className
         )}>
         <input
           className={clsx(

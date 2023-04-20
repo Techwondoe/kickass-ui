@@ -17,5 +17,6 @@ export interface SiteInputProps {
   label?: string;
   onChange?: (value: string) => void;
   placeholder?: string;
+  className?: string;
   value?: string;
 }

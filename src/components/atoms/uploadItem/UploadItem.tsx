@@ -6,7 +6,7 @@ import { UploadItemsProps } from './UploadItem.types';
 
 export const UploadItem: FC<UploadItemsProps> = ({ label, size, progress = 0 }) => {
   return (
-    <div className="flex p-3.5 gap-3.5 bg-white border border-gray-200 rounded-lg">
+    <div className={`flex p-3.5 gap-3.5 bg-white border border-gray-200 rounded-lg ${className}`}>
       <div>
         <div className={`w-8 h-8 flex justify-center items-center rounded-full bg-primary-100`}>
           <Icon name="file-04" size={16} color="primary-600" />

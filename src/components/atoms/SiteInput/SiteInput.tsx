@@ -13,6 +13,7 @@ export const SiteInputField: FC<SiteInputProps> = ({
   disabled = false,
   onChange,
   fullWidth = false,
+  className = ''
 }) => {
   const [internalValue, setInternalValue] = useState('');
 
@@ -36,7 +37,8 @@ export const SiteInputField: FC<SiteInputProps> = ({
         className={clsx(
           `h-10 flex items-center rounded-lg`,
           disabled ? 'bg-gray-50 pointer-events-none hover:cursor-not-allowed' : 'bg-white',
-          fullWidth ? 'w-full' : 'w-80'
+          fullWidth ? 'w-full' : 'w-80',
+          className
         )}>
         <div
           className={clsx(

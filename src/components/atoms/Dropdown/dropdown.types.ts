@@ -22,6 +22,7 @@ export interface DropdownProps {
   fullWidth?: boolean;
   onChange?: (value: boolean) => void;
   open?: boolean;
+  className?: string;
   position?: 'auto' | 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right';
 }
 

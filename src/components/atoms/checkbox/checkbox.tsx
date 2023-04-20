@@ -11,6 +11,7 @@ export function Checkbox({
   disabled,
   color = 'primary',
   size = 'md',
+  className = '',
 }: CheckboxProps) {
   const [internalChecked, setInternalChecked] = useState(initiallyChecked);
   const ref = useRef<HTMLInputElement>(null);
@@ -29,7 +30,7 @@ export function Checkbox({
     }
   }, [ref, indeterminate, checked]);
 
-  const checkboxClasses = `stroke-gray-300 ${
+  const checkboxClasses = `stroke-gray-300 ${className} ${
     disabled
       ? 'fill-gray-100'
       : checked || indeterminate

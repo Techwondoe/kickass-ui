@@ -18,6 +18,7 @@ export const SearchInputField: FC<SearchInputProps> = ({
   items = [],
   searchKeys = [],
   fullWidth = false,
+  className=''
 }) => {
   const [search, setSearch] = useState('');
   const [internalValue, setInternalValue] = useState<SearchInputValue | null>(null);
@@ -45,7 +46,8 @@ export const SearchInputField: FC<SearchInputProps> = ({
                 ? 'border-error-300 focus-within:ring-4 focus-within:ring-error-100'
                 : 'border-gray-300 focus-within:ring-4 focus-within:ring-primary-100',
               disabled ? 'bg-gray-50 pointer-events-none hover:cursor-not-allowed' : 'bg-white',
-              fullWidth ? 'w-full' : 'w-80'
+              fullWidth ? 'w-full' : 'w-80',
+              className
             )}
             onClick={() => setOpenPanel((prev) => !prev)}>
             <div className="grow flex items-center">

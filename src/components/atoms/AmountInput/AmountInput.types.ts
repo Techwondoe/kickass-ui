@@ -19,4 +19,5 @@ export interface AmountInputProps {
   onChange?: (value: string) => void;
   placeholder?: string;
   value?: string;
+  className?: string;
 }

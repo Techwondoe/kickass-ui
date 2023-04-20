@@ -98,6 +98,7 @@ export function Pagination({
   page,
   siblingCount = 1,
   shape = 'square',
+  className = ''
 }: PaginationProps) {
   const { items, prevPageExists, nextPageExists, currentPage, goToNextPage, goToPrevPage } =
     usePagination({
@@ -110,7 +111,7 @@ export function Pagination({
     });
 
   return (
-    <div className="px-6 py-4">
+    <div className={`px-6 py-4 ${className}`}>
       <div className="hidden sm:flex items-center gap-2 justify-between">
         <Button
           label="Previous"

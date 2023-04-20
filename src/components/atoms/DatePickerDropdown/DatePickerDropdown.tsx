@@ -6,7 +6,6 @@ import toDatePickerInput from '../DatePicker/utils/toDatePickerInput';
 import { Dropdown } from '../Dropdown/dropdown';
 import { DatePickerDropdownProps } from './DatePickerDropdown.types';
 
-
 export const DatePickerDropdown: FC<DatePickerDropdownProps> = ({
   type = 'single',
   value: valueProp,
@@ -15,6 +14,7 @@ export const DatePickerDropdown: FC<DatePickerDropdownProps> = ({
   buttonColor,
   buttonVariant,
   hidePresetRanges = false,
+  className,
 }) => {
   const [internalValue, setInternalValue] = useState<CalendarValue>(
     type === 'single' ? '' : { from: '', to: '' }
@@ -39,6 +39,7 @@ export const DatePickerDropdown: FC<DatePickerDropdownProps> = ({
         <Button
           label={buttonLabel}
           color={buttonColor}
+          className={className}
           variant={buttonVariant}
           selected={buttonSelected ?? !!value}
           icon="calendar"
@@ -46,7 +47,7 @@ export const DatePickerDropdown: FC<DatePickerDropdownProps> = ({
       </Dropdown.Button>
       <Dropdown.Panel>
         {openPanel && (
-          <div className="my-2">
+          <div className="my-2 ">
             <DatePicker
               type={type}
               onApply={(v) => {

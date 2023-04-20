@@ -18,6 +18,7 @@ export interface DatePickerProps {
   hideActions?: boolean;
   onApply?: (value: CalendarDate) => void;
   onCancel?: () => void;
+  className?:string
 }
 
 export const DateSinglePicker: FC<Omit<DatePickerProps, 'type' | 'hidePresetRanges'>> = ({
@@ -25,6 +26,7 @@ export const DateSinglePicker: FC<Omit<DatePickerProps, 'type' | 'hidePresetRang
   onCancel,
   defaultValue,
   hideActions = false,
+  className
 }) => {
   const form = useForm({
     mode: 'onChange',
@@ -52,7 +54,7 @@ export const DateSinglePicker: FC<Omit<DatePickerProps, 'type' | 'hidePresetRang
         },
       }}
       render={({ field, formState }) => (
-        <div className="w-fit bg-white border border-gray-100 rounded-lg">
+        <div className={`w-fit bg-white border border-gray-100 rounded-lg ${className}`}>
           <div className="w-[328px] flex flex-col gap-3 px-6 py-5">
             <CalendarHeader
               value={calendarHeaderDate.value}

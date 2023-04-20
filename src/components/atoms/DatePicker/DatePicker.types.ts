@@ -17,4 +17,5 @@ export interface DatePickerProps {
   onApply?: (value: CalendarValue) => void;
   onCancel?: () => void;
   type?: 'single' | 'range';
+  className?:string
 }

@@ -8,6 +8,7 @@ import {MultiSearchInputValue, MultiSearchInputProps } from './MultiSearchInput.
 
 export const MultiSearchInputField: FC<MultiSearchInputProps> = ({
   label,
+  className='',
   placeholder = '',
   hint,
   error = '',
@@ -77,7 +78,8 @@ export const MultiSearchInputField: FC<MultiSearchInputProps> = ({
                 ? 'border-error-300 focus-within:ring-4 focus-within:ring-error-100'
                 : 'border-gray-300 focus-within:ring-4 focus-within:ring-primary-100',
               disabled ? 'bg-gray-50 pointer-events-none hover:cursor-not-allowed' : 'bg-white',
-              fullWidth ? 'w-full' : 'w-80'
+              fullWidth ? 'w-full' : 'w-80',
+              className
             )}>
             <div className="grow shrink flex items-center flex-wrap gap-1">
               {value &&

@@ -39,4 +39,5 @@ export interface MultiSearchInputProps<Value = MultiSearchInputValue> {
   renderSelectedItem?: (value: Value, controls: MultiSearchInputItemControls) => React.ReactNode;
   searchKeys?: [keyof Value];
   value?: Value[];
+  className?: string;
 }

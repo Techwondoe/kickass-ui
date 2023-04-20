@@ -10,6 +10,7 @@ export const DatePicker: FC<DatePickerProps> = ({
   onApply,
   onCancel,
   defaultValue,
+  className=''
 }) => {
   return type === 'range' ? (
     <DateRangePicker
@@ -17,13 +18,15 @@ export const DatePicker: FC<DatePickerProps> = ({
       hideActions={hideActions}
       onApply={onApply}
       onCancel={onCancel}
+      className={className}
       defaultValue={typeof defaultValue !== 'string' ? defaultValue : undefined}
     />
   ) : (
     <DateSinglePicker
       hideActions={hideActions}
       onApply={onApply}
-      onCancel={onCancel}
+        onCancel={onCancel}
+        className={className}
       defaultValue={typeof defaultValue === 'string' ? defaultValue : undefined}
     />
   );

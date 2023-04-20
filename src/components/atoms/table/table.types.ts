@@ -48,4 +48,5 @@ export interface TableProps<TData = unknown> {
     table: ReactTable<TData>;
   }) => React.HTMLProps<HTMLTableRowElement>;
   sorting?: SortingState;
+  className?: string;
 }

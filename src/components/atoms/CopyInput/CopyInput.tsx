@@ -4,8 +4,6 @@ import { Typography } from '../Typography/Typography';
 import { Icon } from '../icon';
 import { CopyInputProps } from './CopyInput.types';
 
-
-
 export const CopyInputField: FC<CopyInputProps> = ({
   label,
   placeholder = '',
@@ -15,6 +13,7 @@ export const CopyInputField: FC<CopyInputProps> = ({
   disabled = false,
   onChange,
   fullWidth = false,
+  className = '',
 }) => {
   const [internalValue, setInternalValue] = useState('');
 
@@ -42,7 +41,8 @@ export const CopyInputField: FC<CopyInputProps> = ({
         className={clsx(
           `h-10 flex items-center rounded-lg`,
           inputGroupBackgroundClass,
-          inputWidth
+          inputWidth,
+          className
         )}>
         <div
           className={clsx(

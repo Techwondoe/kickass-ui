@@ -31,4 +31,5 @@ export interface SelectInputProps {
   renderItem?: (value: SelectInputValue) => React.ReactNode;
   renderSelectedItem?: (value: SelectInputValue) => React.ReactNode;
   value?: SelectInputValue;
+  className?: string;
 }

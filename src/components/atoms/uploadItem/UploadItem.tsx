@@ -4,7 +4,7 @@ import { ProgressBar } from '../ProgressBar/ProgressBar';
 import { Typography } from '../Typography/Typography';
 import { UploadItemsProps } from './UploadItem.types';
 
-export const UploadItem: FC<UploadItemsProps> = ({ label, size, progress = 0,className }) => {
+export const UploadItem: FC<UploadItemsProps> = ({ label, size, progress = 0,className = '' }) => {
   return (
     <div className={`flex p-3.5 gap-3.5 bg-white border border-gray-200 rounded-lg ${className}`}>
       <div>

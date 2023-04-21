@@ -15,6 +15,7 @@ export interface UploadProps {
   disabled?: boolean;
   onError?: (err: unknown) => void;
   onChange?: (fileList: File[] | null) => void;
+  className?: string;
 }
 
 

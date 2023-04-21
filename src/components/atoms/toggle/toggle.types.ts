@@ -7,6 +7,7 @@ export interface ToggleProps {
   enabled?: boolean;
   onChange?: (value: boolean) => void;
   size?: 'sm' | 'md' | 'lg';
+  className?: string;
 }
 
 export const toggleSize = {

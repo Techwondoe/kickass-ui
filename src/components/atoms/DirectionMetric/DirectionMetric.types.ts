@@ -9,4 +9,5 @@ export interface DirectionMetricProps {
   displayValue?: string;
   limit: number;
   value: number;
+  className?: string;
 }

@@ -26,6 +26,7 @@ export interface DateRangePickerProps {
   hidePresetRanges?: boolean;
   onApply?: (value: CalendarRange) => void;
   onCancel?: () => void;
+  className?: string;
 }
 
 export const DateRangePicker: FC<DateRangePickerProps> = ({
@@ -34,6 +35,7 @@ export const DateRangePicker: FC<DateRangePickerProps> = ({
   onApply,
   onCancel,
   defaultValue,
+  className,
 }) => {
   const form = useForm({
     mode: 'onChange',
@@ -136,7 +138,8 @@ export const DateRangePicker: FC<DateRangePickerProps> = ({
 
   return (
     <>
-      <div className="w-fit hidden sm:flex bg-white border border-gray-100 rounded-lg">
+      <div
+        className={`w-fit hidden sm:flex bg-white border border-gray-100 rounded-lg ${className}`}>
         {!hidePresetRanges && (
           <div className={`w-48 px-4 py-3 border-r border-gray-200`}>
             {rangeNames.map((id) => {

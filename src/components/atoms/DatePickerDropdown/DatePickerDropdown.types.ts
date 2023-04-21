@@ -21,4 +21,5 @@ export interface DatePickerDropdownProps {
   onChange?: (value: CalendarValue) => void;
   type?: DatePickerProps['type'];
   value?: CalendarValue;
+  className?:string
 }

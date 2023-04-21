@@ -20,4 +20,5 @@ export interface TextInputProps {
   onChange?: (value: string) => void;
   placeholder?: string;
   value?: string;
+  className?: string;
 }

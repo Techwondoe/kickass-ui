@@ -1,11 +1,16 @@
 import React from 'react';
 import { Typography } from '../Typography/Typography';
 import { Icon } from '../icon/icon';
-import {DirectionMetricProps} from './DirectionMetric.types'
+import { DirectionMetricProps } from './DirectionMetric.types';
 
-export function DirectionMetric({ value, limit, displayValue = `${value}` }: DirectionMetricProps) {
+export function DirectionMetric({
+  value,
+  limit,
+  className = '',
+  displayValue = `${value}`,
+}: DirectionMetricProps) {
   return (
-    <div className="flex items-center gap-0.5">
+    <div className={`flex items-center gap-0.5 ${className}`}>
       {value !== limit && (
         <Icon
           name={value > limit ? 'arrow-up' : 'arrow-down'}

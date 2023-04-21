@@ -7,6 +7,7 @@ export interface UsePaginationProps {
   onChange?: (page: number) => void;
   page?: number;
   siblingCount?: number;
+  className?: string;
 }
 
 export interface UsePaginationReturnType {

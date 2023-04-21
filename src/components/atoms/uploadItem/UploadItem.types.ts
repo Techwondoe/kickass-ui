@@ -9,4 +9,5 @@ export interface UploadItemsProps {
   label: string;
   progress: number;
   size: string;
+  className?: string;
 }

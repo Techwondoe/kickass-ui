@@ -32,4 +32,5 @@ export interface SearchInputProps<Value = SearchInputValue> {
   renderSelectedItem?: (value: Value) => React.ReactNode;
   searchKeys?: [keyof Value];
   value?: Value;
+  className?: string;
 }

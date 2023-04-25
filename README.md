@@ -132,18 +132,50 @@ module.exports = {
 
 You can refer to the following component list and prop definitions to use the library
 
-### Atoms
-
-| Component  | Props |
-|------------|-------|
-| Button     |  [Button Props](./src/components/atoms/Button/Button.types.ts)         |
-| Avatar     |  [Avatar Props](./src/components/atoms/Forms/Avatar/Avatar.types.ts)     |
-| Badge      |  [Badge Props](./src/components/atoms/Forms/Badge/Badge.tsx)     |
-| Checkbox   |  [Checkbox Props](./src/components/atoms/Forms/Checkbox/Checkbox.types.ts)      |
-| Radio      |  [Radio Props](./src/components/atoms/Forms/Radio/Radio.tsx)     |
-| SelectMenu |  [SelectMenu Props](./src/components/atoms/Forms/SelectMenu/SelectMenu.tsx)     |
-| TextArea   |  [TextArea Props](./src/components/atoms/Forms/TextArea/TextArea.types.ts)      |
-| Toggle     | [Toggle Props](./src/components/atoms/Forms/Toggle/Toggle.tsx)      |
-| Slider     | [Slider Props](./src/components/atoms/Slider/Slider.types.ts)
-| TextField   | [TextField Props](./src/components/atoms/TextField/TextField.types.tsx)      |
-| Typography   | [Typography Props](./src/components/atoms/Typography/Typography.types.ts)      |
+| Components         | Props                                    |
+|--------------------|------------------------------------------|
+| AmountInput        | [AmountInput Props](./src/components/atoms/AmountInput/AmountInput.types.ts) |
+| Avatar             | [Props](./src/components/atoms/index.ts) |
+| Badge              | [Props](./src/components/atoms/index.ts) |
+| Button             | [Props](./src/components/atoms/index.ts) |
+| ButtonGroup        | [Props](./src/components/atoms/index.ts) |
+| ButtonWrapper      | [Props](./src/components/atoms/index.ts) |
+| Calendar           | [Props](./src/components/atoms/index.ts) |
+| Card               | [Props](./src/components/atoms/index.ts) |
+| Checkbox           | [Props](./src/components/atoms/index.ts) |
+| ColorPicker        | [Props](./src/components/atoms/index.ts) |
+| CopyInput          | [Props](./src/components/atoms/index.ts) |
+| DatePicker         | [Props](./src/components/atoms/index.ts) |
+| DatePickerDropdown | [Props](./src/components/atoms/index.ts) |
+| DirectionMetric    | [Props](./src/components/atoms/index.ts) |
+| Divider            | [Props](./src/components/atoms/index.ts) |
+| Dropdown           | [Props](./src/components/atoms/index.ts) |
+| EpicSection        | [Props](./src/components/atoms/index.ts) |
+| Forms              | [Props](./src/components/atoms/index.ts) |
+| Icon               | [Props](./src/components/atoms/index.ts) |
+| IconBadge          | [Props](./src/components/atoms/index.ts) |
+| IconButton         | [Props](./src/components/atoms/index.ts) |
+| IconButtonGroup    | [Props](./src/components/atoms/index.ts) |
+| Logo               | [Props](./src/components/atoms/index.ts) |
+| MailInput          | [Props](./src/components/atoms/index.ts) |
+| MultiSearchInput   | [Props](./src/components/atoms/index.ts) |
+| Pagination         | [Props](./src/components/atoms/index.ts) |
+| PasswordInput      | [Props](./src/components/atoms/index.ts) |
+| PhoneInput         | [Props](./src/components/atoms/index.ts) |
+| PorgressBar        | [Props](./src/components/atoms/index.ts) |
+| Radio              | [Props](./src/components/atoms/index.ts) |
+| SearchInput        | [Props](./src/components/atoms/index.ts) |
+| SelectInput        | [Props](./src/components/atoms/index.ts) |
+| Sidebar            | [Props](./src/components/atoms/index.ts) |
+| SideInput          | [Props](./src/components/atoms/index.ts) |
+| Slider             | [Props](./src/components/atoms/index.ts) |
+| Table              | [Props](./src/components/atoms/index.ts) |
+| Tag                | [Props](./src/components/atoms/index.ts) |
+| TextField          | [Props](./src/components/atoms/index.ts) |
+| TextInput          | [Props](./src/components/atoms/index.ts) |
+| toggle             | [Props](./src/components/atoms/index.ts) |
+| Typography         | [Props](./src/components/atoms/index.ts) |
+| Upload             | [Props](./src/components/atoms/index.ts) |
+| UploadItem         | [Props](./src/components/atoms/index.ts) |
+| UserProfile        | [Props](./src/components/atoms/index.ts) |
+| Wrapper            | [Props](./src/components/atoms/index.ts) |

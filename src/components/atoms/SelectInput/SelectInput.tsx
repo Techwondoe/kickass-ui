@@ -15,10 +15,10 @@ export const SelectInputField: FC<SelectInputProps> = ({
   onChange,
   renderItem = () => null,
   renderSelectedItem = renderItem,
-  items =[],
+  items = [],
   fullWidth = false,
   chevronLeft = false,
-  className = ''
+  className = '',
 }) => {
   const [internalValue, setInternalValue] = useState<SelectInputValue | null>(null);
   const [openPanel, setOpenPanel] = useState(false);

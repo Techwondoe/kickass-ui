@@ -1,2 +1,2 @@
-export * from './EmptySection'
-export * from './EmptySection.types'
+export * from './EmptySection';
+export * from './EmptySection.types';

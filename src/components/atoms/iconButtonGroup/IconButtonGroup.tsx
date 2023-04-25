@@ -2,7 +2,6 @@ import React from 'react';
 import { IconButton } from '../iconButton';
 import { IconButtonGroupProps } from './IconButtonGroup.types';
 
-
 export function IconButtonGroup({
   items,
   color = 'primary',

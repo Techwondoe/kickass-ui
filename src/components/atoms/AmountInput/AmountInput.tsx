@@ -15,7 +15,7 @@ export const AmountInputField: FC<AmountInputProps> = ({
   disabled = false,
   onChange,
   fullWidth = false,
-  className = ''
+  className = '',
 }) => {
   const [internalValue, setInternalValue] = useState('');
   const [openCountryCodePanel, setOpenCountryCodePanel] = useState(false);

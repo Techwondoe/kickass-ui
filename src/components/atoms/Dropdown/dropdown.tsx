@@ -1,9 +1,5 @@
 import React, { FC, useEffect, useMemo, useRef, useState } from 'react';
-import {
-  SubComponents,
-  DropdownProps,
-  emptyValues,
-} from './';
+import { SubComponents, DropdownProps, emptyValues } from './';
 
 const emptyRect: DOMRect = {
   ...emptyValues,

@@ -1,4 +1,3 @@
-
 /**
  * @param disabled - Whether the component should be disabled or not
  * @param error - Error text for the component
@@ -14,7 +13,6 @@
  * @param value - Value of the component
  */
 
-
 export interface MultiSearchInputValue {
   [key: string]: string;
   id: string;
@@ -27,6 +25,7 @@ export interface MultiSearchInputItemControls {
 }
 
 export interface MultiSearchInputProps<Value = MultiSearchInputValue> {
+  className?: string;
   disabled?: boolean;
   error?: string;
   fullWidth?: boolean;
@@ -39,5 +38,4 @@ export interface MultiSearchInputProps<Value = MultiSearchInputValue> {
   renderSelectedItem?: (value: Value, controls: MultiSearchInputItemControls) => React.ReactNode;
   searchKeys?: [keyof Value];
   value?: Value[];
-  className?: string;
 }

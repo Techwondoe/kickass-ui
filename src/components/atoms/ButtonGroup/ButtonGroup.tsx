@@ -2,7 +2,6 @@ import { Button } from '../Button/Button';
 import { ButtonGroupProps } from './ButtonGroup.types';
 import React from 'react';
 
-
 export function ButtonGroup({
   items,
   color = 'primary',

@@ -4,7 +4,6 @@ import { Typography } from '../Typography/Typography';
 import { Icon } from '../icon';
 import { MailInputProps } from './MailInput.types';
 
-
 export const MailInputField: FC<MailInputProps> = ({
   label,
   placeholder = '',
@@ -14,7 +13,7 @@ export const MailInputField: FC<MailInputProps> = ({
   disabled = false,
   onChange,
   fullWidth = false,
-  className = ''
+  className = '',
 }) => {
   const [internalValue, setInternalValue] = useState('');
 

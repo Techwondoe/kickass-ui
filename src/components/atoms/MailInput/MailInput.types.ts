@@ -1,6 +1,6 @@
 /**
  * @param disabled - component should be disabled or not
- * @param error - error text for the component 
+ * @param error - error text for the component
  * @param fullWidth - whether it should span whole width
  * @param hint - Hint text for the component
  * @param label - Label to be passed to the component
@@ -10,6 +10,7 @@
  */
 
 export interface MailInputProps {
+  className?: string;
   disabled?: boolean;
   error?: string;
   fullWidth?: boolean;
@@ -18,5 +19,4 @@ export interface MailInputProps {
   onChange?: (value: string) => void;
   placeholder?: string;
   value?: string;
-  className?:string
 }

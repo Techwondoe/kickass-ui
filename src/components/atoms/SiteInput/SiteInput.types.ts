@@ -10,6 +10,7 @@
  */
 
 export interface SiteInputProps {
+  className?: string;
   disabled?: boolean;
   error?: string;
   fullWidth?: boolean;
@@ -17,6 +18,5 @@ export interface SiteInputProps {
   label?: string;
   onChange?: (value: string) => void;
   placeholder?: string;
-  className?: string;
   value?: string;
 }

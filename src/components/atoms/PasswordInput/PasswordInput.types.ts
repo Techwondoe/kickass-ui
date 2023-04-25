@@ -12,15 +12,15 @@
  */
 
 export interface PasswordInputProps {
+  className?: string;
   disabled?: boolean;
   error?: string;
   fullWidth?: boolean;
-  hint?: string;
   hasError?: boolean;
+  hint?: string;
   label?: string;
   onBlur?: () => void;
   onChange?: (value: string) => void;
   placeholder?: string;
   value?: string;
-  className?: string;
 }

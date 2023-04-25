@@ -17,9 +17,9 @@ export interface DatePickerDropdownProps {
   buttonColor?: ButtonProps['color'];
   buttonSelected?: boolean;
   buttonVariant?: ButtonProps['variant'];
+  className?: string;
   hidePresetRanges?: DatePickerProps['hidePresetRanges'];
   onChange?: (value: CalendarValue) => void;
   type?: DatePickerProps['type'];
   value?: CalendarValue;
-  className?:string
 }

@@ -11,6 +11,7 @@
  */
 
 export interface CopyInputProps {
+  className?: string;
   disabled?: boolean;
   error?: string;
   fullWidth?: boolean;
@@ -19,5 +20,4 @@ export interface CopyInputProps {
   onChange?: (value: string) => void;
   placeholder?: string;
   value?: string;
-  className?:string
 }

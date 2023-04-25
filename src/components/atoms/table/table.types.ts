@@ -28,6 +28,7 @@ import {
 
 export interface TableProps<TData = unknown> {
   cellProps?: (context: CellContext<TData, unknown>) => React.HTMLProps<HTMLTableCellElement>;
+  className?: string;
   columns: ColumnDef<TData, unknown>[];
   data: TData[];
   defaultPageSize?: number;
@@ -48,5 +49,4 @@ export interface TableProps<TData = unknown> {
     table: ReactTable<TData>;
   }) => React.HTMLProps<HTMLTableRowElement>;
   sorting?: SortingState;
-  className?: string;
 }

@@ -3,12 +3,11 @@ import clsx from 'clsx';
 import { Dropdown } from '../Dropdown/dropdown';
 import { Typography } from '../Typography/Typography';
 import { Icon } from '../icon';
-import {MultiSearchInputValue, MultiSearchInputProps } from './MultiSearchInput.types'
-
+import { MultiSearchInputValue, MultiSearchInputProps } from './MultiSearchInput.types';
 
 export const MultiSearchInputField: FC<MultiSearchInputProps> = ({
   label,
-  className='',
+  className = '',
   placeholder = '',
   hint,
   error = '',

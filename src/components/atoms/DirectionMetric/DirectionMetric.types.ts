@@ -6,8 +6,8 @@
  */
 
 export interface DirectionMetricProps {
+  className?: string;
   displayValue?: string;
   limit: number;
   value: number;
-  className?: string;
 }

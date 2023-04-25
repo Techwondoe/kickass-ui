@@ -20,6 +20,7 @@ export interface SelectInputValue {
 
 export interface SelectInputProps {
   chevronLeft?: boolean;
+  className?: string;
   disabled?: boolean;
   error?: string;
   fullWidth?: boolean;
@@ -31,5 +32,4 @@ export interface SelectInputProps {
   renderItem?: (value: SelectInputValue) => React.ReactNode;
   renderSelectedItem?: (value: SelectInputValue) => React.ReactNode;
   value?: SelectInputValue;
-  className?: string;
 }

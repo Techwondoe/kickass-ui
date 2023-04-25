@@ -1,4 +1,3 @@
-
 /**
  * @param label - Label for the component
  * @param progress - Progress of the component
@@ -6,8 +5,8 @@
  */
 
 export interface UploadItemsProps {
+  className?: string;
   label: string;
   progress: number;
   size: string;
-  className?: string;
 }

@@ -1,5 +1,5 @@
 import React, { FC, useState } from 'react';
-import {ToggleProps, toggleSize,nobSize  } from './toggle.types'
+import { ToggleProps, toggleSize, nobSize } from './toggle.types';
 
 export const Toggle: FC<ToggleProps> = ({
   defaultEnabled = false,
@@ -8,7 +8,7 @@ export const Toggle: FC<ToggleProps> = ({
   color = 'primary',
   disabled = false,
   size = 'md',
-  className = ''
+  className = '',
 }) => {
   const [internalEnabled, setInternalEnabled] = useState(defaultEnabled);
   let enabled = internalEnabled;

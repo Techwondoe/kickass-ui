@@ -1,4 +1,3 @@
-
 /**
  * @param directionMetric- The content of the button
  * @param status - Status array

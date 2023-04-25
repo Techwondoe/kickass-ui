@@ -14,11 +14,11 @@ import formatCalendarDate from '../../calendar/utils/formatCalendarDate';
 import isValidCalendarDate from '../../calendar/utils/isValidCalendarDate';
 
 export interface DatePickerProps {
+  className?: string;
   defaultValue?: CalendarDate;
   hideActions?: boolean;
   onApply?: (value: CalendarDate) => void;
   onCancel?: () => void;
-  className?:string
 }
 
 export const DateSinglePicker: FC<Omit<DatePickerProps, 'type' | 'hidePresetRanges'>> = ({
@@ -26,7 +26,7 @@ export const DateSinglePicker: FC<Omit<DatePickerProps, 'type' | 'hidePresetRang
   onCancel,
   defaultValue,
   hideActions = false,
-  className
+  className,
 }) => {
   const form = useForm({
     mode: 'onChange',

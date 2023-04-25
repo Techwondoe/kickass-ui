@@ -2,7 +2,6 @@ import clsx from 'clsx';
 import React, { FC, useState } from 'react';
 import { ColorPickerProps } from './ColorPicker.types';
 
-
 export const ColorPicker: FC<ColorPickerProps> = ({ value: valueProp, onChange, className }) => {
   const [internalValue, setInternalValue] = useState('#000000');
   const value = valueProp ?? internalValue;

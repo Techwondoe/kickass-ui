@@ -1,2 +1,2 @@
-export * from './UploadItem'
-export * from './UploadItem.types'
+export * from './UploadItem';
+export * from './UploadItem.types';

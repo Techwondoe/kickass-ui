@@ -1,2 +1,2 @@
-export * from './logo'
-export * from './logo.types'
+export * from './logo';
+export * from './logo.types';

@@ -9,6 +9,7 @@
  * @param value - Value of the component
  */
 export interface PhoneInputProps {
+  className?: string;
   disabled?: boolean;
   error?: string;
   fullWidth?: boolean;
@@ -17,5 +18,4 @@ export interface PhoneInputProps {
   onChange?: (value: string) => void;
   placeholder?: string;
   value?: string;
-  className?: string;
 }

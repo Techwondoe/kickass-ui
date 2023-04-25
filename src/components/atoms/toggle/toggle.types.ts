@@ -1,13 +1,13 @@
-import { ColorType } from "~/types/colors";
+import { ColorType } from '~/types/colors';
 
 export interface ToggleProps {
+  className?: string;
   color?: ColorType;
   defaultEnabled?: boolean;
   disabled?: boolean;
   enabled?: boolean;
   onChange?: (value: boolean) => void;
   size?: 'sm' | 'md' | 'lg';
-  className?: string;
 }
 
 export const toggleSize = {

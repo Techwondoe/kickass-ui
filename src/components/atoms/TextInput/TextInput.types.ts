@@ -11,6 +11,7 @@
  */
 
 export interface TextInputProps {
+  className?: string;
   disabled?: boolean;
   error?: string;
   fullWidth?: boolean;
@@ -20,5 +21,4 @@ export interface TextInputProps {
   onChange?: (value: string) => void;
   placeholder?: string;
   value?: string;
-  className?: string;
 }

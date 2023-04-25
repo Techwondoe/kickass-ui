@@ -8,14 +8,12 @@
  */
 
 export interface UploadProps {
+  acceptedValues?: string[];
+  className?: string;
+  disabled?: boolean;
   maxFiles?: number;
   maxSize?: number;
   minSize?: number;
-  acceptedValues?: string[];
-  disabled?: boolean;
-  onError?: (err: unknown) => void;
   onChange?: (fileList: File[] | null) => void;
-  className?: string;
+  onError?: (err: unknown) => void;
 }
-
-

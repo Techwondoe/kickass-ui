@@ -12,7 +12,6 @@ import { TableHead } from './components/table-head';
 import { TableBody } from './components/table-body';
 import { TableProps } from './table.types';
 
-
 export function Table({
   data,
   columns,
@@ -30,7 +29,7 @@ export function Table({
   onSortingChange,
   onAllRowsSelectionChange,
   onRowSelection,
-  className = ''
+  className = '',
 }: TableProps<unknown>) {
   const [mouseOverRowIndex, setMouseOverRowIndex] = useState(-1);
   const table = useReactTable<unknown>({

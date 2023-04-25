@@ -1,2 +1,2 @@
-export * from './IconBadge'
-export * from './IconBadge.types'
+export * from './IconBadge';
+export * from './IconBadge.types';

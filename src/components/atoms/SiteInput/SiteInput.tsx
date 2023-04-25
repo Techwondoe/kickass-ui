@@ -13,7 +13,7 @@ export const SiteInputField: FC<SiteInputProps> = ({
   disabled = false,
   onChange,
   fullWidth = false,
-  className = ''
+  className = '',
 }) => {
   const [internalValue, setInternalValue] = useState('');
 

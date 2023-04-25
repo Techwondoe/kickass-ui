@@ -1,2 +1,2 @@
-export * from './DirectionMetric'
-export * from './DirectionMetric.types'
+export * from './DirectionMetric';
+export * from './DirectionMetric.types';

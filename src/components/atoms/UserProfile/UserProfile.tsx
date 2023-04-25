@@ -3,8 +3,6 @@ import { Avatar } from '../Avatar/Avatar';
 import { Typography, TypographySizeType } from '../Typography';
 import { UserProfileProps, nameSizes, roleSizes } from './UserProfile.types';
 
-
-
 export const UserProfile: FC<UserProfileProps> = ({
   name,
   subTitle,

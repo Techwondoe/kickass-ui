@@ -2,12 +2,12 @@ import { Button } from '../Button/Button';
 
 export interface UsePaginationProps {
   boundaryCount?: number;
+  className?: string;
   count?: number;
   defaultPage?: number;
   onChange?: (page: number) => void;
   page?: number;
   siblingCount?: number;
-  className?: string;
 }
 
 export interface UsePaginationReturnType {

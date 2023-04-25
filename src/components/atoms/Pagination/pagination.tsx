@@ -5,7 +5,6 @@ import { IconButton } from '../iconButton/IconButton';
 import { Typography } from '../Typography/Typography';
 import { UsePaginationProps, UsePaginationReturnType, PaginationProps } from './pagination.types';
 
-
 const range = (start: number, stop: number, step = 1) =>
   Array(Math.ceil((stop - start) / step))
     .fill(start)
@@ -98,7 +97,7 @@ export function Pagination({
   page,
   siblingCount = 1,
   shape = 'square',
-  className = ''
+  className = '',
 }: PaginationProps) {
   const { items, prevPageExists, nextPageExists, currentPage, goToNextPage, goToPrevPage } =
     usePagination({

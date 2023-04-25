@@ -1,2 +1,2 @@
-export * from './PhoneInput'
-export * from './PhoneInput.types'
+export * from './PhoneInput';
+export * from './PhoneInput.types';

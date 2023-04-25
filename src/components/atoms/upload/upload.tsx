@@ -12,41 +12,41 @@ export const Upload: FC<UploadProps> = ({
   acceptedValues = ['pdf', 'png'],
   onChange,
   onError,
-  className=''
+  className = '',
 }) => {
   const [files, setFiles] = useState<File[]>([]);
   const mimeTypes = {
+    csv: 'text/csv',
+    doc: 'application/msword',
+    docx: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+    eot: 'application/vnd.ms-fontobject',
     epub: 'application/epub+zip',
+    gif: 'image/gif',
+    html: 'text/html',
+    ico: 'image/vnd.microsoft.icon',
+    jpeg: 'image/jpeg',
     js: 'application/javascript',
     json: 'application/json',
-    doc: 'application/msword',
-    pdf: 'application/pdf',
-    xls: 'application/vnd.ms-excel',
-    eot: 'application/vnd.ms-fontobject',
-    ppt: 'application/vnd.ms-powerpoint',
+    mp3: 'audio/mpeg',
+    mp4: 'video/mp4',
     odp: 'application/vnd.oasis.opendocument.presentation',
     ods: 'application/vnd.oasis.opendocument.spreadsheet',
     odt: 'application/vnd.oasis.opendocument.text',
-    pptx: 'application/vnd.openxmlformats-officedocument.presentationml.presentation',
-    xlsx: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
-    docx: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
-    csv: 'text/csv',
-    html: 'text/html',
-    txt: 'text/plain',
-    xml: 'text/xml',
-    mp3: 'audio/mpeg',
     ogg: 'audio/ogg',
-    wav: 'audio/wav',
-    gif: 'image/gif',
-    jpeg: 'image/jpeg',
+    ogv: 'video/ogg',
+    pdf: 'application/pdf',
     png: 'image/png',
+    ppt: 'application/vnd.ms-powerpoint',
+    pptx: 'application/vnd.openxmlformats-officedocument.presentationml.presentation',
     svg: 'image/svg+xml',
     tiff: 'image/tiff',
-    ico: 'image/vnd.microsoft.icon',
-    webp: 'image/webp',
-    mp4: 'video/mp4',
-    ogv: 'video/ogg',
+    txt: 'text/plain',
+    wav: 'audio/wav',
     webm: 'video/webm',
+    webp: 'image/webp',
+    xls: 'application/vnd.ms-excel',
+    xlsx: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+    xml: 'text/xml',
   };
   const accept: Record<string, string[]> = {};
 
@@ -57,20 +57,20 @@ export const Upload: FC<UploadProps> = ({
   const onDrop = useCallback((files: File[]) => {
     setFiles(files);
     onChange && onChange(files);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const onDropRejected = (err: unknown) => {
-    console.log(err);
     onError && onError(err);
   };
 
   const { getRootProps, getInputProps } = useDropzone({
-    onDrop,
-    maxFiles,
     accept,
     disabled,
+    maxFiles,
     maxSize,
     minSize,
+    onDrop,
     onDropRejected,
   });
   return (

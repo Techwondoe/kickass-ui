@@ -20,7 +20,7 @@ export const PhoneInputField: FC<PhoneInputProps> = ({
 }) => {
   const [internalValue, setInternalValue] = useState('');
   const [openCountryCodePanel, setOpenCountryCodePanel] = useState(false);
-  const [selectedCountryCode, setSelectedCountryCode] = useState<typeof countryCodesMap['US']>(
+  const [selectedCountryCode, setSelectedCountryCode] = useState<(typeof countryCodesMap)['US']>(
     countryCodesMap['US']
   );
 

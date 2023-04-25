@@ -1,6 +1,6 @@
-import { HTMLAttributes } from "react";
-import { PrimaryColorType } from "~/types/colors";
-import { IconType } from "../icon/icon-list";
+import { HTMLAttributes } from 'react';
+import { PrimaryColorType } from '~/types/colors';
+import { IconType } from '../icon/icon-list';
 
 /**
  * @param className - Override or extend the styles applied to the component
@@ -25,11 +25,11 @@ export interface IconButtonProps extends HTMLAttributes<HTMLButtonElement | HTML
   variant?: 'contained' | 'outlined' | 'light' | 'text' | 'link';
 }
 export const sizes = {
-  sm: 'w-9 h-9',
-  md: 'w-10 h-10',
-  lg: 'w-11 h-11',
-  xl: 'w-12 h-12',
   '2xl': 'w-14 h-14',
+  lg: 'w-11 h-11',
+  md: 'w-10 h-10',
+  sm: 'w-9 h-9',
+  xl: 'w-12 h-12',
 };
 
 export const shapes = {

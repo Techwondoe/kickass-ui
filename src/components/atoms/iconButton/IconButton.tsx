@@ -4,7 +4,6 @@ import { ColorType } from '../../../types/colors';
 import { Icon } from '../icon';
 import { IconButtonProps, sizes, shapes } from './IconButton.types';
 
-
 /**
  * @param {ButtonProps} props
  * @returns Button component

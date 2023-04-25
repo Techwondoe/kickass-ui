@@ -11,11 +11,11 @@ import { CalendarValue } from '../calendar/hooks/useCalendar';
  */
 
 export interface DatePickerProps {
+  className?: string;
   defaultValue?: CalendarValue;
   hideActions?: boolean;
   hidePresetRanges?: boolean;
   onApply?: (value: CalendarValue) => void;
   onCancel?: () => void;
   type?: 'single' | 'range';
-  className?:string
 }

@@ -5,7 +5,6 @@ import { Icon } from '../icon';
 import { Typography } from '../Typography/Typography';
 import { TagProps, sizes, countSizes } from './tag.types';
 
-
 export const Tag: FC<TagProps> = ({
   label,
   size = 'md',

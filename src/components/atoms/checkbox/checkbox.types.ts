@@ -13,6 +13,7 @@ import { PrimaryColorType } from '../../../types/colors';
 
 export interface CheckboxProps {
   checked?: boolean;
+  className?: string;
   color?: Omit<PrimaryColorType, 'white' | 'black'>;
   disabled?: boolean;
   indeterminate?: boolean;
@@ -20,7 +21,6 @@ export interface CheckboxProps {
   name?: string;
   onChange?: (value: boolean) => void;
   size?: 'sm' | 'md' | 'lg';
-  className?:string
 }
 
 export const sizes = {

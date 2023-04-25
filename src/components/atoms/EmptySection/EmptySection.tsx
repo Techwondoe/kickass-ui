@@ -4,7 +4,7 @@ import { EmptySectionProps } from './EmptySection.types';
 
 export const EmptySection: FC<EmptySectionProps> = ({
   title = 'This page is under construction.',
-  className=''
+  className = '',
 }) => {
   return (
     <div className={`w-full h-full bg-gray-50 flex justify-center items-center ${className}`}>

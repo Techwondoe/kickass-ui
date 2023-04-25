@@ -1,2 +1,2 @@
-export * from './upload'
-export * from './upload.types'
+export * from './upload';
+export * from './upload.types';

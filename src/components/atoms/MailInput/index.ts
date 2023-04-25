@@ -1,2 +1,2 @@
-export * from './MailInput'
-export * from './MailInput.types'
+export * from './MailInput';
+export * from './MailInput.types';

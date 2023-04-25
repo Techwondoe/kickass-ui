@@ -1,2 +1,2 @@
-export * from './CopyInput.types'
-export * from './CopyInput'
+export * from './CopyInput.types';
+export * from './CopyInput';

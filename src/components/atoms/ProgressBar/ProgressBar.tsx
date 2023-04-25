@@ -1,7 +1,6 @@
 import React, { FC } from 'react';
 import { Typography } from '../Typography/Typography';
-import {ProgressBarProps, containerClass, percentageClass } from './ProgressBar.types'
-
+import { ProgressBarProps, containerClass, percentageClass } from './ProgressBar.types';
 
 export const ProgressBar: FC<ProgressBarProps> = ({
   value = 10,

@@ -1,4 +1,3 @@
-
 /**
  * @param disabled - Whether the component should be disabled or not
  * @param error - Error text for the component
@@ -20,6 +19,7 @@ export interface SearchInputValue {
 }
 
 export interface SearchInputProps<Value = SearchInputValue> {
+  className?: string;
   disabled?: boolean;
   error?: string;
   fullWidth?: boolean;
@@ -32,5 +32,4 @@ export interface SearchInputProps<Value = SearchInputValue> {
   renderSelectedItem?: (value: Value) => React.ReactNode;
   searchKeys?: [keyof Value];
   value?: Value;
-  className?: string;
 }

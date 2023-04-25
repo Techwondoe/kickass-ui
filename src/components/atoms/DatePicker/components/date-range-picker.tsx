@@ -21,12 +21,12 @@ import { useCalendar } from '../../calendar/hooks/useCalendar';
 import isValidCalendarDate from '../../calendar/utils/isValidCalendarDate';
 
 export interface DateRangePickerProps {
+  className?: string;
   defaultValue?: CalendarRange;
   hideActions?: boolean;
   hidePresetRanges?: boolean;
   onApply?: (value: CalendarRange) => void;
   onCancel?: () => void;
-  className?: string;
 }
 
 export const DateRangePicker: FC<DateRangePickerProps> = ({

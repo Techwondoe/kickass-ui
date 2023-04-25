@@ -29,11 +29,11 @@ export interface ButtonProps extends HTMLAttributes<HTMLButtonElement | HTMLAnch
   variant?: 'contained' | 'outlined' | 'light' | 'text' | 'link';
 }
 export const sizes = {
-  sm: 'btn-sm',
-  md: 'btn-md',
-  lg: 'btn-lg',
-  xl: 'btn-xl',
   '2xl': 'btn-2xl',
+  lg: 'btn-lg',
+  md: 'btn-md',
+  sm: 'btn-sm',
+  xl: 'btn-xl',
 };
 export const shapes = {
   rounded: 'rounded-full',

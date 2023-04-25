@@ -1,2 +1,2 @@
-export * from './MultiSearchInput'
-export * from './MultiSearchInput.types'
+export * from './MultiSearchInput';
+export * from './MultiSearchInput.types';

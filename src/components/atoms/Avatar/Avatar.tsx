@@ -4,7 +4,6 @@ import { Icon } from '../icon/icon';
 import { Typography } from '../Typography/Typography';
 import { AvatarProps, sizes, shapes, activeClass, statusColors, iconSize } from './Avatar.types';
 
-
 export function Avatar({
   src,
   size = 'md',

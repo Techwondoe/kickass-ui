@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC } from 'react';
 
 /**
  * Defines the props for the Dropdown component
@@ -19,10 +19,10 @@ export interface DropdownProps {
     React.ReactComponentElement<SubComponents['Button']>,
     React.ReactComponentElement<SubComponents['Panel']>
   ];
+  className?: string;
   fullWidth?: boolean;
   onChange?: (value: boolean) => void;
   open?: boolean;
-  className?: string;
   position?: 'auto' | 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right';
 }
 

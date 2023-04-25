@@ -1,4 +1,4 @@
-import { ButtonProps } from "../Button/Button.types";
+import { ButtonProps } from '../Button/Button.types';
 
 /**
  * @param EndIcon - The icon to be displayed at the end of the button

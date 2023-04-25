@@ -2,7 +2,6 @@ import React, { FC, useMemo } from 'react';
 import { iconPack } from './icon-list';
 import { IconProps } from './icon.types';
 
-
 export const Icon: FC<IconProps> = ({ name, color, size = 20, className, onClick }) => {
   const SVGIcon = useMemo(() => iconPack[name], [name]);
   const isSizeANumber = typeof size === 'number';

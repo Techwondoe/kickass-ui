@@ -23,7 +23,19 @@ yarn add kickass-ui
 
 ## Getting started with Kickass-UI Component
 
-Here is an example of a basic app using Kickass-UI Component's `Button` component:
+To get started, you need to import the compiled CSS styles from the <b>kickass-ui library</b>.
+
+```javascript
+import 'kickass-ui/dist/index.css';
+```
+
+You would also require to wrap your parent app component with `ThemeProvider`.
+
+```jsx
+import { ThemeProvider } from 'kickass-ui';
+```
+
+Here is an example of a basic app using Kickass-UI Component's `Typography` component:
 
 ```jsx
 import * as React from 'react';
@@ -32,85 +44,61 @@ import 'kickass-ui/dist/index.css';
 
 function App() {
   return (
-    <Button variant="outlined" color="success" onClick={() => {}}>
-      Hello World
-    </Button>
+     <ThemeProvider>
+      <Typography size={'sm'} className="text-primary-600">
+        Kickass UI Example project
+      </Typography>
+    </ThemeProvider>
   );
 }
 ```
+## Using Custom Colors and font sizes
+By default, the component library uses the following [color schema.](./src/theme.json)
 
-<!-- todo add codesandbox link once npm package is out -->
-<!-- In the interactive demo below, try changing the code and see how it affects the output.
-(Hint: change `variant` to `"outlined"` and `color` to `"secondary"`.
-For more options, see the [`Button` component page](https://mui.com/material-ui/react-button/) in our docs.)
+The component library also uses the following [fonts.](./src/font.json)
 
-[![Edit Button](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/material-ui-u9sy1h) -->
+However, you can define your custom color schema and fonts by using the  `ThemeProvider` context. 
 
-
-## Using Custom themes
-
-By default the component library uses the following color theme configuration
-
-```javascript
-export const base = {
-  contrast: {
-    danger: '#fff',
-    info: '#fff',
-    onSurface: '#fff',
-    primary: '#fff',
-    secondary: '#fff',
-    success: '#000',
-    surface: '#000',
-    warning: '#fff',
-  },
-  custom: {
-    danger: '#fff',
-    info: '#fff',
-    onSurface: '#fff',
-    primary: '#fff',
-    secondary: '#fff',
-    success: '#000',
-    surface: '#000',
-    warning: '#fff',
-  },
-  danger: '#ff4e4e',
-  info: '#5F9DF7',
-  onSurface: '#000',
-  primary: '#4d89ff',
-  secondary: '#999999',
-  success: '#4dff4d',
-  surface: '#fff',
-  warning: '#ff965f',
-};
-```
-
-However, you can define your custom theme by using the  `ThemeProvider` context. 
-
-Here is an example of implementing custom theme using `extendTheme` method:
+Here is an example of implementing a custom theme using the `extendTheme` method:
 
 ```jsx
 import * as React from 'react';
 import { extendTheme, ThemeProvider, Typography } from 'kickass-ui';
 
 const customTheme = extendTheme(base, {
-  primary: 'pink',
-  secondary: 'green',
-  contrast: {
-    ...base.contrast,
-    primary: 'red',
+  ...base,
+  font: {
+    ...base.font,
+    display: {
+      ...base.font.display,
+      sm: {
+        size: '10px',
+        lineHeight: '10px',
+        letterSpacing: '10px',
+      },
+    },
+  },
+  color: {
+    ...base.color,
+    primary: {
+      ...(base.color.primary as Record<ColorShade, string>),
+      '600': 'red',
+    },
   },
 });
 
 const App = () => {
   return (
-    <ThemeProvider customTheme={customTheme}>
-        <Typography color="primary" variant="h1">
-          This is a sample theme
-        </Typography>
+    <ThemeProvider>
+      <Typography size={'sm'} className="text-primary-600">
+        Kickass UI Example project
+      </Typography>
     </ThemeProvider>
   )
 }
 ```
+
+You can also apply a theme manually at any time using the `applyTheme` callback. `applyTheme` accepts the same props as `extendTheme`.
 
 ## Theme Props
 
@@ -119,8 +107,26 @@ const App = () => {
 | `extendTheme` | Create a theme object extending another theme object `( base or dark or custom )`  |
 | `applyTheme`  | Manually apply theme  |
 | `<ThemeProvider/>`  | Theme context to automatically apply custom theme. Pass props `customTheme`  |
-| `themes (base or dark)` | Themes defined in codebase |
-| `ColorCodes` | Enum with the colorcodes, refer [ColorCodes](./src/constants/types.ts) |
+
+## Using Custom Classes
+
+By default, all the components accept props `className` which will allow you to pass custom tailwind CSS to these components. Some components even allow multiple custom-style props.
+
+You can also apply custom styles using predefined custom tailwind classes. We have defined some custom classes for components like `Buttons, IconBadge & Badge`. You can refer to our [kickAssPlugin.js](./src/plugins/kickAssPlugin.js);
+
+All our components are based on 6 sizes ie `['xs', 'sm', 'md', 'lg', 'xl', '2xl']`
+
+To pass your custom plugin, paste the following in your project's `tailwind.config.js`
+
+```javascript
+const { customPlugin } = require('/path-to-custom-plugin');
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  ...
+  plugins: [..., customPlugin],
+};
+
+```
 
 ## Component list
 
@@ -141,59 +147,3 @@ You can refer to the following component list and prop definitions to use the li
 | Slider     | [Slider Props](./src/components/atoms/Slider/Slider.types.ts)
 | TextField   | [TextField Props](./src/components/atoms/TextField/TextField.types.tsx)      |
 | Typography   | [Typography Props](./src/components/atoms/Typography/Typography.types.ts)      |
-
-### Molecules
-
-| Component          | Variant                       | Props |
-|--------------------|-------------------------------|-------|
-| Accordion          |                               |[Accordion Props](./src/components/molecules/Accordion/Accordion.types.ts)        |
-| ActionPanel        |                               |[ActionPanel Props](./src/components/molecules/ActionPanel/ActionPanel.types.ts)        |
-| Alert              |                               |[Alert Props](./src/components/molecules/Alert/Alert.types.ts)        |
-| ButtonGroups       |                               |[ButtonGroups Props](./src/components/molecules/ButtonGroups/ButtonGroups.tsx)        |
-| DescriptionList    |                               |[DescriptionList Props](./src/components/molecules/DescriptionList/DescriptionList.types.ts)        |
-| EmptyStates        | Simple                        |[EmptyStates Props](./src/components/molecules/EmptyStates/EmptyState.types.ts)        |
-|                    | WithRecommendations           |       |
-|                    | WithRecommendationsGrid       |       |
-|                    | WithStartingPoints            |       |
-|                    | WithTemplates                 |       |
-| Feeds              | SimpleWithIcons               |[Feeds Props](./src/components/molecules/Feeds/Feeds.types.ts)        |
-|                    | StackedWithAvatars            |       |
-| GridList           | ActionsWithSharedBorders      |[GridList Props](./src/components/molecules/GridList/GridList.types.ts)       |
-|                    | ContactCardsWithSmallPotraits |       |
-|                    | HorizontalLinkCards           |       |
-|                    | ImagesWithDetails             |       |
-|                    | SimpleCards                   |       |
-| MediaObjects       |                               | [MediaObjects Props](./src/components/molecules/MediaObjects/MediaObjects.types.ts)       |
-| Modal              | CenteredWithSingleAction      |[Modal Props](./src/components/molecules/Modal/Modal.types.ts)        |
-|                    | SimpleAlert                   |       |
-| PageHeading        | CardWithAvatarAndStats        |[PageHeading Props](./src/components/molecules/PageHeading/PageHeading.types.ts)        |
-|                    | WithActions                   |[WithActions Props](./src/components/molecules/PageHeading/WithActions.tsx)        |
-|                    | WithAvatarAndActions          |       |
-|                    | WithBannerImage               |       |
-| RadioGroups        | Cards                         |[RadioGroups Props](./src/components/molecules/RadioGroups/RadioGroups.types.ts)        |
-|                    | ColorPicker                   |       |
-|                    | ListWithDescription           |       |
-|                    | ListWithDescriptionInPanel    |       |
-|                    | ListWithRadioOnRight          |       |
-|                    | SimpleList                    |       |
-|                    | SimpleTable                   |       |
-|                    | SmallCards                    |       |
-|                    | StackedCards                  |       |
-| SectionHeading     | Simple                        |[SectionHeading Props](./src/components/molecules/SectionHeading/SectionHeading.types.ts)        |
-|                    | WithTabs                      |       |
-| Stats              | Simple                        |[Stats Props](./src/components/molecules/Stats/Stats.types.ts)        |
-|                    | WithBrandIcon                 |       |
-|                    | WithSharedBorders             |       |
-| Steps              | Simple                        |[Steps Props](./src/components/molecules/Steps/Steps.types.ts)        |
-|                    | Panels                        |       |
-|                    | Circles                       |       |
-| Tables             |                               |[Tables Props](./src/components/molecules/Tables/Tables.types.ts)        |
-| Tabs               | TabsInPills                   |[Tabs Props](./src/components/molecules/Tabs/Tabs.types.ts)        |
-|                    | TabsWithUnderline             |       |
-| TextAreas          |                               |[TextAreas Props](./src/components/molecules/TextAreas/TextAreas.types.ts)        |
-| Toggles            | ShortToggle                   |[Toggles Props](./src/components/molecules/Toggles/Toggles.types.ts)        |
-|                    | ToggleWithIcon                |       |
-|                    | WithLeftLabelAndDescription   |       |
-|                    | WithRightLabel                |       |
-| Tooltip            |                               |[Tooltip Props](./src/components/molecules/Tooltip/Tooltip.tsx)        |
-| VerticalNavigation |                               |[Tooltip Props](./src/components/molecules/VerticalNavigation/VerticalNavation.types.ts)       |

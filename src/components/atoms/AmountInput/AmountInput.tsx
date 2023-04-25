@@ -15,6 +15,7 @@ export const AmountInputField: FC<AmountInputProps> = ({
   disabled = false,
   onChange,
   fullWidth = false,
+  className = ''
 }) => {
   const [internalValue, setInternalValue] = useState('');
   const [openCountryCodePanel, setOpenCountryCodePanel] = useState(false);
@@ -43,7 +44,8 @@ export const AmountInputField: FC<AmountInputProps> = ({
                 ? 'border-error-300 focus-within:ring-4 focus-within:ring-error-100'
                 : 'border-gray-300 focus-within:ring-4 focus-within:ring-primary-100',
               disabled ? 'bg-gray-50 pointer-events-none hover:cursor-not-allowed' : 'bg-white',
-              fullWidth ? 'w-full' : 'w-80'
+              fullWidth ? 'w-full' : 'w-80',
+              className
             )}>
             <div className={`h-10 grow shrink pl-3 py-2 flex items-center gap-2`}>
               <Typography

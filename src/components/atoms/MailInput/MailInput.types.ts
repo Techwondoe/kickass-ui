@@ -18,4 +18,5 @@ export interface MailInputProps {
   onChange?: (value: string) => void;
   placeholder?: string;
   value?: string;
+  className?:string
 }

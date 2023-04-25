@@ -30,6 +30,7 @@ export function Table({
   onSortingChange,
   onAllRowsSelectionChange,
   onRowSelection,
+  className = ''
 }: TableProps<unknown>) {
   const [mouseOverRowIndex, setMouseOverRowIndex] = useState(-1);
   const table = useReactTable<unknown>({
@@ -62,7 +63,7 @@ export function Table({
 
   return (
     <div
-      className={`border border-gray-200 rounded-lg shadow-sm overflow-hidden`}
+      className={`border border-gray-200 rounded-lg shadow-sm overflow-hidden ${className}`}
       onMouseLeave={() => setMouseOverRowIndex(-1)}>
       {header && <div>{header(table)}</div>}
       <div className={clsx('overflow-auto', childClassName)}>

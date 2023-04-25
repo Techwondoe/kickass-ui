@@ -15,6 +15,7 @@ export const Dropdown: FC<DropdownProps> & SubComponents = ({
   position = 'auto',
   open: openProp,
   onChange,
+  className = '',
   fullWidth = false,
 }) => {
   const [internalOpen, setInternalOpen] = useState(false);
@@ -97,7 +98,7 @@ export const Dropdown: FC<DropdownProps> & SubComponents = ({
       </div>
       <div
         ref={panelRef}
-        className={`${width} h-fit absolute z-10 ${open ? 'block' : 'hidden'}`}
+        className={`${width} ${className} h-fit absolute z-10 ${open ? 'block' : 'hidden'}`}
         style={{
           ...positionValues,
         }}

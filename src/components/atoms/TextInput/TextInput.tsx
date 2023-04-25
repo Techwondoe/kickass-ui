@@ -4,8 +4,6 @@ import { Typography } from '../Typography/Typography';
 import { Icon } from '../icon';
 import { TextInputProps } from './TextInput.types';
 
-
-
 export const TextInputField: FC<TextInputProps> = ({
   label,
   placeholder = '',
@@ -16,6 +14,7 @@ export const TextInputField: FC<TextInputProps> = ({
   onChange,
   onBlur,
   fullWidth = false,
+  className = '',
 }) => {
   const [internalValue, setInternalValue] = useState('');
 
@@ -42,7 +41,8 @@ export const TextInputField: FC<TextInputProps> = ({
             ? 'border-error-300 focus-within:ring-4 focus-within:ring-error-100'
             : 'border-gray-300 focus-within:ring-4 focus-within:ring-primary-100',
           disabled ? 'bg-gray-50 pointer-events-none hover:cursor-not-allowed' : 'bg-white',
-          fullWidth ? 'w-full' : 'w-80'
+          fullWidth ? 'w-full' : 'w-80',
+          className
         )}>
         <input
           className={clsx(

@@ -4,4 +4,5 @@
  */
 export interface EmptySectionProps {
   title?: string;
+  className?: string;
 }

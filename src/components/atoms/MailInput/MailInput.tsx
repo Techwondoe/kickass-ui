@@ -14,6 +14,7 @@ export const MailInputField: FC<MailInputProps> = ({
   disabled = false,
   onChange,
   fullWidth = false,
+  className = ''
 }) => {
   const [internalValue, setInternalValue] = useState('');
 
@@ -40,7 +41,8 @@ export const MailInputField: FC<MailInputProps> = ({
             ? 'border-error-300 focus-within:ring-4 focus-within:ring-error-100'
             : 'border-gray-300 focus-within:ring-4 focus-within:ring-primary-100',
           disabled ? 'bg-gray-50 pointer-events-none hover:cursor-not-allowed' : 'bg-white',
-          fullWidth ? 'w-full' : 'w-80'
+          fullWidth ? 'w-full' : 'w-80',
+          className
         )}>
         <Icon name="mail-01" color="gray-500" size={20} />
         <input

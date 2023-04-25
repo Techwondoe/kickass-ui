@@ -16,6 +16,7 @@ export const PhoneInputField: FC<PhoneInputProps> = ({
   disabled = false,
   onChange,
   fullWidth = false,
+  className = '',
 }) => {
   const [internalValue, setInternalValue] = useState('');
   const [openCountryCodePanel, setOpenCountryCodePanel] = useState(false);
@@ -46,7 +47,8 @@ export const PhoneInputField: FC<PhoneInputProps> = ({
                 ? 'border-error-300 focus-within:ring-4 focus-within:ring-error-100'
                 : 'border-gray-300 focus-within:ring-4 focus-within:ring-primary-100',
               disabled ? 'bg-gray-50 pointer-events-none hover:cursor-not-allowed' : 'bg-white',
-              fullWidth ? 'w-full' : 'w-80'
+              fullWidth ? 'w-full' : 'w-80',
+              className
             )}>
             <div
               className={`pl-3 pr-2.5 py-2 flex items-center gap-2 cursor-pointer rounded-l-lg`}

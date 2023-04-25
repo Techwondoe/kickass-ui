@@ -12,6 +12,7 @@ export const Upload: FC<UploadProps> = ({
   acceptedValues = ['pdf', 'png'],
   onChange,
   onError,
+  className=''
 }) => {
   const [files, setFiles] = useState<File[]>([]);
   const mimeTypes = {
@@ -76,7 +77,7 @@ export const Upload: FC<UploadProps> = ({
     <div
       className={`group px-6 py-4 gap-1 rounded-lg flex flex-col items-center cursor-pointer border border-gray-200 ${
         disabled ? `bg-gray-50` : `bg-white focus:bg-primary-25 focus:border-primary-300`
-      }`}
+      } ${className}`}
       {...getRootProps()}>
       <input {...getInputProps()} className="w-0 h-0" />
       <div

@@ -1,6 +1,6 @@
 import React, { FC, useState } from 'react';
 import { Button } from '../Button';
-import { CalendarValue } from '../calendar/hooks/useCalendar';
+import { CalendarValue } from '../Calendar/hooks/useCalendar';
 import { DatePicker } from '../DatePicker';
 import toDatePickerInput from '../DatePicker/utils/toDatePickerInput';
 import { Dropdown } from '../Dropdown/dropdown';

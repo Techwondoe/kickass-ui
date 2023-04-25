@@ -1,17 +1,17 @@
 import React, { FC } from 'react';
 import { Controller, useForm } from 'react-hook-form';
 import { Button } from '../../Button/Button';
-import { Calendar } from '../../calendar/calendar';
-import CalendarHeader from '../../calendar/components/calendar-header';
-import useCalendarDate, { CalendarDate } from '../../calendar/hooks/useCalendarDate';
+import { Calendar } from '../../Calendar/Calendar';
+import CalendarHeader from '../../Calendar/components/calendar-header';
+import useCalendarDate, { CalendarDate } from '../../Calendar/hooks/useCalendarDate';
 import { Typography } from '../../Typography/Typography';
 import DatePickerInput from './date-picker-input';
 import formatDatePickerInput from '../utils/formatDatePickerInput';
 import isValidDatePickerInput from '../utils/isValidDatePickerInput';
 import toCalendarDate from '../utils/toCalendarDate';
 import toDatePickerInput from '../utils/toDatePickerInput';
-import formatCalendarDate from '../../calendar/utils/formatCalendarDate';
-import isValidCalendarDate from '../../calendar/utils/isValidCalendarDate';
+import formatCalendarDate from '../../Calendar/utils/formatCalendarDate';
+import isValidCalendarDate from '../../Calendar/utils/isValidCalendarDate';
 
 export interface DatePickerProps {
   className?: string;

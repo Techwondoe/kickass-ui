@@ -1,4 +1,4 @@
-import formatCalendarDate from '../../calendar/utils/formatCalendarDate';
+import formatCalendarDate from '../../Calendar/utils/formatCalendarDate';
 import { DatePickerInputValue } from '../components/date-picker-input';
 import parseDatePickerInput from './parseDatePickerInput';
 

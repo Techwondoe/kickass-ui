@@ -1,5 +1,5 @@
-import { CalendarRange } from '../../calendar/hooks/useCalendarRange';
-import parseCalendarDate from '../../calendar/utils/parseCalendarDate';
+import { CalendarRange } from '../../Calendar/hooks/useCalendarRange';
+import parseCalendarDate from '../../Calendar/utils/parseCalendarDate';
 import formatDatePickerInput from './formatDatePickerInput';
 
 export const toDatePickerInputRange = (value: CalendarRange) => {

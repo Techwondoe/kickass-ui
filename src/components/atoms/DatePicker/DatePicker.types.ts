@@ -1,4 +1,4 @@
-import { CalendarValue } from '../calendar/hooks/useCalendar';
+import { CalendarValue } from '../Calendar/hooks/useCalendar';
 
 /**
  * Defines the props for the Date Picker component

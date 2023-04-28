@@ -2,7 +2,7 @@ import React from 'react';
 import { Badge } from '../Badge/Badge';
 import { DirectionMetric } from '../DirectionMetric/DirectionMetric';
 import { Typography } from '../Typography/Typography';
-import { CardProps } from './card.types';
+import { CardProps } from './Card.types';
 
 /* eslint-disable-next-line */
 

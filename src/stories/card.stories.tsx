@@ -2,7 +2,7 @@ import type { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ComponentWithColors, ComponentName } from '~/helpers/extend-colors-storybook';
 import { extendTheme, base, ColorShade } from '~/themes';
 import React from 'react';
-import { Card } from '../components/atoms/card/card';
+import { Card } from '../components/atoms/Card/Card';
 
 const Story: ComponentMeta<typeof Card> = {
   component: Card,
